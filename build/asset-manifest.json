@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e87b9eab.chunk.css",
+    "main.js": "/static/js/main.6eff7295.chunk.js",
+    "main.js.map": "/static/js/main.6eff7295.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.fb64e31e.chunk.css": "/static/css/2.fb64e31e.chunk.css",
+    "static/js/2.9a4dd271.chunk.js": "/static/js/2.9a4dd271.chunk.js",
+    "static/js/2.9a4dd271.chunk.js.map": "/static/js/2.9a4dd271.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.af07ec16f0b32ec1a73f9ffc88454924.js": "/precache-manifest.af07ec16f0b32ec1a73f9ffc88454924.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.fb64e31e.chunk.css.map": "/static/css/2.fb64e31e.chunk.css.map",
+    "static/css/main.e87b9eab.chunk.css.map": "/static/css/main.e87b9eab.chunk.css.map",
+    "static/media/chevron-down.svg": "/static/media/chevron-down.041d46cd.svg",
+    "static/media/dblogo.jpg": "/static/media/dblogo.56ac0149.jpg",
+    "static/media/speech-bubble-plus.svg": "/static/media/speech-bubble-plus.6df5d2c6.svg"
+  }
+}
