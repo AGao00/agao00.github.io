@@ -23,8 +23,8 @@
         h = r(5),
         f = r(4),
         d = r(1),
-        p = r(9),
-        m = r(10),
+        m = r(9),
+        p = r(10),
         v = (r(20), r(11)),
         g = r.n(v);
       function b() {
@@ -78,15 +78,15 @@
         var h = {};
         function f() {}
         function d() {}
-        function p() {}
-        var m = {};
-        s(m, o, function () {
+        function m() {}
+        var p = {};
+        s(p, o, function () {
           return this;
         });
         var v = Object.getPrototypeOf,
           g = v && v(v(k([])));
-        g && g !== t && r.call(g, o) && (m = g);
-        var y = (p.prototype = f.prototype = Object.create(m));
+        g && g !== t && r.call(g, o) && (p = g);
+        var y = (m.prototype = f.prototype = Object.create(p));
         function w(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -243,10 +243,10 @@
           return { value: void 0, done: !0 };
         }
         return (
-          (d.prototype = p),
-          n(y, "constructor", { value: p, configurable: !0 }),
-          n(p, "constructor", { value: d, configurable: !0 }),
-          (d.displayName = s(p, c, "GeneratorFunction")),
+          (d.prototype = m),
+          n(y, "constructor", { value: m, configurable: !0 }),
+          n(m, "constructor", { value: d, configurable: !0 }),
+          (d.displayName = s(m, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
             var t = "function" == typeof e && e.constructor;
             return (
@@ -257,8 +257,8 @@
           (e.mark = function (e) {
             return (
               Object.setPrototypeOf
-                ? Object.setPrototypeOf(e, p)
-                : ((e.__proto__ = p), s(e, c, "GeneratorFunction")),
+                ? Object.setPrototypeOf(e, m)
+                : ((e.__proto__ = m), s(e, c, "GeneratorFunction")),
               (e.prototype = Object.create(y)),
               e
             );
@@ -531,14 +531,14 @@
           { className: "rcw-response" },
           a.a.createElement("div", {
             className: "rcw-message-text",
-            dangerouslySetInnerHTML: { __html: m.sanitize(p.marked.parse(t)) },
+            dangerouslySetInnerHTML: { __html: p.sanitize(m.marked.parse(t)) },
           }),
           r.length > 0
             ? a.a.createElement(
                 "div",
                 { className: "rcw-sources" },
                 a.a.createElement(
-                  "p",
+                  "div",
                   { className: "rcw-sources-title" },
                   "Source".concat(1 === r.length ? "" : "s")
                 ),
@@ -739,4 +739,4 @@
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.12737d24.chunk.js.map
+//# sourceMappingURL=main.199773a4.chunk.js.map
