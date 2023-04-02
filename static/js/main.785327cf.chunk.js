@@ -587,7 +587,7 @@
           var t = g()(window).height(),
             r = g()(window).scrollTop();
           return g()(e).offset().top <= t + r;
-        })(g()("footer"))
+        })(g()("footer#footer"))
           ? g()(".rcw-widget-container").css("position", "fixed")
           : g()(".rcw-widget-container").css("position", "absolute");
       }
@@ -746,4 +746,4 @@
   },
   [[14, 1, 2]],
 ]);
-//# sourceMappingURL=main.7a4706b7.chunk.js.map
+//# sourceMappingURL=main.919009df.chunk.js.map
