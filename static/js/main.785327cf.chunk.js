@@ -1,34 +1,36 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [0],
   {
-    11: function (e, t) {
+    12: function (e, t) {
       e.exports =
         "data:image/png;base64,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";
     },
-    13: function (e, t, r) {
-      e.exports = r(21);
+    14: function (e, t, r) {
+      e.exports = r(22);
     },
-    19: function (e, t, r) {},
-    21: function (e, t, r) {
+    20: function (e, t, r) {},
+    22: function (e, t, r) {
       "use strict";
       r.r(t);
       var n = r(0),
-        a = r.n(n),
-        o = r(7),
-        i = r.n(o),
-        c = (r(19), r(8)),
-        s = r(12),
-        u = r(2),
-        l = r(3),
-        h = r(5),
-        f = r(4),
+        o = r.n(n),
+        a = r(8),
+        i = r.n(a),
+        c = (r(20), r(9)),
+        s = r(13),
+        u = r(3),
+        l = r(4),
+        h = r(6),
+        f = r(5),
         d = r(1),
-        m = r(9),
         p = r(10),
-        v = (r(20), r(11)),
-        g = r.n(v);
-      function b() {
-        b = function () {
+        m = r(11),
+        v = r(2),
+        g = r.n(v),
+        b = (r(21), r(12)),
+        y = r.n(b);
+      function w() {
+        w = function () {
           return e;
         };
         var e = {},
@@ -39,10 +41,10 @@
             function (e, t, r) {
               e[t] = r.value;
             },
-          a = "function" == typeof Symbol ? Symbol : {},
-          o = a.iterator || "@@iterator",
-          i = a.asyncIterator || "@@asyncIterator",
-          c = a.toStringTag || "@@toStringTag";
+          o = "function" == typeof Symbol ? Symbol : {},
+          a = o.iterator || "@@iterator",
+          i = o.asyncIterator || "@@asyncIterator",
+          c = o.toStringTag || "@@toStringTag";
         function s(e, t, r) {
           return (
             Object.defineProperty(e, t, {
@@ -61,10 +63,10 @@
             return (e[t] = r);
           };
         }
-        function u(e, t, r, a) {
-          var o = t && t.prototype instanceof f ? t : f,
-            i = Object.create(o.prototype),
-            c = new C(a || []);
+        function u(e, t, r, o) {
+          var a = t && t.prototype instanceof f ? t : f,
+            i = Object.create(a.prototype),
+            c = new N(o || []);
           return n(i, "_invoke", { value: x(e, r, c) }), i;
         }
         function l(e, t, r) {
@@ -78,16 +80,16 @@
         var h = {};
         function f() {}
         function d() {}
-        function m() {}
-        var p = {};
-        s(p, o, function () {
+        function p() {}
+        var m = {};
+        s(m, a, function () {
           return this;
         });
         var v = Object.getPrototypeOf,
           g = v && v(v(k([])));
-        g && g !== t && r.call(g, o) && (p = g);
-        var y = (m.prototype = f.prototype = Object.create(p));
-        function w(e) {
+        g && g !== t && r.call(g, a) && (m = g);
+        var b = (p.prototype = f.prototype = Object.create(m));
+        function y(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
               return this._invoke(t, e);
@@ -95,13 +97,13 @@
           });
         }
         function E(e, t) {
-          var a;
+          var o;
           n(this, "_invoke", {
-            value: function (n, o) {
+            value: function (n, a) {
               function i() {
-                return new t(function (a, i) {
-                  !(function n(a, o, i, c) {
-                    var s = l(e[a], e, o);
+                return new t(function (o, i) {
+                  !(function n(o, a, i, c) {
+                    var s = l(e[o], e, a);
                     if ("throw" !== s.type) {
                       var u = s.arg,
                         h = u.value;
@@ -124,23 +126,23 @@
                           );
                     }
                     c(s.arg);
-                  })(n, o, a, i);
+                  })(n, a, o, i);
                 });
               }
-              return (a = a ? a.then(i, i) : i());
+              return (o = o ? o.then(i, i) : i());
             },
           });
         }
         function x(e, t, r) {
           var n = "suspendedStart";
-          return function (a, o) {
+          return function (o, a) {
             if ("executing" === n)
               throw new Error("Generator is already running");
             if ("completed" === n) {
-              if ("throw" === a) throw o;
+              if ("throw" === o) throw a;
               return L();
             }
-            for (r.method = a, r.arg = o; ; ) {
+            for (r.method = o, r.arg = a; ; ) {
               var i = r.delegate;
               if (i) {
                 var c = O(i, r);
@@ -187,21 +189,21 @@
                   )))),
               h
             );
-          var a = l(n, e.iterator, t.arg);
-          if ("throw" === a.type)
+          var o = l(n, e.iterator, t.arg);
+          if ("throw" === o.type)
             return (
-              (t.method = "throw"), (t.arg = a.arg), (t.delegate = null), h
+              (t.method = "throw"), (t.arg = o.arg), (t.delegate = null), h
             );
-          var o = a.arg;
-          return o
-            ? o.done
-              ? ((t[e.resultName] = o.value),
+          var a = o.arg;
+          return a
+            ? a.done
+              ? ((t[e.resultName] = a.value),
                 (t.next = e.nextLoc),
                 "return" !== t.method &&
                   ((t.method = "next"), (t.arg = void 0)),
                 (t.delegate = null),
                 h)
-              : o
+              : a
             : ((t.method = "throw"),
               (t.arg = new TypeError("iterator result is not an object")),
               (t.delegate = null),
@@ -213,28 +215,28 @@
             2 in e && ((t.finallyLoc = e[2]), (t.afterLoc = e[3])),
             this.tryEntries.push(t);
         }
-        function N(e) {
+        function C(e) {
           var t = e.completion || {};
           (t.type = "normal"), delete t.arg, (e.completion = t);
         }
-        function C(e) {
+        function N(e) {
           (this.tryEntries = [{ tryLoc: "root" }]),
             e.forEach(j, this),
             this.reset(!0);
         }
         function k(e) {
           if (e) {
-            var t = e[o];
+            var t = e[a];
             if (t) return t.call(e);
             if ("function" == typeof e.next) return e;
             if (!isNaN(e.length)) {
               var n = -1,
-                a = function t() {
+                o = function t() {
                   for (; ++n < e.length; )
                     if (r.call(e, n)) return (t.value = e[n]), (t.done = !1), t;
                   return (t.value = void 0), (t.done = !0), t;
                 };
-              return (a.next = a);
+              return (o.next = o);
             }
           }
           return { next: L };
@@ -243,10 +245,10 @@
           return { value: void 0, done: !0 };
         }
         return (
-          (d.prototype = m),
-          n(y, "constructor", { value: m, configurable: !0 }),
-          n(m, "constructor", { value: d, configurable: !0 }),
-          (d.displayName = s(m, c, "GeneratorFunction")),
+          (d.prototype = p),
+          n(b, "constructor", { value: p, configurable: !0 }),
+          n(p, "constructor", { value: d, configurable: !0 }),
+          (d.displayName = s(p, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
             var t = "function" == typeof e && e.constructor;
             return (
@@ -257,35 +259,35 @@
           (e.mark = function (e) {
             return (
               Object.setPrototypeOf
-                ? Object.setPrototypeOf(e, m)
-                : ((e.__proto__ = m), s(e, c, "GeneratorFunction")),
-              (e.prototype = Object.create(y)),
+                ? Object.setPrototypeOf(e, p)
+                : ((e.__proto__ = p), s(e, c, "GeneratorFunction")),
+              (e.prototype = Object.create(b)),
               e
             );
           }),
           (e.awrap = function (e) {
             return { __await: e };
           }),
-          w(E.prototype),
+          y(E.prototype),
           s(E.prototype, i, function () {
             return this;
           }),
           (e.AsyncIterator = E),
-          (e.async = function (t, r, n, a, o) {
-            void 0 === o && (o = Promise);
-            var i = new E(u(t, r, n, a), o);
+          (e.async = function (t, r, n, o, a) {
+            void 0 === a && (a = Promise);
+            var i = new E(u(t, r, n, o), a);
             return e.isGeneratorFunction(r)
               ? i
               : i.next().then(function (e) {
                   return e.done ? e.value : i.next();
                 });
           }),
-          w(y),
-          s(y, c, "Generator"),
-          s(y, o, function () {
+          y(b),
+          s(b, c, "Generator"),
+          s(b, a, function () {
             return this;
           }),
-          s(y, "toString", function () {
+          s(b, "toString", function () {
             return "[object Generator]";
           }),
           (e.keys = function (e) {
@@ -304,8 +306,8 @@
             );
           }),
           (e.values = k),
-          (C.prototype = {
-            constructor: C,
+          (N.prototype = {
+            constructor: N,
             reset: function (e) {
               if (
                 ((this.prev = 0),
@@ -315,7 +317,7 @@
                 (this.delegate = null),
                 (this.method = "next"),
                 (this.arg = void 0),
-                this.tryEntries.forEach(N),
+                this.tryEntries.forEach(C),
                 !e)
               )
                 for (var t in this)
@@ -342,49 +344,49 @@
                   !!n
                 );
               }
-              for (var a = this.tryEntries.length - 1; a >= 0; --a) {
-                var o = this.tryEntries[a],
-                  i = o.completion;
-                if ("root" === o.tryLoc) return n("end");
-                if (o.tryLoc <= this.prev) {
-                  var c = r.call(o, "catchLoc"),
-                    s = r.call(o, "finallyLoc");
+              for (var o = this.tryEntries.length - 1; o >= 0; --o) {
+                var a = this.tryEntries[o],
+                  i = a.completion;
+                if ("root" === a.tryLoc) return n("end");
+                if (a.tryLoc <= this.prev) {
+                  var c = r.call(a, "catchLoc"),
+                    s = r.call(a, "finallyLoc");
                   if (c && s) {
-                    if (this.prev < o.catchLoc) return n(o.catchLoc, !0);
-                    if (this.prev < o.finallyLoc) return n(o.finallyLoc);
+                    if (this.prev < a.catchLoc) return n(a.catchLoc, !0);
+                    if (this.prev < a.finallyLoc) return n(a.finallyLoc);
                   } else if (c) {
-                    if (this.prev < o.catchLoc) return n(o.catchLoc, !0);
+                    if (this.prev < a.catchLoc) return n(a.catchLoc, !0);
                   } else {
                     if (!s)
                       throw new Error("try statement without catch or finally");
-                    if (this.prev < o.finallyLoc) return n(o.finallyLoc);
+                    if (this.prev < a.finallyLoc) return n(a.finallyLoc);
                   }
                 }
               }
             },
             abrupt: function (e, t) {
               for (var n = this.tryEntries.length - 1; n >= 0; --n) {
-                var a = this.tryEntries[n];
+                var o = this.tryEntries[n];
                 if (
-                  a.tryLoc <= this.prev &&
-                  r.call(a, "finallyLoc") &&
-                  this.prev < a.finallyLoc
+                  o.tryLoc <= this.prev &&
+                  r.call(o, "finallyLoc") &&
+                  this.prev < o.finallyLoc
                 ) {
-                  var o = a;
+                  var a = o;
                   break;
                 }
               }
-              o &&
+              a &&
                 ("break" === e || "continue" === e) &&
-                o.tryLoc <= t &&
-                t <= o.finallyLoc &&
-                (o = null);
-              var i = o ? o.completion : {};
+                a.tryLoc <= t &&
+                t <= a.finallyLoc &&
+                (a = null);
+              var i = a ? a.completion : {};
               return (
                 (i.type = e),
                 (i.arg = t),
-                o
-                  ? ((this.method = "next"), (this.next = o.finallyLoc), h)
+                a
+                  ? ((this.method = "next"), (this.next = a.finallyLoc), h)
                   : this.complete(i)
               );
             },
@@ -405,7 +407,7 @@
               for (var t = this.tryEntries.length - 1; t >= 0; --t) {
                 var r = this.tryEntries[t];
                 if (r.finallyLoc === e)
-                  return this.complete(r.completion, r.afterLoc), N(r), h;
+                  return this.complete(r.completion, r.afterLoc), C(r), h;
               }
             },
             catch: function (e) {
@@ -414,10 +416,10 @@
                 if (r.tryLoc === e) {
                   var n = r.completion;
                   if ("throw" === n.type) {
-                    var a = n.arg;
-                    N(r);
+                    var o = n.arg;
+                    C(r);
                   }
-                  return a;
+                  return o;
                 }
               }
               throw new Error("illegal catch attempt");
@@ -433,69 +435,7 @@
           e
         );
       }
-      var y = !1,
-        w = (function (e) {
-          Object(h.a)(r, e);
-          var t = Object(f.a)(r);
-          function r() {
-            return Object(u.a)(this, r), t.apply(this, arguments);
-          }
-          return (
-            Object(l.a)(r, [
-              {
-                key: "render",
-                value: function () {
-                  return a.a.createElement(
-                    "div",
-                    { className: "rcw-disclaimer-info" },
-                    a.a.createElement("img", {
-                      className: "rcw-info",
-                      src: g.a,
-                      alt: "info",
-                    }),
-                    a.a.createElement(
-                      "div",
-                      null,
-                      "This trained assistant model may display inaccurate or offensive information that doesn't represent Databricks views."
-                    )
-                  );
-                },
-              },
-            ]),
-            r
-          );
-        })(n.Component),
-        E = (function (e) {
-          Object(h.a)(r, e);
-          var t = Object(f.a)(r);
-          function r() {
-            return Object(u.a)(this, r), t.apply(this, arguments);
-          }
-          return (
-            Object(l.a)(r, [
-              {
-                key: "render",
-                value: function () {
-                  return a.a.createElement(
-                    "div",
-                    { className: "rcw-loading" },
-                    a.a.createElement("img", {
-                      className: "rcw-avatar",
-                      src: "https://agao00.github.io/static/media/dblogo.56ac0149.jpg",
-                      alt: "profile",
-                    }),
-                    a.a.createElement("img", {
-                      className: "rcw-loading-img",
-                      src: "https://agao00.github.io/static/media/loading.48438880.svg",
-                      alt: "loading",
-                    })
-                  );
-                },
-              },
-            ]),
-            r
-          );
-        })(n.Component),
+      var E = !1,
         x = (function (e) {
           Object(h.a)(r, e);
           var t = Object(f.a)(r);
@@ -507,7 +447,58 @@
               {
                 key: "render",
                 value: function () {
-                  return a.a.createElement(
+                  return o.a.createElement(
+                    "div",
+                    { className: "rcw-disclaimer-info" },
+                    o.a.createElement("img", {
+                      className: "rcw-info",
+                      src: y.a,
+                      alt: "info",
+                    }),
+                    o.a.createElement(
+                      "div",
+                      null,
+                      "This trained assistant model may display inaccurate or offensive information that doesn't represent Databricks views."
+                    )
+                  );
+                },
+              },
+            ]),
+            r
+          );
+        })(n.Component),
+        O = (function (e) {
+          Object(h.a)(r, e);
+          var t = Object(f.a)(r);
+          function r() {
+            return Object(u.a)(this, r), t.apply(this, arguments);
+          }
+          return (
+            Object(l.a)(r, [
+              {
+                key: "render",
+                value: function () {
+                  return o.a.createElement("div", {
+                    className: "rcw-response rcw-message-text rcw-loading",
+                  });
+                },
+              },
+            ]),
+            r
+          );
+        })(n.Component),
+        j = (function (e) {
+          Object(h.a)(r, e);
+          var t = Object(f.a)(r);
+          function r() {
+            return Object(u.a)(this, r), t.apply(this, arguments);
+          }
+          return (
+            Object(l.a)(r, [
+              {
+                key: "render",
+                value: function () {
+                  return o.a.createElement(
                     "a",
                     {
                       href: this.props.url,
@@ -523,88 +514,97 @@
             r
           );
         })(n.Component);
-      function O(e) {
+      function C(e) {
         var t = e.answer,
           r = e.sources;
-        return a.a.createElement(
+        return o.a.createElement(
           "div",
           { className: "rcw-response" },
-          a.a.createElement("div", {
+          o.a.createElement("div", {
             className: "rcw-message-text",
-            dangerouslySetInnerHTML: { __html: p.sanitize(m.marked.parse(t)) },
+            dangerouslySetInnerHTML: { __html: m.sanitize(p.marked.parse(t)) },
           }),
           r.length > 0
-            ? a.a.createElement(
+            ? o.a.createElement(
                 "div",
                 { className: "rcw-sources" },
-                a.a.createElement(
+                o.a.createElement(
                   "div",
                   { className: "rcw-sources-title" },
                   "Source".concat(1 === r.length ? "" : "s")
                 ),
                 r.map(function (e) {
-                  return a.a.createElement(x, { url: e });
+                  return o.a.createElement(j, { url: e });
                 })
               )
             : null
         );
       }
-      function j() {
-        return a.a.createElement(
+      function N() {
+        return o.a.createElement(
           "div",
           { className: "rcw-response" },
-          a.a.createElement(
+          o.a.createElement(
             "div",
             { className: "rcw-message-text" },
             "Hi, I'm Databricks AI Assistant. You can ask me questions you have about using Databricks. ",
-            a.a.createElement("br", null),
-            a.a.createElement("br", null),
+            o.a.createElement("br", null),
+            o.a.createElement("br", null),
             " Some questions you could try: ",
-            a.a.createElement("br", null),
+            o.a.createElement("br", null),
             " 1. How do I load files into Databricks? ",
-            a.a.createElement("br", null),
+            o.a.createElement("br", null),
             " 2. How do you deploy my model for serving? ",
-            a.a.createElement("br", null),
+            o.a.createElement("br", null),
             " 3. How I convert my files to parquet files?"
           )
         );
       }
-      function N() {
-        return a.a.createElement(
+      function k() {
+        return o.a.createElement(
           "div",
           { className: "rcw-response" },
-          a.a.createElement(
+          o.a.createElement(
             "div",
             { className: "rcw-message-text" },
             "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in our documentation page at",
             " ",
-            a.a.createElement(x, { url: "https://docs.databricks.com" }),
+            o.a.createElement(j, { url: "https://docs.databricks.com" }),
             " or knowledge base page at ",
-            a.a.createElement(x, { url: "https://kb.databricks.com" })
+            o.a.createElement(j, { url: "https://kb.databricks.com" })
           )
         );
       }
-      function C() {
-        return a.a.createElement("hr", { className: "rcw-question-separator" });
+      function L() {
+        return o.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function k() {
+      function S() {
         document.querySelector(".rcw-loading").parentElement.remove(),
-          Object(d.renderCustomComponent)(N, {}, !0);
+          Object(d.renderCustomComponent)(k, {}, !0);
       }
-      var L = (function (e) {
+      function G() {
+        !(function (e) {
+          var t = g()(window).height(),
+            r = g()(window).scrollTop();
+          return g()(e).offset().top <= t + r;
+        })(g()("footer"))
+          ? g()(".rcw-widget-container").css("position", "fixed")
+          : g()(".rcw-widget-container").css("position", "absolute");
+      }
+      var A = (function (e) {
           Object(h.a)(r, e);
           var t = Object(f.a)(r);
           function r() {
             var e;
             Object(u.a)(this, r);
-            for (var n = arguments.length, a = new Array(n), o = 0; o < n; o++)
-              a[o] = arguments[o];
+            for (var n = arguments.length, o = new Array(n), a = 0; a < n; a++)
+              o[a] = arguments[a];
             return (
-              ((e = t.call.apply(t, [this].concat(a))).handleNewUserMessage =
+              ((e = t.call.apply(t, [this].concat(o))).handleNewUserMessage =
                 function (t) {
                   (document.querySelector(".rcw-sender").style.visibility =
                     "hidden"),
-                    Object(d.renderCustomComponent)(E),
+                    Object(d.renderCustomComponent)(O, {}, !0),
                     e.fetchAnswer(t, function () {
                       (document.querySelector(".rcw-sender").style.display =
                         "none"),
@@ -619,7 +619,7 @@
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
-                  Object(d.renderCustomComponent)(C);
+                  Object(d.renderCustomComponent)(L);
               }),
               e
             );
@@ -629,18 +629,25 @@
               {
                 key: "componentDidMount",
                 value: function () {
-                  y ||
-                    (Object(d.renderCustomComponent)(w),
-                    Object(d.renderCustomComponent)(j, {}, !0),
-                    (y = !0));
+                  E ||
+                    (Object(d.renderCustomComponent)(x),
+                    Object(d.renderCustomComponent)(N, {}, !0),
+                    (E = !0)),
+                    document.addEventListener("scroll", G);
+                },
+              },
+              {
+                key: "componentWillUnmount",
+                value: function () {
+                  document.removeEventListener("scroll", G);
                 },
               },
               {
                 key: "fetchAnswer",
                 value: (function () {
                   var e = Object(c.a)(
-                    b().mark(function e(t, r) {
-                      return b().wrap(function (e) {
+                    w().mark(function e(t, r) {
+                      return w().wrap(function (e) {
                         for (;;)
                           switch ((e.prev = e.next)) {
                             case 0:
@@ -658,16 +665,16 @@
                                               .querySelector(".rcw-loading")
                                               .parentElement.remove(),
                                             Object(d.renderCustomComponent)(
-                                              O,
+                                              C,
                                               t,
                                               !0
                                             ))
-                                          : k();
+                                          : S();
                                       })
-                                    : k();
+                                    : S();
                                 })
                                 .catch(function () {
-                                  k();
+                                  S();
                                 })
                                 .finally(r);
                             case 1:
@@ -685,10 +692,10 @@
               {
                 key: "render",
                 value: function () {
-                  return a.a.createElement(
+                  return o.a.createElement(
                     "div",
                     { className: "LLMAssistantWidget" },
-                    a.a.createElement(d.Widget, {
+                    o.a.createElement(d.Widget, {
                       handleNewUserMessage: this.handleNewUserMessage,
                       handleQuickButtonClicked: this.handleQuickButtonClicked,
                       title: "Databricks Assistant",
@@ -701,23 +708,23 @@
                         return (function (e) {
                           var t = Object(n.useState)(!1),
                             r = Object(s.a)(t, 2),
-                            o = r[0],
+                            a = r[0],
                             i = r[1];
-                          return a.a.createElement(
+                          return o.a.createElement(
                             "button",
                             {
                               className: "rcw-custom-launcher",
                               onClick: function () {
-                                i(!o), e();
+                                i(!a), e();
                               },
                             },
-                            o
-                              ? a.a.createElement("img", {
+                            a
+                              ? o.a.createElement("img", {
                                   className: "rcw-close-launcher",
                                   src: "https://agao00.github.io/static/media/chevron-down.041d46cd.svg",
                                   alt: "close",
                                 })
-                              : a.a.createElement("img", {
+                              : o.a.createElement("img", {
                                   className: "rcw-open-launcher",
                                   src: "https://agao00.github.io/static/media/speech-bubble-plus.6df5d2c6.svg",
                                   alt: "open",
@@ -733,10 +740,10 @@
             r
           );
         })(n.Component),
-        S = document.getElementById("rcw-root");
-      i.a.render(a.a.createElement(L, null), S);
+        B = document.getElementById("rcw-root");
+      i.a.render(o.a.createElement(A, null), B);
     },
   },
-  [[13, 1, 2]],
+  [[14, 1, 2]],
 ]);
-//# sourceMappingURL=main.199773a4.chunk.js.map
+//# sourceMappingURL=main.7a4706b7.chunk.js.map
