@@ -18,17 +18,17 @@
         i = r.n(a),
         c = (r(20), r(9)),
         s = r(13),
-        u = r(3),
-        l = r(4),
-        h = r(6),
-        f = r(5),
+        u = r(2),
+        l = r(3),
+        h = r(5),
+        f = r(4),
         d = r(1),
         p = r(10),
         m = r(11),
-        v = r(2),
-        g = r.n(v),
-        b = (r(21), r(12)),
-        y = r.n(b);
+        v = r(6),
+        b = r.n(v),
+        g = (r(21), r(12)),
+        y = r.n(g);
       function w() {
         w = function () {
           return e;
@@ -86,9 +86,9 @@
           return this;
         });
         var v = Object.getPrototypeOf,
-          g = v && v(v(k([])));
-        g && g !== t && r.call(g, a) && (m = g);
-        var b = (p.prototype = f.prototype = Object.create(m));
+          b = v && v(v(k([])));
+        b && b !== t && r.call(b, a) && (m = b);
+        var g = (p.prototype = f.prototype = Object.create(m));
         function y(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -246,7 +246,7 @@
         }
         return (
           (d.prototype = p),
-          n(b, "constructor", { value: p, configurable: !0 }),
+          n(g, "constructor", { value: p, configurable: !0 }),
           n(p, "constructor", { value: d, configurable: !0 }),
           (d.displayName = s(p, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
@@ -261,7 +261,7 @@
               Object.setPrototypeOf
                 ? Object.setPrototypeOf(e, p)
                 : ((e.__proto__ = p), s(e, c, "GeneratorFunction")),
-              (e.prototype = Object.create(b)),
+              (e.prototype = Object.create(g)),
               e
             );
           }),
@@ -282,12 +282,12 @@
                   return e.done ? e.value : i.next();
                 });
           }),
-          y(b),
-          s(b, c, "Generator"),
-          s(b, a, function () {
+          y(g),
+          s(g, c, "Generator"),
+          s(g, a, function () {
             return this;
           }),
-          s(b, "toString", function () {
+          s(g, "toString", function () {
             return "[object Generator]";
           }),
           (e.keys = function (e) {
@@ -582,16 +582,18 @@
         document.querySelector(".rcw-loading").parentElement.remove(),
           Object(d.renderCustomComponent)(k, {}, !0);
       }
-      function G() {
-        !(function (e) {
-          var t = g()(window).height(),
-            r = g()(window).scrollTop();
-          return g()(e).offset().top <= t + r;
-        })(g()("#footer"))
-          ? g()(".rcw-widget-container").css("position", "fixed")
-          : g()(".rcw-widget-container").css("position", "absolute");
-      }
-      var A = (function (e) {
+      var G = new IntersectionObserver(
+          function (e) {
+            e[0].isIntersecting
+              ? (console.log("Element has just become visible in screen"),
+                b()(".rcw-widget-container").css("position", "absolute"))
+              : e[0].isIntersecting ||
+                (console.log("Element has just become invisible in screen"),
+                b()(".rcw-widget-container").css("position", "fixed"));
+          },
+          { threshold: [0] }
+        ),
+        A = (function (e) {
           Object(h.a)(r, e);
           var t = Object(f.a)(r);
           function r() {
@@ -633,13 +635,7 @@
                     (Object(d.renderCustomComponent)(x),
                     Object(d.renderCustomComponent)(N, {}, !0),
                     (E = !0)),
-                    document.addEventListener("scroll", G);
-                },
-              },
-              {
-                key: "componentWillUnmount",
-                value: function () {
-                  document.removeEventListener("scroll", G);
+                    G.observe(document.querySelector("footer#footer"));
                 },
               },
               {
@@ -746,4 +742,4 @@
   },
   [[14, 1, 2]],
 ]);
-//# sourceMappingURL=main.1619fc51.chunk.js.map
+//# sourceMappingURL=main.43c5fe6b.chunk.js.map
