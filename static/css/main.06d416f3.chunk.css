@@ -14,8 +14,8 @@
 
 .rcw-widget-container {
   max-width: 440px !important;
-  right: 32px !important;
-  bottom: 32px !important;
+  right: 50px !important;
+  bottom: 109.5px !important;
   margin: 0 !important
 }
 
@@ -46,7 +46,6 @@
   line-height: 16px !important;
   background: #f2f5f7;
   color: #5d7283 !important;
-  border-radius: 4px !important;
   margin: -16px -16px 0 !important;
   position: fixed !important;
   box-sizing: unset !important
@@ -68,7 +67,8 @@
   padding: 12px 16px !important;
   color: #1f272d !important;
   background-color: #f2f5f7 !important;
-  border-radius: 16px !important
+  max-width: 300px !important;
+  border-radius: 8px !important
 }
 
 .rcw-response .rcw-message-text p {
@@ -132,8 +132,9 @@
 
 .rcw-client {
   background: #0e538b !important;
-  border-radius: 16px !important;
+  border-radius: 8px !important;
   padding: 12px 16px !important;
+  max-width: 300px !important;
   margin-right: 8px
 }
 
@@ -157,7 +158,8 @@
   padding: 16px 0 !important;
   text-align: left !important;
   border-bottom: 1px solid #cddae5 !important;
-  border-radius: 8px !important
+  border-top-right-radius: 8px !important;
+  border-top-left-radius: 8px !important
 }
 
 .rcw-conversation-container .rcw-header .rcw-title {
@@ -198,7 +200,8 @@
   bottom: 0 !important;
   padding: 16px !important;
   height: 32px !important;
-  border-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
   border-top: 1px solid #cddae5 !important;
   box-sizing: unset !important
 }
@@ -286,4 +289,4 @@
   font-size: 13px !important
 }
 
-/*# sourceMappingURL=main.0f0e3f81.chunk.css.map */
+/*# sourceMappingURL=main.83a87184.chunk.css.map */
