@@ -48,7 +48,8 @@
   color: #5d7283 !important;
   border-radius: 4px !important;
   margin: -16px -16px 0 !important;
-  position: fixed !important
+  position: fixed !important;
+  box-sizing: unset !important
 }
 
 .rcw-info {
@@ -282,4 +283,4 @@
   font-size: 13px !important
 }
 
-/*# sourceMappingURL=main.f5e59635.chunk.css.map */
+/*# sourceMappingURL=main.74891fb9.chunk.css.map */
