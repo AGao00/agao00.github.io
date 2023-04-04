@@ -156,7 +156,8 @@
   color: #000 !important;
   padding: 16px 0 !important;
   text-align: left !important;
-  border-bottom: 1px solid #cddae5 !important
+  border-bottom: 1px solid #cddae5 !important;
+  border-radius: 8px !important
 }
 
 .rcw-conversation-container .rcw-header .rcw-title {
@@ -197,7 +198,7 @@
   bottom: 0 !important;
   padding: 16px !important;
   height: 32px !important;
-  border-radius: 0 !important;
+  border-radius: 8px !important;
   border-top: 1px solid #cddae5 !important;
   box-sizing: unset !important
 }
@@ -263,7 +264,8 @@
 }
 
 .quick-buttons-container {
-  padding: 16px !important
+  padding: 16px !important;
+  border-radius: 8px !important
 }
 
 .rcw-sources-title {
@@ -284,4 +286,4 @@
   font-size: 13px !important
 }
 
-/*# sourceMappingURL=main.dbd67084.chunk.css.map */
+/*# sourceMappingURL=main.0f0e3f81.chunk.css.map */
