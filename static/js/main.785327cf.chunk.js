@@ -455,15 +455,15 @@
                         xmlns: "http://www.w3.org/2000/svg",
                         "aria-hidden": "true",
                         focusable: "false",
-                        class: "rcw-info",
+                        className: "rcw-info",
                       },
                       o.a.createElement("path", {
                         d: "M7.25 11V7h1.5v4h-1.5zM8 4.5A.75.75 0 118 6a.75.75 0 010-1.5z",
                         fill: "currentColor",
                       }),
                       o.a.createElement("path", {
-                        "fill-rule": "evenodd",
-                        "clip-rule": "evenodd",
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
                         d: "M0 8a8 8 0 1116 0A8 8 0 010 8zm8-6.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z",
                         fill: "currentColor",
                       })
@@ -598,11 +598,9 @@
       var C = new IntersectionObserver(
           function (e) {
             e[0].isIntersecting
-              ? (console.log("Element has just become visible in screen"),
-                y()(".rcw-widget-container").css("position", "absolute"))
+              ? y()(".rcw-widget-container").css("position", "absolute")
               : e[0].isIntersecting ||
-                (console.log("Element has just become invisible in screen"),
-                y()(".rcw-widget-container").css("position", "fixed"));
+                y()(".rcw-widget-container").css("position", "fixed");
           },
           { threshold: [0] }
         ),
@@ -757,4 +755,4 @@
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.e8a98e88.chunk.js.map
+//# sourceMappingURL=main.d8f04250.chunk.js.map

@@ -8,8 +8,21 @@
   position: sticky !important
 }
 
+.rcw-close-button {
+  display: none !important
+}
+
 .rcw-widget-container {
-  max-width: 440px !important
+  max-width: 440px !important;
+  right: 32px !important;
+  bottom: 32px !important;
+  margin: 0 !important
+}
+
+@media screen and (max-width:800px) {
+  .rcw-widget-container.rcw-opened {
+    height: auto !important
+  }
 }
 
 .rcw-question-separator {
@@ -269,4 +282,4 @@
   font-size: 13px !important
 }
 
-/*# sourceMappingURL=main.fe7472c4.chunk.css.map */
+/*# sourceMappingURL=main.f5e59635.chunk.css.map */
