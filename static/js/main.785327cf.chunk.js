@@ -595,16 +595,16 @@
         document.querySelector(".rcw-loading").parentElement.remove(),
           Object(d.renderCustomComponent)(x, {}, !0);
       }
-      var C = new IntersectionObserver(
-          function (e) {
-            e[0].isIntersecting
-              ? y()(".rcw-widget-container").css("position", "absolute")
-              : e[0].isIntersecting ||
-                y()(".rcw-widget-container").css("position", "fixed");
-          },
-          { threshold: [0] }
-        ),
-        S = (function (e) {
+      new IntersectionObserver(
+        function (e) {
+          e[0].isIntersecting
+            ? y()(".rcw-widget-container").css("position", "absolute")
+            : e[0].isIntersecting ||
+              y()(".rcw-widget-container").css("position", "fixed");
+        },
+        { threshold: [0] }
+      );
+      var C = (function (e) {
           Object(h.a)(r, e);
           var t = Object(f.a)(r);
           function r() {
@@ -646,9 +646,10 @@
                     (Object(d.renderCustomComponent)(b),
                     Object(d.renderCustomComponent)(k, {}, !0),
                     (w = !0)),
-                    document.addEventListener("DOMContentLoaded", function () {
-                      C.observe(document.querySelector("footer#footer"));
-                    });
+                    document.addEventListener(
+                      "DOMContentLoaded",
+                      function () {}
+                    );
                 },
               },
               {
@@ -749,10 +750,10 @@
             r
           );
         })(n.Component),
-        _ = document.getElementById("rcw-root");
-      i.a.render(o.a.createElement(S, null), _);
+        S = document.getElementById("rcw-root");
+      i.a.render(o.a.createElement(C, null), S);
     },
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.d8f04250.chunk.js.map
+//# sourceMappingURL=main.9b082981.chunk.js.map
