@@ -8,6 +8,10 @@
   position: sticky !important
 }
 
+.rcw-widget-container {
+  max-width: 440px !important
+}
+
 .rcw-question-separator {
   background-color: #cddae5 !important;
   width: 332px !important;
@@ -15,22 +19,30 @@
   border: none !important
 }
 
+.rcw-message:has(.rcw-disclaimer-info) {
+  height: 49px !important
+}
+
 .rcw-disclaimer-info {
-  border: 1px solid #cddae5 !important;
+  width: 408px;
+  border-bottom: 1px solid #cddae5 !important;
   padding: 16px !important;
   text-align: left !important;
   float: right !important;
   font-size: 12px !important;
+  line-height: 16px !important;
+  background: #f2f5f7;
   color: #5d7283 !important;
   border-radius: 4px !important;
-  margin: 0 8px !important
+  margin: -16px -16px 0 !important;
+  position: fixed !important
 }
 
 .rcw-info {
-  width: 24px !important;
-  height: 24px !important;
+  width: 20px !important;
+  height: 20px !important;
   float: left !important;
-  padding: 16px 16px 16px 0 !important;
+  padding: 6px 16px 0 0 !important;
   box-sizing: unset !important
 }
 
@@ -141,12 +153,12 @@
 }
 
 .rcw-conversation-container {
-  max-width: 380px !important;
-  max-height: 560px !important;
+  max-width: 440px !important;
+  height: 620px !important;
   margin-bottom: 16px !important;
   background: #fff !important;
   box-shadow: 0 4px 16px rgba(31, 39, 45, .12) !important;
-  border-radius: 4px !important
+  border-radius: 8px !important
 }
 
 .rcw-send-icon {
@@ -166,9 +178,12 @@
 }
 
 .rcw-sender {
-  border-radius: 0 !important;
+  position: fixed !important;
+  width: 408px !important;
+  bottom: 0 !important;
   padding: 16px !important;
   height: 32px !important;
+  border-radius: 0 !important;
   border-top: 1px solid #cddae5 !important;
   box-sizing: unset !important
 }
@@ -181,7 +196,9 @@
 }
 
 .rcw-messages-container {
-  padding-top: 0 !important
+  padding-top: 0 !important;
+  max-height: 502px !important;
+  height: auto !important
 }
 
 .rcw-conversation-container .avatar {
@@ -252,4 +269,4 @@
   font-size: 13px !important
 }
 
-/*# sourceMappingURL=main.9d177245.chunk.css.map */
+/*# sourceMappingURL=main.fe7472c4.chunk.css.map */
