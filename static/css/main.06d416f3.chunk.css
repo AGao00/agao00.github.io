@@ -230,7 +230,8 @@
 .rcw-avatar {
   padding: 8px;
   margin: 0 8px !important;
-  background: #fff5f7 !important
+  background: #fff5f7 !important;
+  position: inherit !important
 }
 
 .rcw-custom-launcher {
@@ -283,4 +284,4 @@
   font-size: 13px !important
 }
 
-/*# sourceMappingURL=main.74891fb9.chunk.css.map */
+/*# sourceMappingURL=main.dbd67084.chunk.css.map */
