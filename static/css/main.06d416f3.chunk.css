@@ -30,10 +30,6 @@
   border: none !important
 }
 
-.rcw-message:has(.rcw-disclaimer-info) {
-  height: 49px !important
-}
-
 .rcw-disclaimer-info {
   width: 408px;
   border-bottom: 1px solid #cddae5 !important;
@@ -170,7 +166,7 @@
 
 .rcw-conversation-container {
   max-width: 440px !important;
-  height: 620px !important;
+  height: 620px;
   margin-bottom: 16px !important;
   background: #fff !important;
   box-shadow: 0 4px 16px rgba(31, 39, 45, .12) !important;
@@ -288,4 +284,4 @@
   font-size: 13px !important
 }
 
-/*# sourceMappingURL=main.9aa13ac1.chunk.css.map */
+/*# sourceMappingURL=main.bd43f0cb.chunk.css.map */
