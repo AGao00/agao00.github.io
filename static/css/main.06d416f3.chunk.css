@@ -69,6 +69,7 @@
   border-radius: 8px !important
 }
 
+.rcw-response .rcw-message-text ol li,
 .rcw-response .rcw-message-text p {
   font-weight: 400 !important;
   font-size: 13px !important;
@@ -287,4 +288,4 @@
   font-size: 13px !important
 }
 
-/*# sourceMappingURL=main.c7b04a48.chunk.css.map */
+/*# sourceMappingURL=main.9aa13ac1.chunk.css.map */
