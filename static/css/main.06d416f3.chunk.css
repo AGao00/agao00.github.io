@@ -233,6 +233,16 @@
   position: inherit !important
 }
 
+.rcw-custom-launcher:hover {
+  cursor: pointer;
+  background: #e4ecf1 !important;
+  box-shadow: 0 4px 16px rgba(31, 39, 45, .12) !important
+}
+
+.rcw-custom-launcher:hover .rcw-tooltip {
+  visibility: visible
+}
+
 .rcw-custom-launcher {
   width: 50px !important;
   height: 50px !important;
@@ -284,4 +294,33 @@
   font-size: 13px !important
 }
 
-/*# sourceMappingURL=main.5b956e6f.chunk.css.map */
+.rcw-tooltip {
+  visibility: hidden;
+  width: 248px;
+  background: #1f262d;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  top: 10px;
+  right: 120%;
+  position: absolute;
+  z-index: 1;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: hsla(0, 0%, 100%, .84)
+}
+
+.rcw-tooltip:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border: 5px solid transparent;
+  border-left-color: #1f262d
+}
+
+/*# sourceMappingURL=main.5bf7ab41.chunk.css.map */
