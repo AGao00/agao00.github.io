@@ -9,9 +9,9 @@
       "use strict";
       r.r(t);
       var n = r(0),
-        o = r.n(n),
-        a = r(8),
-        i = r.n(a),
+        a = r.n(n),
+        o = r(8),
+        i = r.n(o),
         c = (r(19), r(9)),
         s = r(12),
         u = r(3),
@@ -22,10 +22,10 @@
         m = r(10),
         p = r(11),
         v = r(2),
-        y = r.n(v);
+        g = r.n(v);
       r(20);
-      function w() {
-        w = function () {
+      function y() {
+        y = function () {
           return e;
         };
         var e = {},
@@ -36,10 +36,10 @@
             function (e, t, r) {
               e[t] = r.value;
             },
-          o = "function" == typeof Symbol ? Symbol : {},
-          a = o.iterator || "@@iterator",
-          i = o.asyncIterator || "@@asyncIterator",
-          c = o.toStringTag || "@@toStringTag";
+          a = "function" == typeof Symbol ? Symbol : {},
+          o = a.iterator || "@@iterator",
+          i = a.asyncIterator || "@@asyncIterator",
+          c = a.toStringTag || "@@toStringTag";
         function s(e, t, r) {
           return (
             Object.defineProperty(e, t, {
@@ -53,22 +53,22 @@
         }
         try {
           s({}, "");
-        } catch (S) {
+        } catch (C) {
           s = function (e, t, r) {
             return (e[t] = r);
           };
         }
-        function u(e, t, r, o) {
-          var a = t && t.prototype instanceof d ? t : d,
-            i = Object.create(a.prototype),
-            c = new L(o || []);
+        function u(e, t, r, a) {
+          var o = t && t.prototype instanceof d ? t : d,
+            i = Object.create(o.prototype),
+            c = new L(a || []);
           return n(i, "_invoke", { value: k(e, r, c) }), i;
         }
         function l(e, t, r) {
           try {
             return { type: "normal", arg: e.call(t, r) };
-          } catch (S) {
-            return { type: "throw", arg: S };
+          } catch (C) {
+            return { type: "throw", arg: C };
           }
         }
         e.wrap = u;
@@ -77,13 +77,13 @@
         function f() {}
         function m() {}
         var p = {};
-        s(p, a, function () {
+        s(p, o, function () {
           return this;
         });
         var v = Object.getPrototypeOf,
-          y = v && v(v(N([])));
-        y && y !== t && r.call(y, a) && (p = y);
-        var g = (m.prototype = d.prototype = Object.create(p));
+          g = v && v(v(N([])));
+        g && g !== t && r.call(g, o) && (p = g);
+        var w = (m.prototype = d.prototype = Object.create(p));
         function b(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -92,13 +92,13 @@
           });
         }
         function E(e, t) {
-          var o;
+          var a;
           n(this, "_invoke", {
-            value: function (n, a) {
+            value: function (n, o) {
               function i() {
-                return new t(function (o, i) {
-                  !(function n(o, a, i, c) {
-                    var s = l(e[o], e, a);
+                return new t(function (a, i) {
+                  !(function n(a, o, i, c) {
+                    var s = l(e[a], e, o);
                     if ("throw" !== s.type) {
                       var u = s.arg,
                         h = u.value;
@@ -121,23 +121,23 @@
                           );
                     }
                     c(s.arg);
-                  })(n, a, o, i);
+                  })(n, o, a, i);
                 });
               }
-              return (o = o ? o.then(i, i) : i());
+              return (a = a ? a.then(i, i) : i());
             },
           });
         }
         function k(e, t, r) {
           var n = "suspendedStart";
-          return function (o, a) {
+          return function (a, o) {
             if ("executing" === n)
               throw new Error("Generator is already running");
             if ("completed" === n) {
-              if ("throw" === o) throw a;
-              return C();
+              if ("throw" === a) throw o;
+              return A();
             }
-            for (r.method = o, r.arg = a; ; ) {
+            for (r.method = a, r.arg = o; ; ) {
               var i = r.delegate;
               if (i) {
                 var c = O(i, r);
@@ -184,21 +184,21 @@
                   )))),
               h
             );
-          var o = l(n, e.iterator, t.arg);
-          if ("throw" === o.type)
+          var a = l(n, e.iterator, t.arg);
+          if ("throw" === a.type)
             return (
-              (t.method = "throw"), (t.arg = o.arg), (t.delegate = null), h
+              (t.method = "throw"), (t.arg = a.arg), (t.delegate = null), h
             );
-          var a = o.arg;
-          return a
-            ? a.done
-              ? ((t[e.resultName] = a.value),
+          var o = a.arg;
+          return o
+            ? o.done
+              ? ((t[e.resultName] = o.value),
                 (t.next = e.nextLoc),
                 "return" !== t.method &&
                   ((t.method = "next"), (t.arg = void 0)),
                 (t.delegate = null),
                 h)
-              : a
+              : o
             : ((t.method = "throw"),
               (t.arg = new TypeError("iterator result is not an object")),
               (t.delegate = null),
@@ -221,27 +221,27 @@
         }
         function N(e) {
           if (e) {
-            var t = e[a];
+            var t = e[o];
             if (t) return t.call(e);
             if ("function" == typeof e.next) return e;
             if (!isNaN(e.length)) {
               var n = -1,
-                o = function t() {
+                a = function t() {
                   for (; ++n < e.length; )
                     if (r.call(e, n)) return (t.value = e[n]), (t.done = !1), t;
                   return (t.value = void 0), (t.done = !0), t;
                 };
-              return (o.next = o);
+              return (a.next = a);
             }
           }
-          return { next: C };
+          return { next: A };
         }
-        function C() {
+        function A() {
           return { value: void 0, done: !0 };
         }
         return (
           (f.prototype = m),
-          n(g, "constructor", { value: m, configurable: !0 }),
+          n(w, "constructor", { value: m, configurable: !0 }),
           n(m, "constructor", { value: f, configurable: !0 }),
           (f.displayName = s(m, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
@@ -256,7 +256,7 @@
               Object.setPrototypeOf
                 ? Object.setPrototypeOf(e, m)
                 : ((e.__proto__ = m), s(e, c, "GeneratorFunction")),
-              (e.prototype = Object.create(g)),
+              (e.prototype = Object.create(w)),
               e
             );
           }),
@@ -268,21 +268,21 @@
             return this;
           }),
           (e.AsyncIterator = E),
-          (e.async = function (t, r, n, o, a) {
-            void 0 === a && (a = Promise);
-            var i = new E(u(t, r, n, o), a);
+          (e.async = function (t, r, n, a, o) {
+            void 0 === o && (o = Promise);
+            var i = new E(u(t, r, n, a), o);
             return e.isGeneratorFunction(r)
               ? i
               : i.next().then(function (e) {
                   return e.done ? e.value : i.next();
                 });
           }),
-          b(g),
-          s(g, c, "Generator"),
-          s(g, a, function () {
+          b(w),
+          s(w, c, "Generator"),
+          s(w, o, function () {
             return this;
           }),
-          s(g, "toString", function () {
+          s(w, "toString", function () {
             return "[object Generator]";
           }),
           (e.keys = function (e) {
@@ -339,49 +339,49 @@
                   !!n
                 );
               }
-              for (var o = this.tryEntries.length - 1; o >= 0; --o) {
-                var a = this.tryEntries[o],
-                  i = a.completion;
-                if ("root" === a.tryLoc) return n("end");
-                if (a.tryLoc <= this.prev) {
-                  var c = r.call(a, "catchLoc"),
-                    s = r.call(a, "finallyLoc");
+              for (var a = this.tryEntries.length - 1; a >= 0; --a) {
+                var o = this.tryEntries[a],
+                  i = o.completion;
+                if ("root" === o.tryLoc) return n("end");
+                if (o.tryLoc <= this.prev) {
+                  var c = r.call(o, "catchLoc"),
+                    s = r.call(o, "finallyLoc");
                   if (c && s) {
-                    if (this.prev < a.catchLoc) return n(a.catchLoc, !0);
-                    if (this.prev < a.finallyLoc) return n(a.finallyLoc);
+                    if (this.prev < o.catchLoc) return n(o.catchLoc, !0);
+                    if (this.prev < o.finallyLoc) return n(o.finallyLoc);
                   } else if (c) {
-                    if (this.prev < a.catchLoc) return n(a.catchLoc, !0);
+                    if (this.prev < o.catchLoc) return n(o.catchLoc, !0);
                   } else {
                     if (!s)
                       throw new Error("try statement without catch or finally");
-                    if (this.prev < a.finallyLoc) return n(a.finallyLoc);
+                    if (this.prev < o.finallyLoc) return n(o.finallyLoc);
                   }
                 }
               }
             },
             abrupt: function (e, t) {
               for (var n = this.tryEntries.length - 1; n >= 0; --n) {
-                var o = this.tryEntries[n];
+                var a = this.tryEntries[n];
                 if (
-                  o.tryLoc <= this.prev &&
-                  r.call(o, "finallyLoc") &&
-                  this.prev < o.finallyLoc
+                  a.tryLoc <= this.prev &&
+                  r.call(a, "finallyLoc") &&
+                  this.prev < a.finallyLoc
                 ) {
-                  var a = o;
+                  var o = a;
                   break;
                 }
               }
-              a &&
+              o &&
                 ("break" === e || "continue" === e) &&
-                a.tryLoc <= t &&
-                t <= a.finallyLoc &&
-                (a = null);
-              var i = a ? a.completion : {};
+                o.tryLoc <= t &&
+                t <= o.finallyLoc &&
+                (o = null);
+              var i = o ? o.completion : {};
               return (
                 (i.type = e),
                 (i.arg = t),
-                a
-                  ? ((this.method = "next"), (this.next = a.finallyLoc), h)
+                o
+                  ? ((this.method = "next"), (this.next = o.finallyLoc), h)
                   : this.complete(i)
               );
             },
@@ -411,10 +411,10 @@
                 if (r.tryLoc === e) {
                   var n = r.completion;
                   if ("throw" === n.type) {
-                    var o = n.arg;
+                    var a = n.arg;
                     x(r);
                   }
-                  return o;
+                  return a;
                 }
               }
               throw new Error("illegal catch attempt");
@@ -430,8 +430,8 @@
           e
         );
       }
-      var g = !1,
-        b = (function (e) {
+      var w = !1;
+      var b = (function (e) {
           Object(h.a)(r, e);
           var t = Object(d.a)(r);
           function r() {
@@ -442,10 +442,10 @@
               {
                 key: "render",
                 value: function () {
-                  return o.a.createElement(
+                  return a.a.createElement(
                     "div",
                     { className: "rcw-disclaimer-info" },
-                    o.a.createElement(
+                    a.a.createElement(
                       "svg",
                       {
                         width: "1em",
@@ -457,18 +457,18 @@
                         focusable: "false",
                         className: "rcw-info",
                       },
-                      o.a.createElement("path", {
+                      a.a.createElement("path", {
                         d: "M7.25 11V7h1.5v4h-1.5zM8 4.5A.75.75 0 118 6a.75.75 0 010-1.5z",
                         fill: "currentColor",
                       }),
-                      o.a.createElement("path", {
+                      a.a.createElement("path", {
                         fillRule: "evenodd",
                         clipRule: "evenodd",
                         d: "M0 8a8 8 0 1116 0A8 8 0 010 8zm8-6.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z",
                         fill: "currentColor",
                       })
                     ),
-                    o.a.createElement(
+                    a.a.createElement(
                       "div",
                       null,
                       "This trained assistant model may display inaccurate or offensive information that doesn\u2019t represent Databricks views."
@@ -491,7 +491,7 @@
               {
                 key: "render",
                 value: function () {
-                  return o.a.createElement("div", {
+                  return a.a.createElement("div", {
                     className: "rcw-response rcw-message-text rcw-loading",
                   });
                 },
@@ -511,7 +511,7 @@
               {
                 key: "render",
                 value: function () {
-                  return o.a.createElement(
+                  return a.a.createElement(
                     "a",
                     {
                       href: this.props.url,
@@ -528,14 +528,14 @@
           );
         })(n.Component);
       function O() {
-        y()(window).height() >= 850
-          ? (y()(".rcw-conversation-container").height("620px"),
-            y()(".rcw-messages-container").height("502px"))
-          : (y()(".rcw-conversation-container").height(
-              "".concat(y()(window).height() - 210, "px")
+        g()(window).height() >= 850
+          ? (g()(".rcw-conversation-container").height("620px"),
+            g()(".rcw-messages-container").height("502px"))
+          : (g()(".rcw-conversation-container").height(
+              "".concat(g()(window).height() - 210, "px")
             ),
-            y()(".rcw-messages-container").height(
-              "".concat(y()(window).height() - 328, "px")
+            g()(".rcw-messages-container").height(
+              "".concat(g()(window).height() - 328, "px")
             ));
       }
       var j = new MutationObserver(function () {
@@ -544,95 +544,95 @@
         ) &&
           (O(),
           window.addEventListener("resize", O, !0),
-          (y()(".rcw-disclaimer-info").parent()[0].style.height = "49px"),
+          (g()(".rcw-disclaimer-info").parent()[0].style.height = "49px"),
           j.disconnect());
       });
       function x(e) {
         var t = e.answer,
           r = e.sources;
-        return o.a.createElement(
+        return a.a.createElement(
           "div",
           { className: "rcw-response" },
-          o.a.createElement("div", {
+          a.a.createElement("div", {
             className: "rcw-message-text",
             dangerouslySetInnerHTML: { __html: p.sanitize(m.marked.parse(t)) },
           }),
           r.length > 0
-            ? o.a.createElement(
+            ? a.a.createElement(
                 "div",
                 { className: "rcw-sources" },
-                o.a.createElement(
+                a.a.createElement(
                   "div",
                   { className: "rcw-sources-title" },
                   "Source".concat(1 === r.length ? "" : "s")
                 ),
                 r.map(function (e) {
-                  return o.a.createElement(k, { url: e });
+                  return a.a.createElement(k, { url: e });
                 })
               )
             : null
         );
       }
       function L() {
-        return o.a.createElement(
+        return a.a.createElement(
           "div",
           { className: "rcw-response" },
-          o.a.createElement(
+          a.a.createElement(
             "div",
             { className: "rcw-message-text" },
             "Hi, I'm Databricks AI Assistant. You can ask me questions you have about using Databricks. ",
-            o.a.createElement("br", null),
-            o.a.createElement("br", null),
+            a.a.createElement("br", null),
+            a.a.createElement("br", null),
             " Some questions you could try: ",
-            o.a.createElement("br", null),
+            a.a.createElement("br", null),
             " 1. How do I load files into Databricks? ",
-            o.a.createElement("br", null),
+            a.a.createElement("br", null),
             " 2. How do you deploy my model for serving? ",
-            o.a.createElement("br", null),
+            a.a.createElement("br", null),
             " 3. How I convert my files to parquet files?"
           )
         );
       }
       function N() {
-        return o.a.createElement(
+        return a.a.createElement(
           "div",
           { className: "rcw-response" },
-          o.a.createElement(
+          a.a.createElement(
             "div",
             { className: "rcw-message-text" },
             "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
             " ",
-            o.a.createElement(k, {
+            a.a.createElement(k, {
               url: "https://docs.databricks.com",
               name: "Databricks Documentation",
             }),
             " ",
             "or",
             " ",
-            o.a.createElement(k, {
+            a.a.createElement(k, {
               url: "https://kb.databricks.com",
               name: "Databricks Knowledge Base",
             })
           )
         );
       }
-      function C() {
-        return o.a.createElement(
+      function A() {
+        return a.a.createElement(
           "div",
           { className: "rcw-response" },
-          o.a.createElement(
+          a.a.createElement(
             "div",
             { className: "rcw-message-text" },
             "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
             " ",
-            o.a.createElement(k, {
+            a.a.createElement(k, {
               url: "https://learn.microsoft.com/en-us/azure/databricks",
               name: "Databricks on Azure",
             }),
             " ",
             "and",
             " ",
-            o.a.createElement(k, {
+            a.a.createElement(k, {
               url: "https://docs.gcp.databricks.com",
               name: "Databricks on GCP",
             }),
@@ -641,25 +641,25 @@
           )
         );
       }
-      function S() {
-        return o.a.createElement("hr", { className: "rcw-question-separator" });
+      function C() {
+        return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function _() {
+      function S() {
         document.querySelector(".rcw-loading") &&
           document.querySelector(".rcw-loading").parentElement.remove();
       }
-      function A(e) {
-        _(),
+      function _(e) {
+        S(),
           e
-            ? Object(f.renderCustomComponent)(C, {}, !0)
+            ? Object(f.renderCustomComponent)(A, {}, !0)
             : Object(f.renderCustomComponent)(N, {}, !0);
       }
       new IntersectionObserver(
         function (e) {
           e[0].isIntersecting
-            ? y()(".rcw-widget-container").css("position", "absolute")
+            ? g()(".rcw-widget-container").css("position", "absolute")
             : e[0].isIntersecting ||
-              y()(".rcw-widget-container").css("position", "fixed");
+              g()(".rcw-widget-container").css("position", "fixed");
         },
         { threshold: [0] }
       );
@@ -669,29 +669,31 @@
           function r() {
             var e;
             Object(u.a)(this, r);
-            for (var n = arguments.length, o = new Array(n), a = 0; a < n; a++)
-              o[a] = arguments[a];
+            for (var n = arguments.length, a = new Array(n), o = 0; o < n; o++)
+              a[o] = arguments[o];
             return (
-              ((e = t.call.apply(t, [this].concat(o))).handleNewUserMessage =
-                function (t) {
+              ((e = t.call.apply(t, [this].concat(a))).state = {
+                receivedFirstMessage: !1,
+              }),
+              (e.handleNewUserMessage = function (t) {
+                Object(f.renderCustomComponent)(E, {}, !0),
                   (document.querySelector(".rcw-sender").style.visibility =
                     "hidden"),
-                    Object(f.renderCustomComponent)(E, {}, !0),
-                    e.fetchAnswer(t, function () {
-                      (document.querySelector(".rcw-sender").style.display =
-                        "none"),
-                        Object(f.setQuickButtons)([
-                          { label: "Ask another question", value: "" },
-                        ]);
-                    });
-                }),
+                  e.fetchAnswer(t, function () {
+                    (document.querySelector(".rcw-sender").style.display =
+                      "none"),
+                      Object(f.setQuickButtons)([
+                        { label: "Ask another question", value: "" },
+                      ]);
+                  });
+              }),
               (e.handleQuickButtonClicked = function () {
                 Object(f.setQuickButtons)([]),
                   (document.querySelector(".rcw-sender").style.visibility =
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
-                  Object(f.renderCustomComponent)(S);
+                  Object(f.renderCustomComponent)(C);
               }),
               e
             );
@@ -701,10 +703,10 @@
               {
                 key: "componentDidMount",
                 value: function () {
-                  g ||
+                  w ||
                     (Object(f.renderCustomComponent)(b),
                     Object(f.renderCustomComponent)(L, {}, !0),
-                    (g = !0)),
+                    (w = !0)),
                     document.addEventListener(
                       "DOMContentLoaded",
                       function () {}
@@ -715,42 +717,55 @@
                 key: "fetchAnswer",
                 value: (function () {
                   var e = Object(c.a)(
-                    w().mark(function e(t, r) {
-                      return w().wrap(function (e) {
-                        for (;;)
-                          switch ((e.prev = e.next)) {
-                            case 0:
-                              fetch("https://chatapi.databricks.com/doc_qa", {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify({ question: t }),
-                              })
-                                .then(function (e) {
-                                  e.text().then(function (e) {
-                                    var t = JSON.parse(e);
-                                    t.related_to_azure_gcp
-                                      ? A(!0)
-                                      : t.has_answer
-                                      ? (_(),
-                                        Object(f.renderCustomComponent)(
-                                          x,
-                                          t,
-                                          !0
-                                        ))
-                                      : A(!1);
+                    y().mark(function e(t, r) {
+                      var n = this;
+                      return y().wrap(
+                        function (e) {
+                          for (;;)
+                            switch ((e.prev = e.next)) {
+                              case 0:
+                                fetch("https://chatapi.databricks.com/doc_qa", {
+                                  method: "POST",
+                                  headers: {
+                                    "Content-Type": "application/json",
+                                  },
+                                  body: JSON.stringify({
+                                    question: t,
+                                    is_first_message:
+                                      !this.state.receivedFirstMessage,
+                                  }),
+                                })
+                                  .then(function (e) {
+                                    e.text().then(function (e) {
+                                      var t = JSON.parse(e);
+                                      t.related_to_azure_gcp
+                                        ? _(!0)
+                                        : t.has_answer
+                                        ? (S(),
+                                          Object(f.renderCustomComponent)(
+                                            x,
+                                            t,
+                                            !0
+                                          ))
+                                        : _(!1);
+                                    });
+                                  })
+                                  .catch(function () {
+                                    _(!1);
+                                  })
+                                  .finally(function () {
+                                    n.setState({ receivedFirstMessage: !0 }),
+                                      S(),
+                                      r();
                                   });
-                                })
-                                .catch(function () {
-                                  A(!1);
-                                })
-                                .finally(function () {
-                                  _(), r();
-                                });
-                            case 1:
-                            case "end":
-                              return e.stop();
-                          }
-                      }, e);
+                              case 1:
+                              case "end":
+                                return e.stop();
+                            }
+                        },
+                        e,
+                        this
+                      );
                     })
                   );
                   return function (t, r) {
@@ -761,53 +776,62 @@
               {
                 key: "render",
                 value: function () {
-                  return o.a.createElement(
-                    "div",
-                    { className: "LLMAssistantWidget" },
-                    o.a.createElement(f.Widget, {
-                      handleNewUserMessage: this.handleNewUserMessage,
-                      handleQuickButtonClicked: this.handleQuickButtonClicked,
-                      title: "Databricks AI Assistant",
-                      subtitle: "",
-                      profileAvatar:
-                        "https://agao00.github.io/static/media/dblogo.56ac0149.jpg",
-                      titleAvatar:
-                        "https://agao00.github.io/static/media/dblogo.56ac0149.jpg",
-                      launcher: function (e) {
-                        return (function (e) {
-                          var t = Object(n.useState)(!1),
-                            r = Object(s.a)(t, 2),
-                            a = r[0],
-                            i = r[1];
-                          return o.a.createElement(
-                            "button",
-                            {
-                              className: "rcw-custom-launcher",
-                              onClick: function () {
-                                i(!a),
-                                  e(),
-                                  j.observe(
-                                    document.querySelector("#rcw-root"),
-                                    { subtree: !0, childList: !0 }
-                                  );
-                              },
-                            },
-                            a
-                              ? o.a.createElement("img", {
-                                  className: "rcw-close-launcher",
-                                  src: "https://agao00.github.io/static/media/chevron-down.041d46cd.svg",
-                                  alt: "close",
-                                })
-                              : o.a.createElement("img", {
-                                  className: "rcw-open-launcher",
-                                  src: "https://agao00.github.io/static/media/speech-bubble-plus.6df5d2c6.svg",
-                                  alt: "open",
-                                })
-                          );
-                        })(e);
-                      },
-                    })
-                  );
+                  return navigator.userAgent.match(/Android/i) ||
+                    navigator.userAgent.match(/webOS/i) ||
+                    navigator.userAgent.match(/iPhone/i) ||
+                    navigator.userAgent.match(/iPad/i) ||
+                    navigator.userAgent.match(/iPod/i) ||
+                    navigator.userAgent.match(/BlackBerry/i) ||
+                    navigator.userAgent.match(/Windows Phone/i)
+                    ? null
+                    : a.a.createElement(
+                        "div",
+                        { className: "LLMAssistantWidget" },
+                        a.a.createElement(f.Widget, {
+                          handleNewUserMessage: this.handleNewUserMessage,
+                          handleQuickButtonClicked:
+                            this.handleQuickButtonClicked,
+                          title: "Databricks AI Assistant",
+                          subtitle: "",
+                          profileAvatar:
+                            "https://agao00.github.io/static/media/dblogo.56ac0149.jpg",
+                          titleAvatar:
+                            "https://agao00.github.io/static/media/dblogo.56ac0149.jpg",
+                          launcher: function (e) {
+                            return (function (e) {
+                              var t = Object(n.useState)(!1),
+                                r = Object(s.a)(t, 2),
+                                o = r[0],
+                                i = r[1];
+                              return a.a.createElement(
+                                "button",
+                                {
+                                  className: "rcw-custom-launcher",
+                                  onClick: function () {
+                                    i(!o),
+                                      e(),
+                                      j.observe(
+                                        document.querySelector("#rcw-root"),
+                                        { subtree: !0, childList: !0 }
+                                      );
+                                  },
+                                },
+                                o
+                                  ? a.a.createElement("img", {
+                                      className: "rcw-close-launcher",
+                                      src: "https://agao00.github.io/static/media/chevron-down.041d46cd.svg",
+                                      alt: "close",
+                                    })
+                                  : a.a.createElement("img", {
+                                      className: "rcw-open-launcher",
+                                      src: "https://agao00.github.io/static/media/speech-bubble-plus.6df5d2c6.svg",
+                                      alt: "open",
+                                    })
+                              );
+                            })(e);
+                          },
+                        })
+                      );
                 },
               },
             ]),
@@ -815,9 +839,9 @@
           );
         })(n.Component),
         I = document.getElementById("rcw-root");
-      i.a.render(o.a.createElement(q, null), I);
+      i.a.render(a.a.createElement(q, null), I);
     },
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.e774b96f.chunk.js.map
+//# sourceMappingURL=main.a40c99cf.chunk.js.map
