@@ -53,7 +53,7 @@
         }
         try {
           s({}, "");
-        } catch (C) {
+        } catch (j) {
           s = function (e, t, n) {
             return (e[t] = n);
           };
@@ -61,14 +61,14 @@
         function u(e, t, n, a) {
           var o = t && t.prototype instanceof d ? t : d,
             i = Object.create(o.prototype),
-            c = new L(a || []);
+            c = new A(a || []);
           return r(i, "_invoke", { value: k(e, n, c) }), i;
         }
         function l(e, t, n) {
           try {
             return { type: "normal", arg: e.call(t, n) };
-          } catch (C) {
-            return { type: "throw", arg: C };
+          } catch (j) {
+            return { type: "throw", arg: j };
           }
         }
         e.wrap = u;
@@ -81,7 +81,7 @@
           return this;
         });
         var v = Object.getPrototypeOf,
-          y = v && v(v(A([])));
+          y = v && v(v(L([])));
         y && y !== t && n.call(y, o) && (p = y);
         var w = (m.prototype = d.prototype = Object.create(p));
         function b(e) {
@@ -135,7 +135,7 @@
               throw new Error("Generator is already running");
             if ("completed" === r) {
               if ("throw" === a) throw o;
-              return j();
+              return C();
             }
             for (n.method = a, n.arg = o; ; ) {
               var i = n.delegate;
@@ -214,12 +214,12 @@
           var t = e.completion || {};
           (t.type = "normal"), delete t.arg, (e.completion = t);
         }
-        function L(e) {
+        function A(e) {
           (this.tryEntries = [{ tryLoc: "root" }]),
             e.forEach(O, this),
             this.reset(!0);
         }
-        function A(e) {
+        function L(e) {
           if (e) {
             var t = e[o];
             if (t) return t.call(e);
@@ -234,9 +234,9 @@
               return (a.next = a);
             }
           }
-          return { next: j };
+          return { next: C };
         }
-        function j() {
+        function C() {
           return { value: void 0, done: !0 };
         }
         return (
@@ -300,9 +300,9 @@
               }
             );
           }),
-          (e.values = A),
-          (L.prototype = {
-            constructor: L,
+          (e.values = L),
+          (A.prototype = {
+            constructor: A,
             reset: function (e) {
               if (
                 ((this.prev = 0),
@@ -421,7 +421,7 @@
             },
             delegateYield: function (e, t, n) {
               return (
-                (this.delegate = { iterator: A(e), resultName: t, nextLoc: n }),
+                (this.delegate = { iterator: L(e), resultName: t, nextLoc: n }),
                 "next" === this.method && (this.arg = void 0),
                 h
               );
@@ -466,8 +466,8 @@
       function k(e) {
         E(),
           e
-            ? Object(f.renderCustomComponent)(A, {}, !0)
-            : Object(f.renderCustomComponent)(L, {}, !0);
+            ? Object(f.renderCustomComponent)(L, {}, !0)
+            : Object(f.renderCustomComponent)(A, {}, !0);
       }
       function x() {
         return a.a.createElement(
@@ -529,7 +529,7 @@
           )
         );
       }
-      function L() {
+      function A() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -538,21 +538,21 @@
             { className: "rcw-message-text" },
             "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
             " ",
-            a.a.createElement(C, {
+            a.a.createElement(j, {
               url: "https://docs.databricks.com",
               name: "Databricks Documentation",
             }),
             " ",
             "or",
             " ",
-            a.a.createElement(C, {
+            a.a.createElement(j, {
               url: "https://kb.databricks.com",
               name: "Databricks Knowledge Base",
             })
           )
         );
       }
-      function A() {
+      function L() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -561,14 +561,14 @@
             { className: "rcw-message-text" },
             "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
             " ",
-            a.a.createElement(C, {
+            a.a.createElement(j, {
               url: "https://learn.microsoft.com/en-us/azure/databricks",
               name: "Databricks on Azure",
             }),
             " ",
             "and",
             " ",
-            a.a.createElement(C, {
+            a.a.createElement(j, {
               url: "https://docs.gcp.databricks.com",
               name: "Databricks on GCP",
             }),
@@ -577,10 +577,10 @@
           )
         );
       }
-      function j() {
+      function C() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function C(e) {
+      function j(e) {
         var t = e.url,
           n = e.name;
         return a.a.createElement(
@@ -614,7 +614,7 @@
                   "Source".concat(1 === n.length ? "" : "s")
                 ),
                 n.map(function (e) {
-                  return a.a.createElement(C, { url: e });
+                  return a.a.createElement(j, { url: e });
                 })
               )
             : null
@@ -672,7 +672,7 @@
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
-                  Object(f.renderCustomComponent)(j);
+                  Object(f.renderCustomComponent)(C);
               }),
               e
             );
@@ -718,6 +718,7 @@
                 value: (function () {
                   var e = Object(c.a)(
                     g().mark(function e(t, n) {
+                      var r = this;
                       return g().wrap(
                         function (e) {
                           for (;;)
@@ -735,21 +736,27 @@
                                 })
                                   .then(function (e) {
                                     e.text().then(function (e) {
-                                      var t = JSON.parse(e);
-                                      t.related_to_azure_gcp
-                                        ? k(!0)
-                                        : t.has_answer
+                                      var n = JSON.parse(e);
+                                      n.related_to_azure_gcp
+                                        ? (k(!0),
+                                          r.addToChatHistory(
+                                            t,
+                                            "AZURE_GCP_RELATED"
+                                          ))
+                                        : n.has_answer
                                         ? (E(),
+                                          r.addToChatHistory(t, n),
                                           Object(f.renderCustomComponent)(
                                             S,
-                                            t,
+                                            n,
                                             !0
                                           ))
-                                        : k(!1);
+                                        : (k(!1),
+                                          r.addToChatHistory(t, "NO_ANSWER"));
                                     });
                                   })
                                   .catch(function () {
-                                    k(!1);
+                                    k(!1), r.addToChatHistory(t, "NO_ANSWER");
                                   })
                                   .finally(function () {
                                     E(), n();
@@ -849,4 +856,4 @@
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.e38ef653.chunk.js.map
+//# sourceMappingURL=main.fe2f1b0c.chunk.js.map
