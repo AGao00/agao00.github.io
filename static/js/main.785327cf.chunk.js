@@ -61,7 +61,7 @@
         function u(e, t, n, a) {
           var o = t && t.prototype instanceof d ? t : d,
             i = Object.create(o.prototype),
-            c = new A(a || []);
+            c = new N(a || []);
           return r(i, "_invoke", { value: k(e, n, c) }), i;
         }
         function l(e, t, n) {
@@ -81,7 +81,7 @@
           return this;
         });
         var v = Object.getPrototypeOf,
-          y = v && v(v(L([])));
+          y = v && v(v(C([])));
         y && y !== t && n.call(y, o) && (p = y);
         var w = (m.prototype = d.prototype = Object.create(p));
         function b(e) {
@@ -135,7 +135,7 @@
               throw new Error("Generator is already running");
             if ("completed" === r) {
               if ("throw" === a) throw o;
-              return C();
+              return L();
             }
             for (n.method = a, n.arg = o; ; ) {
               var i = n.delegate;
@@ -204,22 +204,22 @@
               (t.delegate = null),
               h);
         }
-        function O(e) {
+        function A(e) {
           var t = { tryLoc: e[0] };
           1 in e && (t.catchLoc = e[1]),
             2 in e && ((t.finallyLoc = e[2]), (t.afterLoc = e[3])),
             this.tryEntries.push(t);
         }
-        function N(e) {
+        function O(e) {
           var t = e.completion || {};
           (t.type = "normal"), delete t.arg, (e.completion = t);
         }
-        function A(e) {
+        function N(e) {
           (this.tryEntries = [{ tryLoc: "root" }]),
-            e.forEach(O, this),
+            e.forEach(A, this),
             this.reset(!0);
         }
-        function L(e) {
+        function C(e) {
           if (e) {
             var t = e[o];
             if (t) return t.call(e);
@@ -234,9 +234,9 @@
               return (a.next = a);
             }
           }
-          return { next: C };
+          return { next: L };
         }
-        function C() {
+        function L() {
           return { value: void 0, done: !0 };
         }
         return (
@@ -300,9 +300,9 @@
               }
             );
           }),
-          (e.values = L),
-          (A.prototype = {
-            constructor: A,
+          (e.values = C),
+          (N.prototype = {
+            constructor: N,
             reset: function (e) {
               if (
                 ((this.prev = 0),
@@ -312,7 +312,7 @@
                 (this.delegate = null),
                 (this.method = "next"),
                 (this.arg = void 0),
-                this.tryEntries.forEach(N),
+                this.tryEntries.forEach(O),
                 !e)
               )
                 for (var t in this)
@@ -402,7 +402,7 @@
               for (var t = this.tryEntries.length - 1; t >= 0; --t) {
                 var n = this.tryEntries[t];
                 if (n.finallyLoc === e)
-                  return this.complete(n.completion, n.afterLoc), N(n), h;
+                  return this.complete(n.completion, n.afterLoc), O(n), h;
               }
             },
             catch: function (e) {
@@ -412,7 +412,7 @@
                   var r = n.completion;
                   if ("throw" === r.type) {
                     var a = r.arg;
-                    N(n);
+                    O(n);
                   }
                   return a;
                 }
@@ -421,7 +421,7 @@
             },
             delegateYield: function (e, t, n) {
               return (
-                (this.delegate = { iterator: L(e), resultName: t, nextLoc: n }),
+                (this.delegate = { iterator: C(e), resultName: t, nextLoc: n }),
                 "next" === this.method && (this.arg = void 0),
                 h
               );
@@ -466,8 +466,8 @@
       function k(e) {
         E(),
           e
-            ? Object(f.renderCustomComponent)(L, {}, !0)
-            : Object(f.renderCustomComponent)(A, {}, !0);
+            ? Object(f.renderCustomComponent)(C, {}, !0)
+            : Object(f.renderCustomComponent)(N, {}, !0);
       }
       function x() {
         return a.a.createElement(
@@ -503,12 +503,12 @@
           )
         );
       }
-      function O() {
+      function A() {
         return a.a.createElement("div", {
           className: "rcw-response rcw-message-text rcw-loading",
         });
       }
-      function N() {
+      function O() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -529,7 +529,7 @@
           )
         );
       }
-      function A() {
+      function N() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -552,7 +552,7 @@
           )
         );
       }
-      function L() {
+      function C() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -577,7 +577,7 @@
           )
         );
       }
-      function C() {
+      function L() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
       function j(e) {
@@ -638,11 +638,12 @@
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              Object(f.renderCustomComponent)(O, {}, !0),
+                              Object(f.renderCustomComponent)(A, {}, !0),
                               (document.querySelector(
                                 ".rcw-sender"
                               ).style.visibility = "hidden"),
-                              (t.next = 4),
+                              e.addQuestionToChatHistory(n),
+                              (t.next = 5),
                               e.fetchAnswer(n, function () {
                                 (document.querySelector(
                                   ".rcw-sender"
@@ -655,7 +656,7 @@
                                   ]);
                               })
                             );
-                          case 4:
+                          case 5:
                           case "end":
                             return t.stop();
                         }
@@ -672,7 +673,7 @@
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
-                  Object(f.renderCustomComponent)(C);
+                  Object(f.renderCustomComponent)(L);
               }),
               e
             );
@@ -683,7 +684,7 @@
                 key: "componentDidMount",
                 value: function () {
                   Object(f.renderCustomComponent)(x),
-                    Object(f.renderCustomComponent)(N, {}, !0),
+                    Object(f.renderCustomComponent)(O, {}, !0),
                     document.addEventListener(
                       "DOMContentLoaded",
                       function () {}
@@ -691,18 +692,25 @@
                 },
               },
               {
-                key: "addToChatHistory",
-                value: function (e, t) {
-                  var n;
-                  (n =
-                    "NO_ANSWER" === t
+                key: "addQuestionToChatHistory",
+                value: function (e) {
+                  this.history.push({
+                    question: { question: e, timestamp: new Date().getTime() },
+                  });
+                },
+              },
+              {
+                key: "addAnswerToChatHistory",
+                value: function (e) {
+                  var t;
+                  (t =
+                    "NO_ANSWER" === e
                       ? "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in Databricks Documentation or Databricks Knowledge Base"
-                      : "AZURE_GCP_ANSWER" === t
+                      : "AZURE_GCP_ANSWER" === e
                       ? "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime."
-                      : t),
-                    this.history.push({
-                      question: e,
-                      answer: n,
+                      : e),
+                    (this.history[this.history.length - 1].answer = {
+                      answer: t,
                       timestamp: new Date().getTime(),
                     });
                 },
@@ -710,7 +718,11 @@
               {
                 key: "getChatHistory",
                 value: function () {
-                  return (this.history = this.history.slice(-3)), this.history;
+                  return (
+                    (this.history = this.history.slice(-4)),
+                    console.log(">>> history", this.history),
+                    this.history.slice(0, -1)
+                  );
                 },
               },
               {
@@ -736,27 +748,29 @@
                                 })
                                   .then(function (e) {
                                     e.text().then(function (e) {
-                                      var n = JSON.parse(e);
-                                      n.related_to_azure_gcp
+                                      var t = JSON.parse(e);
+                                      t.related_to_azure_gcp
                                         ? (k(!0),
-                                          r.addToChatHistory(
-                                            t,
+                                          r.addAnswerToChatHistory(
                                             "AZURE_GCP_RELATED"
                                           ))
-                                        : n.has_answer
+                                        : t.has_answer
                                         ? (E(),
-                                          r.addToChatHistory(t, n),
+                                          r.addAnswerToChatHistory(t.answer),
                                           Object(f.renderCustomComponent)(
                                             S,
-                                            n,
+                                            t,
                                             !0
                                           ))
                                         : (k(!1),
-                                          r.addToChatHistory(t, "NO_ANSWER"));
+                                          r.addAnswerToChatHistory(
+                                            "NO_ANSWER"
+                                          ));
                                     });
                                   })
                                   .catch(function () {
-                                    k(!1), r.addToChatHistory(t, "NO_ANSWER");
+                                    k(!1),
+                                      r.addAnswerToChatHistory("NO_ANSWER");
                                   })
                                   .finally(function () {
                                     E(), n();
@@ -856,4 +870,4 @@
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.fe2f1b0c.chunk.js.map
+//# sourceMappingURL=main.d5e75ef0.chunk.js.map
