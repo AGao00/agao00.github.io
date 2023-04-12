@@ -81,6 +81,14 @@
   border-radius: 8px !important
 }
 
+.rcw-feedback:hover {
+  cursor: pointer
+}
+
+.rcw-thumbs-up {
+  margin-right: 8px !important
+}
+
 .rcw-loading {
   line-height: 8px !important;
   font-weight: 700 !important;
@@ -323,4 +331,4 @@
   border-left-color: #1f262d
 }
 
-/*# sourceMappingURL=main.5bf7ab41.chunk.css.map */
+/*# sourceMappingURL=main.ee548455.chunk.css.map */
