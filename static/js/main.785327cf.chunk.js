@@ -720,7 +720,6 @@
                 value: function () {
                   return (
                     (this.history = this.history.slice(-4)),
-                    console.log(">>> history", this.history),
                     this.history.slice(0, -1)
                   );
                 },
@@ -870,4 +869,4 @@
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.d5e75ef0.chunk.js.map
+//# sourceMappingURL=main.086c0249.chunk.js.map
