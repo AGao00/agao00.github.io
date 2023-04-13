@@ -18,8 +18,8 @@
         l = n(12),
         h = n(11),
         d = n(4),
-        f = n(1),
-        m = n(9),
+        m = n(1),
+        f = n(9),
         p = n(10),
         v = n(2),
         y = n.n(v);
@@ -53,7 +53,7 @@
         }
         try {
           s({}, "");
-        } catch (j) {
+        } catch (C) {
           s = function (e, t, n) {
             return (e[t] = n);
           };
@@ -61,29 +61,29 @@
         function u(e, t, n, a) {
           var o = t && t.prototype instanceof d ? t : d,
             i = Object.create(o.prototype),
-            c = new N(a || []);
+            c = new j(a || []);
           return r(i, "_invoke", { value: k(e, n, c) }), i;
         }
         function l(e, t, n) {
           try {
             return { type: "normal", arg: e.call(t, n) };
-          } catch (j) {
-            return { type: "throw", arg: j };
+          } catch (C) {
+            return { type: "throw", arg: C };
           }
         }
         e.wrap = u;
         var h = {};
         function d() {}
-        function f() {}
         function m() {}
+        function f() {}
         var p = {};
         s(p, o, function () {
           return this;
         });
         var v = Object.getPrototypeOf,
-          y = v && v(v(C([])));
+          y = v && v(v(N([])));
         y && y !== t && n.call(y, o) && (p = y);
-        var w = (m.prototype = d.prototype = Object.create(p));
+        var w = (f.prototype = d.prototype = Object.create(p));
         function b(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -135,7 +135,7 @@
               throw new Error("Generator is already running");
             if ("completed" === r) {
               if ("throw" === a) throw o;
-              return L();
+              return A();
             }
             for (n.method = a, n.arg = o; ; ) {
               var i = n.delegate;
@@ -204,22 +204,22 @@
               (t.delegate = null),
               h);
         }
-        function A(e) {
+        function O(e) {
           var t = { tryLoc: e[0] };
           1 in e && (t.catchLoc = e[1]),
             2 in e && ((t.finallyLoc = e[2]), (t.afterLoc = e[3])),
             this.tryEntries.push(t);
         }
-        function O(e) {
+        function L(e) {
           var t = e.completion || {};
           (t.type = "normal"), delete t.arg, (e.completion = t);
         }
-        function N(e) {
+        function j(e) {
           (this.tryEntries = [{ tryLoc: "root" }]),
-            e.forEach(A, this),
+            e.forEach(O, this),
             this.reset(!0);
         }
-        function C(e) {
+        function N(e) {
           if (e) {
             var t = e[o];
             if (t) return t.call(e);
@@ -234,28 +234,28 @@
               return (a.next = a);
             }
           }
-          return { next: L };
+          return { next: A };
         }
-        function L() {
+        function A() {
           return { value: void 0, done: !0 };
         }
         return (
-          (f.prototype = m),
-          r(w, "constructor", { value: m, configurable: !0 }),
-          r(m, "constructor", { value: f, configurable: !0 }),
-          (f.displayName = s(m, c, "GeneratorFunction")),
+          (m.prototype = f),
+          r(w, "constructor", { value: f, configurable: !0 }),
+          r(f, "constructor", { value: m, configurable: !0 }),
+          (m.displayName = s(f, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
             var t = "function" == typeof e && e.constructor;
             return (
               !!t &&
-              (t === f || "GeneratorFunction" === (t.displayName || t.name))
+              (t === m || "GeneratorFunction" === (t.displayName || t.name))
             );
           }),
           (e.mark = function (e) {
             return (
               Object.setPrototypeOf
-                ? Object.setPrototypeOf(e, m)
-                : ((e.__proto__ = m), s(e, c, "GeneratorFunction")),
+                ? Object.setPrototypeOf(e, f)
+                : ((e.__proto__ = f), s(e, c, "GeneratorFunction")),
               (e.prototype = Object.create(w)),
               e
             );
@@ -300,9 +300,9 @@
               }
             );
           }),
-          (e.values = C),
-          (N.prototype = {
-            constructor: N,
+          (e.values = N),
+          (j.prototype = {
+            constructor: j,
             reset: function (e) {
               if (
                 ((this.prev = 0),
@@ -312,7 +312,7 @@
                 (this.delegate = null),
                 (this.method = "next"),
                 (this.arg = void 0),
-                this.tryEntries.forEach(O),
+                this.tryEntries.forEach(L),
                 !e)
               )
                 for (var t in this)
@@ -402,7 +402,7 @@
               for (var t = this.tryEntries.length - 1; t >= 0; --t) {
                 var n = this.tryEntries[t];
                 if (n.finallyLoc === e)
-                  return this.complete(n.completion, n.afterLoc), O(n), h;
+                  return this.complete(n.completion, n.afterLoc), L(n), h;
               }
             },
             catch: function (e) {
@@ -412,7 +412,7 @@
                   var r = n.completion;
                   if ("throw" === r.type) {
                     var a = r.arg;
-                    O(n);
+                    L(n);
                   }
                   return a;
                 }
@@ -421,7 +421,7 @@
             },
             delegateYield: function (e, t, n) {
               return (
-                (this.delegate = { iterator: C(e), resultName: t, nextLoc: n }),
+                (this.delegate = { iterator: N(e), resultName: t, nextLoc: n }),
                 "next" === this.method && (this.arg = void 0),
                 h
               );
@@ -466,10 +466,14 @@
       function k(e) {
         E(),
           e
-            ? Object(f.renderCustomComponent)(C, {}, !0)
-            : Object(f.renderCustomComponent)(N, {}, !0);
+            ? Object(m.renderCustomComponent)(C, {}, !0)
+            : Object(m.renderCustomComponent)(A, {}, !0);
       }
-      function x() {
+      var x =
+          "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime.",
+        O =
+          "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in Databricks Documentation or Databricks Knowledge Base";
+      function L() {
         return a.a.createElement(
           "div",
           { className: "rcw-disclaimer-info" },
@@ -503,12 +507,12 @@
           )
         );
       }
-      function A() {
+      function j() {
         return a.a.createElement("div", {
           className: "rcw-response rcw-message-text rcw-loading",
         });
       }
-      function O() {
+      function N() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -529,7 +533,7 @@
           )
         );
       }
-      function N() {
+      function A() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -538,14 +542,14 @@
             { className: "rcw-message-text" },
             "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
             " ",
-            a.a.createElement(j, {
+            a.a.createElement(_, {
               url: "https://docs.databricks.com",
               name: "Databricks Documentation",
             }),
             " ",
             "or",
             " ",
-            a.a.createElement(j, {
+            a.a.createElement(_, {
               url: "https://kb.databricks.com",
               name: "Databricks Knowledge Base",
             })
@@ -561,14 +565,14 @@
             { className: "rcw-message-text" },
             "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
             " ",
-            a.a.createElement(j, {
+            a.a.createElement(_, {
               url: "https://learn.microsoft.com/en-us/azure/databricks",
               name: "Databricks on Azure",
             }),
             " ",
             "and",
             " ",
-            a.a.createElement(j, {
+            a.a.createElement(_, {
               url: "https://docs.gcp.databricks.com",
               name: "Databricks on GCP",
             }),
@@ -577,10 +581,10 @@
           )
         );
       }
-      function L() {
+      function S() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function j(e) {
+      function _(e) {
         var t = e.url,
           n = e.name;
         return a.a.createElement(
@@ -594,7 +598,7 @@
           n || t
         );
       }
-      function S(e) {
+      function D(e) {
         var t = e.answer,
           n = e.sources;
         return a.a.createElement(
@@ -602,7 +606,7 @@
           { className: "rcw-response" },
           a.a.createElement("div", {
             className: "rcw-message-text",
-            dangerouslySetInnerHTML: { __html: p.sanitize(m.marked.parse(t)) },
+            dangerouslySetInnerHTML: { __html: p.sanitize(f.marked.parse(t)) },
           }),
           n.length > 0
             ? a.a.createElement(
@@ -614,13 +618,13 @@
                   "Source".concat(1 === n.length ? "" : "s")
                 ),
                 n.map(function (e) {
-                  return a.a.createElement(j, { url: e });
+                  return a.a.createElement(_, { url: e });
                 })
               )
             : null
         );
       }
-      var _ = (function (e) {
+      var I = (function (e) {
           Object(l.a)(n, e);
           var t = Object(h.a)(n);
           function n() {
@@ -638,7 +642,7 @@
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              Object(f.renderCustomComponent)(A, {}, !0),
+                              Object(m.renderCustomComponent)(j, {}, !0),
                               (document.querySelector(
                                 ".rcw-sender"
                               ).style.visibility = "hidden"),
@@ -648,7 +652,7 @@
                                 (document.querySelector(
                                   ".rcw-sender"
                                 ).style.display = "none"),
-                                  Object(f.setQuickButtons)([
+                                  Object(m.setQuickButtons)([
                                     {
                                       label: "Ask another question",
                                       value: "",
@@ -668,12 +672,12 @@
                 };
               })()),
               (e.handleQuickButtonClicked = function () {
-                Object(f.setQuickButtons)([]),
+                Object(m.setQuickButtons)([]),
                   (document.querySelector(".rcw-sender").style.visibility =
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
-                  Object(f.renderCustomComponent)(L);
+                  Object(m.renderCustomComponent)(S);
               }),
               e
             );
@@ -683,8 +687,8 @@
               {
                 key: "componentDidMount",
                 value: function () {
-                  Object(f.renderCustomComponent)(x),
-                    Object(f.renderCustomComponent)(O, {}, !0),
+                  Object(m.renderCustomComponent)(L),
+                    Object(m.renderCustomComponent)(N, {}, !0),
                     document.addEventListener(
                       "DOMContentLoaded",
                       function () {}
@@ -697,22 +701,6 @@
                   this.history.push({
                     question: { question: e, timestamp: new Date().getTime() },
                   });
-                },
-              },
-              {
-                key: "addAnswerToChatHistory",
-                value: function (e) {
-                  var t;
-                  (t =
-                    "NO_ANSWER" === e
-                      ? "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in Databricks Documentation or Databricks Knowledge Base"
-                      : "AZURE_GCP_ANSWER" === e
-                      ? "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime."
-                      : e),
-                    (this.history[this.history.length - 1].answer = {
-                      answer: t,
-                      timestamp: new Date().getTime(),
-                    });
                 },
               },
               {
@@ -729,52 +717,56 @@
                 value: (function () {
                   var e = Object(c.a)(
                     g().mark(function e(t, n) {
-                      var r = this;
+                      var r,
+                        a = this;
                       return g().wrap(
                         function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
                               case 0:
-                                fetch("https://chatapi.databricks.com/doc_qa", {
-                                  method: "POST",
-                                  headers: {
-                                    "Content-Type": "application/json",
-                                  },
-                                  body: JSON.stringify({
-                                    question: t,
-                                    history: this.getChatHistory(),
-                                  }),
-                                })
-                                  .then(function (e) {
-                                    e.text().then(function (e) {
-                                      var t = JSON.parse(e);
-                                      t.related_to_azure_gcp
-                                        ? (k(!0),
-                                          r.addAnswerToChatHistory(
-                                            "AZURE_GCP_RELATED"
-                                          ))
-                                        : t.has_answer
-                                        ? (E(),
-                                          r.addAnswerToChatHistory(t.answer),
-                                          Object(f.renderCustomComponent)(
-                                            S,
-                                            t,
-                                            !0
-                                          ))
-                                        : (k(!1),
-                                          r.addAnswerToChatHistory(
-                                            "NO_ANSWER"
-                                          ));
+                                (r = { answer: "", timestamp: 0 }),
+                                  fetch(
+                                    "https://chatapi.databricks.com/doc_qa",
+                                    {
+                                      method: "POST",
+                                      headers: {
+                                        "Content-Type": "application/json",
+                                      },
+                                      body: JSON.stringify({
+                                        question: t,
+                                        history: this.getChatHistory(),
+                                      }),
+                                    }
+                                  )
+                                    .then(function (e) {
+                                      e.text().then(function (e) {
+                                        var t = JSON.parse(e);
+                                        (r.timestamp = t.timestamp),
+                                          t.related_to_azure_gcp
+                                            ? (k(!0), (r.answer = x))
+                                            : t.has_answer
+                                            ? (E(),
+                                              Object(m.renderCustomComponent)(
+                                                D,
+                                                t,
+                                                !0
+                                              ),
+                                              (r.answer = t.answer))
+                                            : (k(!1), (r.answer = O));
+                                      });
+                                    })
+                                    .catch(function () {
+                                      k(!1),
+                                        (r.answer = O),
+                                        (r.timestamp = new Date().getTime());
+                                    })
+                                    .finally(function () {
+                                      (a.history[a.history.length - 1].answer =
+                                        r),
+                                        E(),
+                                        n();
                                     });
-                                  })
-                                  .catch(function () {
-                                    k(!1),
-                                      r.addAnswerToChatHistory("NO_ANSWER");
-                                  })
-                                  .finally(function () {
-                                    E(), n();
-                                  });
-                              case 1:
+                              case 2:
                               case "end":
                                 return e.stop();
                             }
@@ -803,7 +795,7 @@
                     : a.a.createElement(
                         "div",
                         { className: "LLMAssistantWidget" },
-                        a.a.createElement(f.Widget, {
+                        a.a.createElement(m.Widget, {
                           handleNewUserMessage: this.handleNewUserMessage,
                           handleQuickButtonClicked:
                             this.handleQuickButtonClicked,
@@ -863,10 +855,10 @@
             n
           );
         })(r.Component),
-        D = document.getElementById("rcw-root");
-      i.a.render(a.a.createElement(_, null), D);
+        q = document.getElementById("rcw-root");
+      i.a.render(a.a.createElement(I, null), q);
     },
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.086c0249.chunk.js.map
+//# sourceMappingURL=main.25605604.chunk.js.map
