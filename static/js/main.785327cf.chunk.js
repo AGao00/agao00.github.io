@@ -453,9 +453,9 @@
         E = new IntersectionObserver(
           function (e) {
             e[0].isIntersecting
-              ? y()(".rcw-widget-container").css("bottom", "32px")
+              ? y()(".rcw-widget-container").css("bottom", "122px")
               : e[0].isIntersecting ||
-                y()(".rcw-widget-container").css("bottom", "122px");
+                y()(".rcw-widget-container").css("bottom", "32px");
           },
           { threshold: [0] }
         );
@@ -860,4 +860,4 @@
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.0f902f6d.chunk.js.map
+//# sourceMappingURL=main.b1347ae7.chunk.js.map

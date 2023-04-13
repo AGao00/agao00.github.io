@@ -13,7 +13,7 @@
 .rcw-widget-container {
   max-width: 440px !important;
   right: 32px !important;
-  bottom: 32px !important;
+  bottom: 32px;
   margin: 0 !important;
   position: fixed !important
 }
@@ -332,4 +332,4 @@
   border-left-color: #1f262d
 }
 
-/*# sourceMappingURL=main.6c0e0149.chunk.css.map */
+/*# sourceMappingURL=main.3bee7168.chunk.css.map */
