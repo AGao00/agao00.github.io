@@ -17,8 +17,8 @@
         u = r(8),
         l = r(12),
         h = r(11),
-        m = r(4),
-        d = r(1),
+        d = r(4),
+        m = r(1),
         f = r(9),
         p = r(10),
         v = r(2),
@@ -59,7 +59,7 @@
           };
         }
         function u(e, t, r, a) {
-          var o = t && t.prototype instanceof m ? t : m,
+          var o = t && t.prototype instanceof d ? t : d,
             i = Object.create(o.prototype),
             c = new N(a || []);
           return n(i, "_invoke", { value: k(e, r, c) }), i;
@@ -73,8 +73,8 @@
         }
         e.wrap = u;
         var h = {};
-        function m() {}
         function d() {}
+        function m() {}
         function f() {}
         var p = {};
         s(p, o, function () {
@@ -83,7 +83,7 @@
         var v = Object.getPrototypeOf,
           w = v && v(v(j([])));
         w && w !== t && r.call(w, o) && (p = w);
-        var y = (f.prototype = m.prototype = Object.create(p));
+        var y = (f.prototype = d.prototype = Object.create(p));
         function b(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -240,15 +240,15 @@
           return { value: void 0, done: !0 };
         }
         return (
-          (d.prototype = f),
+          (m.prototype = f),
           n(y, "constructor", { value: f, configurable: !0 }),
-          n(f, "constructor", { value: d, configurable: !0 }),
-          (d.displayName = s(f, c, "GeneratorFunction")),
+          n(f, "constructor", { value: m, configurable: !0 }),
+          (m.displayName = s(f, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
             var t = "function" == typeof e && e.constructor;
             return (
               !!t &&
-              (t === d || "GeneratorFunction" === (t.displayName || t.name))
+              (t === m || "GeneratorFunction" === (t.displayName || t.name))
             );
           }),
           (e.mark = function (e) {
@@ -461,8 +461,8 @@
         );
       function k(e) {
         e
-          ? Object(d.renderCustomComponent)(C, {}, !0)
-          : Object(d.renderCustomComponent)(A, {}, !0);
+          ? Object(m.renderCustomComponent)(C, {}, !0)
+          : Object(m.renderCustomComponent)(A, {}, !0);
       }
       var x =
           "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime.",
@@ -547,7 +547,8 @@
             a.a.createElement(q, {
               url: "https://kb.databricks.com",
               name: "Databricks Knowledge Base",
-            })
+            }),
+            "."
           )
         );
       }
@@ -648,7 +649,7 @@
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              Object(d.renderCustomComponent)(N, {}, !0),
+                              Object(m.renderCustomComponent)(N, {}, !0),
                               (document.querySelector(
                                 ".rcw-sender"
                               ).style.visibility = "hidden"),
@@ -667,12 +668,12 @@
                 };
               })()),
               (e.handleQuickButtonClicked = function () {
-                Object(d.setQuickButtons)([]),
+                Object(m.setQuickButtons)([]),
                   (document.querySelector(".rcw-sender").style.visibility =
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
-                  Object(d.renderCustomComponent)(_);
+                  Object(m.renderCustomComponent)(_);
               }),
               e
             );
@@ -682,8 +683,8 @@
               {
                 key: "componentDidMount",
                 value: function () {
-                  Object(d.renderCustomComponent)(L),
-                    Object(d.renderCustomComponent)(j, {}, !0),
+                  Object(m.renderCustomComponent)(L),
+                    Object(m.renderCustomComponent)(j, {}, !0),
                     document.addEventListener("DOMContentLoaded", function () {
                       E.observe(document.querySelector("footer#footer"));
                     });
@@ -703,21 +704,22 @@
                 value: (function () {
                   var e = Object(c.a)(
                     g().mark(function e(t) {
-                      var r, n, a, o, i;
+                      var r, n, a, o, i, c, s;
                       return g().wrap(
                         function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
                               case 0:
                                 return (
-                                  (r = {
+                                  (a = {
                                     question: {
                                       question: t,
                                       timestamp: new Date().getTime(),
                                     },
                                     answer: { answer: "", timestamp: 0 },
                                   }),
-                                  (e.next = 3),
+                                  (e.prev = 1),
+                                  (e.next = 4),
                                   fetch(
                                     "https://chatapi.databricks.com/doc_qa",
                                     {
@@ -732,59 +734,64 @@
                                     }
                                   )
                                 );
-                              case 3:
+                              case 4:
+                                (o = e.sent), (e.next = 10);
+                                break;
+                              case 7:
+                                (e.prev = 7), (e.t0 = e.catch(1)), k(!1);
+                              case 10:
                                 if (
-                                  !(
-                                    (n = e.sent).status >= 200 || n.status < 300
-                                  )
+                                  !(null === (r = o) || void 0 === r
+                                    ? void 0
+                                    : r.ok)
                                 ) {
-                                  e.next = 14;
+                                  e.next = 21;
                                   break;
                                 }
-                                return (e.next = 7), n.text();
-                              case 7:
-                                (a = e.sent),
-                                  (o = JSON.parse(a)),
-                                  (r.answer.timestamp = o.timestamp),
-                                  (i = o.related_to_azure_gcp) || !o.has_answer
-                                    ? (k(i), (r.answer.answer = i ? x : O))
-                                    : (Object(d.renderCustomComponent)(
+                                return (e.next = 13), o.text();
+                              case 13:
+                                (i = e.sent),
+                                  (c = JSON.parse(i)),
+                                  (a.answer.timestamp = c.timestamp),
+                                  (s = c.related_to_azure_gcp) || !c.has_answer
+                                    ? (k(s), (a.answer.answer = s ? x : O))
+                                    : (Object(m.renderCustomComponent)(
                                         D,
-                                        o,
+                                        c,
                                         !0
                                       ),
-                                      (r.answer.answer = o.answer)),
-                                  (e.next = 15);
+                                      (a.answer.answer = c.answer)),
+                                  this.history.push(a),
+                                  (e.next = 22);
                                 break;
-                              case 14:
-                                429 === n.status
-                                  ? Object(d.renderCustomComponent)(S, {}, !0)
-                                  : (k(!1),
-                                    (r.answer.answer = O),
-                                    (r.answer.timestamp =
-                                      new Date().getTime()));
-                              case 15:
+                              case 21:
+                                429 ===
+                                  (null === (n = o) || void 0 === n
+                                    ? void 0
+                                    : n.status) &&
+                                  Object(m.renderCustomComponent)(S, {}, !0);
+                              case 22:
                                 document.querySelector(".rcw-loading") &&
                                   document
                                     .querySelector(".rcw-loading")
                                     .parentElement.remove(),
-                                  429 !== n.status && this.history.push(r),
                                   (document.querySelector(
                                     ".rcw-sender"
                                   ).style.display = "none"),
-                                  Object(d.setQuickButtons)([
+                                  Object(m.setQuickButtons)([
                                     {
                                       label: "Ask another question",
                                       value: "",
                                     },
                                   ]);
-                              case 19:
+                              case 25:
                               case "end":
                                 return e.stop();
                             }
                         },
                         e,
-                        this
+                        this,
+                        [[1, 7]]
                       );
                     })
                   );
@@ -807,7 +814,7 @@
                     : a.a.createElement(
                         "div",
                         { className: "LLMAssistantWidget" },
-                        a.a.createElement(d.Widget, {
+                        a.a.createElement(m.Widget, {
                           handleNewUserMessage: this.handleNewUserMessage,
                           handleQuickButtonClicked:
                             this.handleQuickButtonClicked,
@@ -820,7 +827,7 @@
                           launcher: function (e) {
                             return (function (e) {
                               var t = Object(n.useState)(!1),
-                                r = Object(m.a)(t, 2),
+                                r = Object(d.a)(t, 2),
                                 o = r[0],
                                 i = r[1];
                               return a.a.createElement(
@@ -873,4 +880,4 @@
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.646b84aa.chunk.js.map
+//# sourceMappingURL=main.b170379f.chunk.js.map
