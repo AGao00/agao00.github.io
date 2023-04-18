@@ -82,6 +82,10 @@
   border-radius: 8px !important
 }
 
+.rcw-response .rcw-message-text .rcw-rate-limited {
+  color: #c82d4c !important
+}
+
 .rcw-feedback:hover {
   cursor: pointer
 }
@@ -332,4 +336,4 @@
   border-left-color: #1f262d
 }
 
-/*# sourceMappingURL=main.3bee7168.chunk.css.map */
+/*# sourceMappingURL=main.3c91227f.chunk.css.map */

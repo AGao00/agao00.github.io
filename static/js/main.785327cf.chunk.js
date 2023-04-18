@@ -1,49 +1,49 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [0],
   {
-    13: function (e, t, n) {
-      e.exports = n(21);
+    13: function (e, t, r) {
+      e.exports = r(21);
     },
-    19: function (e, t, n) {},
-    21: function (e, t, n) {
+    19: function (e, t, r) {},
+    21: function (e, t, r) {
       "use strict";
-      n.r(t);
-      var r = n(0),
-        a = n.n(r),
-        o = n(6),
-        i = n.n(o),
-        c = (n(19), n(3)),
-        s = n(7),
-        u = n(8),
-        l = n(12),
-        h = n(11),
-        d = n(4),
-        m = n(1),
-        f = n(9),
-        p = n(10),
-        v = n(2),
-        y = n.n(v);
-      n(20);
+      r.r(t);
+      var n = r(0),
+        a = r.n(n),
+        o = r(6),
+        i = r.n(o),
+        c = (r(19), r(3)),
+        s = r(7),
+        u = r(8),
+        l = r(12),
+        h = r(11),
+        m = r(4),
+        d = r(1),
+        f = r(9),
+        p = r(10),
+        v = r(2),
+        w = r.n(v);
+      r(20);
       function g() {
         g = function () {
           return e;
         };
         var e = {},
           t = Object.prototype,
-          n = t.hasOwnProperty,
-          r =
+          r = t.hasOwnProperty,
+          n =
             Object.defineProperty ||
-            function (e, t, n) {
-              e[t] = n.value;
+            function (e, t, r) {
+              e[t] = r.value;
             },
           a = "function" == typeof Symbol ? Symbol : {},
           o = a.iterator || "@@iterator",
           i = a.asyncIterator || "@@asyncIterator",
           c = a.toStringTag || "@@toStringTag";
-        function s(e, t, n) {
+        function s(e, t, r) {
           return (
             Object.defineProperty(e, t, {
-              value: n,
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0,
@@ -54,36 +54,36 @@
         try {
           s({}, "");
         } catch (C) {
-          s = function (e, t, n) {
-            return (e[t] = n);
+          s = function (e, t, r) {
+            return (e[t] = r);
           };
         }
-        function u(e, t, n, a) {
-          var o = t && t.prototype instanceof d ? t : d,
+        function u(e, t, r, a) {
+          var o = t && t.prototype instanceof m ? t : m,
             i = Object.create(o.prototype),
-            c = new j(a || []);
-          return r(i, "_invoke", { value: k(e, n, c) }), i;
+            c = new N(a || []);
+          return n(i, "_invoke", { value: k(e, r, c) }), i;
         }
-        function l(e, t, n) {
+        function l(e, t, r) {
           try {
-            return { type: "normal", arg: e.call(t, n) };
+            return { type: "normal", arg: e.call(t, r) };
           } catch (C) {
             return { type: "throw", arg: C };
           }
         }
         e.wrap = u;
         var h = {};
-        function d() {}
         function m() {}
+        function d() {}
         function f() {}
         var p = {};
         s(p, o, function () {
           return this;
         });
         var v = Object.getPrototypeOf,
-          y = v && v(v(N([])));
-        y && y !== t && n.call(y, o) && (p = y);
-        var w = (f.prototype = d.prototype = Object.create(p));
+          w = v && v(v(j([])));
+        w && w !== t && r.call(w, o) && (p = w);
+        var y = (f.prototype = m.prototype = Object.create(p));
         function b(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -93,22 +93,22 @@
         }
         function E(e, t) {
           var a;
-          r(this, "_invoke", {
-            value: function (r, o) {
+          n(this, "_invoke", {
+            value: function (n, o) {
               function i() {
                 return new t(function (a, i) {
-                  !(function r(a, o, i, c) {
+                  !(function n(a, o, i, c) {
                     var s = l(e[a], e, o);
                     if ("throw" !== s.type) {
                       var u = s.arg,
                         h = u.value;
-                      return h && "object" == typeof h && n.call(h, "__await")
+                      return h && "object" == typeof h && r.call(h, "__await")
                         ? t.resolve(h.__await).then(
                             function (e) {
-                              r("next", e, i, c);
+                              n("next", e, i, c);
                             },
                             function (e) {
-                              r("throw", e, i, c);
+                              n("throw", e, i, c);
                             }
                           )
                         : t.resolve(h).then(
@@ -116,75 +116,75 @@
                               (u.value = e), i(u);
                             },
                             function (e) {
-                              return r("throw", e, i, c);
+                              return n("throw", e, i, c);
                             }
                           );
                     }
                     c(s.arg);
-                  })(r, o, a, i);
+                  })(n, o, a, i);
                 });
               }
               return (a = a ? a.then(i, i) : i());
             },
           });
         }
-        function k(e, t, n) {
-          var r = "suspendedStart";
+        function k(e, t, r) {
+          var n = "suspendedStart";
           return function (a, o) {
-            if ("executing" === r)
+            if ("executing" === n)
               throw new Error("Generator is already running");
-            if ("completed" === r) {
+            if ("completed" === n) {
               if ("throw" === a) throw o;
               return A();
             }
-            for (n.method = a, n.arg = o; ; ) {
-              var i = n.delegate;
+            for (r.method = a, r.arg = o; ; ) {
+              var i = r.delegate;
               if (i) {
-                var c = x(i, n);
+                var c = x(i, r);
                 if (c) {
                   if (c === h) continue;
                   return c;
                 }
               }
-              if ("next" === n.method) n.sent = n._sent = n.arg;
-              else if ("throw" === n.method) {
-                if ("suspendedStart" === r) throw ((r = "completed"), n.arg);
-                n.dispatchException(n.arg);
-              } else "return" === n.method && n.abrupt("return", n.arg);
-              r = "executing";
-              var s = l(e, t, n);
+              if ("next" === r.method) r.sent = r._sent = r.arg;
+              else if ("throw" === r.method) {
+                if ("suspendedStart" === n) throw ((n = "completed"), r.arg);
+                r.dispatchException(r.arg);
+              } else "return" === r.method && r.abrupt("return", r.arg);
+              n = "executing";
+              var s = l(e, t, r);
               if ("normal" === s.type) {
                 if (
-                  ((r = n.done ? "completed" : "suspendedYield"), s.arg === h)
+                  ((n = r.done ? "completed" : "suspendedYield"), s.arg === h)
                 )
                   continue;
-                return { value: s.arg, done: n.done };
+                return { value: s.arg, done: r.done };
               }
               "throw" === s.type &&
-                ((r = "completed"), (n.method = "throw"), (n.arg = s.arg));
+                ((n = "completed"), (r.method = "throw"), (r.arg = s.arg));
             }
           };
         }
         function x(e, t) {
-          var n = t.method,
-            r = e.iterator[n];
-          if (void 0 === r)
+          var r = t.method,
+            n = e.iterator[r];
+          if (void 0 === n)
             return (
               (t.delegate = null),
-              ("throw" === n &&
+              ("throw" === r &&
                 e.iterator.return &&
                 ((t.method = "return"),
                 (t.arg = void 0),
                 x(e, t),
                 "throw" === t.method)) ||
-                ("return" !== n &&
+                ("return" !== r &&
                   ((t.method = "throw"),
                   (t.arg = new TypeError(
-                    "The iterator does not provide a '" + n + "' method"
+                    "The iterator does not provide a '" + r + "' method"
                   )))),
               h
             );
-          var a = l(r, e.iterator, t.arg);
+          var a = l(n, e.iterator, t.arg);
           if ("throw" === a.type)
             return (
               (t.method = "throw"), (t.arg = a.arg), (t.delegate = null), h
@@ -214,21 +214,21 @@
           var t = e.completion || {};
           (t.type = "normal"), delete t.arg, (e.completion = t);
         }
-        function j(e) {
+        function N(e) {
           (this.tryEntries = [{ tryLoc: "root" }]),
             e.forEach(O, this),
             this.reset(!0);
         }
-        function N(e) {
+        function j(e) {
           if (e) {
             var t = e[o];
             if (t) return t.call(e);
             if ("function" == typeof e.next) return e;
             if (!isNaN(e.length)) {
-              var r = -1,
+              var n = -1,
                 a = function t() {
-                  for (; ++r < e.length; )
-                    if (n.call(e, r)) return (t.value = e[r]), (t.done = !1), t;
+                  for (; ++n < e.length; )
+                    if (r.call(e, n)) return (t.value = e[n]), (t.done = !1), t;
                   return (t.value = void 0), (t.done = !0), t;
                 };
               return (a.next = a);
@@ -240,15 +240,15 @@
           return { value: void 0, done: !0 };
         }
         return (
-          (m.prototype = f),
-          r(w, "constructor", { value: f, configurable: !0 }),
-          r(f, "constructor", { value: m, configurable: !0 }),
-          (m.displayName = s(f, c, "GeneratorFunction")),
+          (d.prototype = f),
+          n(y, "constructor", { value: f, configurable: !0 }),
+          n(f, "constructor", { value: d, configurable: !0 }),
+          (d.displayName = s(f, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
             var t = "function" == typeof e && e.constructor;
             return (
               !!t &&
-              (t === m || "GeneratorFunction" === (t.displayName || t.name))
+              (t === d || "GeneratorFunction" === (t.displayName || t.name))
             );
           }),
           (e.mark = function (e) {
@@ -256,7 +256,7 @@
               Object.setPrototypeOf
                 ? Object.setPrototypeOf(e, f)
                 : ((e.__proto__ = f), s(e, c, "GeneratorFunction")),
-              (e.prototype = Object.create(w)),
+              (e.prototype = Object.create(y)),
               e
             );
           }),
@@ -268,41 +268,41 @@
             return this;
           }),
           (e.AsyncIterator = E),
-          (e.async = function (t, n, r, a, o) {
+          (e.async = function (t, r, n, a, o) {
             void 0 === o && (o = Promise);
-            var i = new E(u(t, n, r, a), o);
-            return e.isGeneratorFunction(n)
+            var i = new E(u(t, r, n, a), o);
+            return e.isGeneratorFunction(r)
               ? i
               : i.next().then(function (e) {
                   return e.done ? e.value : i.next();
                 });
           }),
-          b(w),
-          s(w, c, "Generator"),
-          s(w, o, function () {
+          b(y),
+          s(y, c, "Generator"),
+          s(y, o, function () {
             return this;
           }),
-          s(w, "toString", function () {
+          s(y, "toString", function () {
             return "[object Generator]";
           }),
           (e.keys = function (e) {
             var t = Object(e),
-              n = [];
-            for (var r in t) n.push(r);
+              r = [];
+            for (var n in t) r.push(n);
             return (
-              n.reverse(),
+              r.reverse(),
               function e() {
-                for (; n.length; ) {
-                  var r = n.pop();
-                  if (r in t) return (e.value = r), (e.done = !1), e;
+                for (; r.length; ) {
+                  var n = r.pop();
+                  if (n in t) return (e.value = n), (e.done = !1), e;
                 }
                 return (e.done = !0), e;
               }
             );
           }),
-          (e.values = N),
-          (j.prototype = {
-            constructor: j,
+          (e.values = j),
+          (N.prototype = {
+            constructor: N,
             reset: function (e) {
               if (
                 ((this.prev = 0),
@@ -317,7 +317,7 @@
               )
                 for (var t in this)
                   "t" === t.charAt(0) &&
-                    n.call(this, t) &&
+                    r.call(this, t) &&
                     !isNaN(+t.slice(1)) &&
                     (this[t] = void 0);
             },
@@ -330,41 +330,41 @@
             dispatchException: function (e) {
               if (this.done) throw e;
               var t = this;
-              function r(n, r) {
+              function n(r, n) {
                 return (
                   (i.type = "throw"),
                   (i.arg = e),
-                  (t.next = n),
-                  r && ((t.method = "next"), (t.arg = void 0)),
-                  !!r
+                  (t.next = r),
+                  n && ((t.method = "next"), (t.arg = void 0)),
+                  !!n
                 );
               }
               for (var a = this.tryEntries.length - 1; a >= 0; --a) {
                 var o = this.tryEntries[a],
                   i = o.completion;
-                if ("root" === o.tryLoc) return r("end");
+                if ("root" === o.tryLoc) return n("end");
                 if (o.tryLoc <= this.prev) {
-                  var c = n.call(o, "catchLoc"),
-                    s = n.call(o, "finallyLoc");
+                  var c = r.call(o, "catchLoc"),
+                    s = r.call(o, "finallyLoc");
                   if (c && s) {
-                    if (this.prev < o.catchLoc) return r(o.catchLoc, !0);
-                    if (this.prev < o.finallyLoc) return r(o.finallyLoc);
+                    if (this.prev < o.catchLoc) return n(o.catchLoc, !0);
+                    if (this.prev < o.finallyLoc) return n(o.finallyLoc);
                   } else if (c) {
-                    if (this.prev < o.catchLoc) return r(o.catchLoc, !0);
+                    if (this.prev < o.catchLoc) return n(o.catchLoc, !0);
                   } else {
                     if (!s)
                       throw new Error("try statement without catch or finally");
-                    if (this.prev < o.finallyLoc) return r(o.finallyLoc);
+                    if (this.prev < o.finallyLoc) return n(o.finallyLoc);
                   }
                 }
               }
             },
             abrupt: function (e, t) {
-              for (var r = this.tryEntries.length - 1; r >= 0; --r) {
-                var a = this.tryEntries[r];
+              for (var n = this.tryEntries.length - 1; n >= 0; --n) {
+                var a = this.tryEntries[n];
                 if (
                   a.tryLoc <= this.prev &&
-                  n.call(a, "finallyLoc") &&
+                  r.call(a, "finallyLoc") &&
                   this.prev < a.finallyLoc
                 ) {
                   var o = a;
@@ -400,28 +400,28 @@
             },
             finish: function (e) {
               for (var t = this.tryEntries.length - 1; t >= 0; --t) {
-                var n = this.tryEntries[t];
-                if (n.finallyLoc === e)
-                  return this.complete(n.completion, n.afterLoc), L(n), h;
+                var r = this.tryEntries[t];
+                if (r.finallyLoc === e)
+                  return this.complete(r.completion, r.afterLoc), L(r), h;
               }
             },
             catch: function (e) {
               for (var t = this.tryEntries.length - 1; t >= 0; --t) {
-                var n = this.tryEntries[t];
-                if (n.tryLoc === e) {
-                  var r = n.completion;
-                  if ("throw" === r.type) {
-                    var a = r.arg;
-                    L(n);
+                var r = this.tryEntries[t];
+                if (r.tryLoc === e) {
+                  var n = r.completion;
+                  if ("throw" === n.type) {
+                    var a = n.arg;
+                    L(r);
                   }
                   return a;
                 }
               }
               throw new Error("illegal catch attempt");
             },
-            delegateYield: function (e, t, n) {
+            delegateYield: function (e, t, r) {
               return (
-                (this.delegate = { iterator: N(e), resultName: t, nextLoc: n }),
+                (this.delegate = { iterator: j(e), resultName: t, nextLoc: r }),
                 "next" === this.method && (this.arg = void 0),
                 h
               );
@@ -430,50 +430,45 @@
           e
         );
       }
-      function w() {
-        y()(window).height() >= 850
-          ? (y()(".rcw-conversation-container").height("620px"),
-            y()(".rcw-messages-container").height("502px"))
-          : (y()(".rcw-conversation-container").height(
-              "".concat(y()(window).height() - 210, "px")
+      function y() {
+        w()(window).height() >= 850
+          ? (w()(".rcw-conversation-container").height("620px"),
+            w()(".rcw-messages-container").height("502px"))
+          : (w()(".rcw-conversation-container").height(
+              "".concat(w()(window).height() - 210, "px")
             ),
-            y()(".rcw-messages-container").height(
-              "".concat(y()(window).height() - 328, "px")
+            w()(".rcw-messages-container").height(
+              "".concat(w()(window).height() - 328, "px")
             ));
       }
       var b = new MutationObserver(function () {
           document.contains(
             document.querySelector(".rcw-conversation-container .rcw-header")
           ) &&
-            (w(),
-            window.addEventListener("resize", w, !0),
-            (y()(".rcw-disclaimer-info").parent()[0].style.height = "49px"),
+            (y(),
+            window.addEventListener("resize", y, !0),
+            (w()(".rcw-disclaimer-info").parent()[0].style.height = "49px"),
             b.disconnect());
         }),
         E = new IntersectionObserver(
           function (e) {
             e[0].isIntersecting
-              ? y()(".rcw-widget-container").css("bottom", "122px")
+              ? w()(".rcw-widget-container").css("bottom", "122px")
               : e[0].isIntersecting ||
-                y()(".rcw-widget-container").css("bottom", "32px");
+                w()(".rcw-widget-container").css("bottom", "32px");
           },
           { threshold: [0] }
         );
-      function k() {
-        document.querySelector(".rcw-loading") &&
-          document.querySelector(".rcw-loading").parentElement.remove();
+      function k(e) {
+        e
+          ? Object(d.renderCustomComponent)(C, {}, !0)
+          : Object(d.renderCustomComponent)(A, {}, !0);
       }
-      function x(e) {
-        k(),
-          e
-            ? Object(m.renderCustomComponent)(S, {}, !0)
-            : Object(m.renderCustomComponent)(C, {}, !0);
-      }
-      var O =
+      var x =
           "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime.",
-        L =
+        O =
           "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in Databricks Documentation or Databricks Knowledge Base";
-      function j() {
+      function L() {
         return a.a.createElement(
           "div",
           { className: "rcw-disclaimer-info" },
@@ -512,7 +507,7 @@
           className: "rcw-response rcw-message-text rcw-loading",
         });
       }
-      function A() {
+      function j() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -533,7 +528,7 @@
           )
         );
       }
-      function C() {
+      function A() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -542,17 +537,42 @@
             { className: "rcw-message-text" },
             "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
             " ",
-            a.a.createElement(D, {
+            a.a.createElement(q, {
               url: "https://docs.databricks.com",
               name: "Databricks Documentation",
             }),
             " ",
             "or",
             " ",
-            a.a.createElement(D, {
+            a.a.createElement(q, {
               url: "https://kb.databricks.com",
               name: "Databricks Knowledge Base",
             })
+          )
+        );
+      }
+      function C() {
+        return a.a.createElement(
+          "div",
+          { className: "rcw-response" },
+          a.a.createElement(
+            "div",
+            { className: "rcw-message-text" },
+            "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
+            " ",
+            a.a.createElement(q, {
+              url: "https://learn.microsoft.com/en-us/azure/databricks",
+              name: "Databricks on Azure",
+            }),
+            " ",
+            "and",
+            " ",
+            a.a.createElement(q, {
+              url: "https://docs.gcp.databricks.com",
+              name: "Databricks on GCP",
+            }),
+            " ",
+            "in the meantime."
           )
         );
       }
@@ -562,31 +582,17 @@
           { className: "rcw-response" },
           a.a.createElement(
             "div",
-            { className: "rcw-message-text" },
-            "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
-            " ",
-            a.a.createElement(D, {
-              url: "https://learn.microsoft.com/en-us/azure/databricks",
-              name: "Databricks on Azure",
-            }),
-            " ",
-            "and",
-            " ",
-            a.a.createElement(D, {
-              url: "https://docs.gcp.databricks.com",
-              name: "Databricks on GCP",
-            }),
-            " ",
-            "in the meantime."
+            { className: "rcw-message-text rcw-rate-limited" },
+            "Too many requests to the bot. Take a moment before asking more questions."
           )
         );
       }
       function _() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function D(e) {
+      function q(e) {
         var t = e.url,
-          n = e.name;
+          r = e.name;
         return a.a.createElement(
           "a",
           {
@@ -595,12 +601,12 @@
             target: "_blank",
             rel: "noopener noreferrer",
           },
-          n || t
+          r || t
         );
       }
-      function q(e) {
+      function D(e) {
         var t = e.answer,
-          n = e.sources;
+          r = e.sources;
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -608,59 +614,48 @@
             className: "rcw-message-text",
             dangerouslySetInnerHTML: { __html: p.sanitize(f.marked.parse(t)) },
           }),
-          n.length > 0
+          r.length > 0
             ? a.a.createElement(
                 "div",
                 { className: "rcw-sources" },
                 a.a.createElement(
                   "div",
                   { className: "rcw-sources-title" },
-                  "Source".concat(1 === n.length ? "" : "s")
+                  "Source".concat(1 === r.length ? "" : "s")
                 ),
-                n.map(function (e) {
-                  return a.a.createElement(D, { url: e });
+                r.map(function (e) {
+                  return a.a.createElement(q, { url: e });
                 })
               )
             : null
         );
       }
       var I = (function (e) {
-          Object(l.a)(n, e);
-          var t = Object(h.a)(n);
-          function n() {
+          Object(l.a)(r, e);
+          var t = Object(h.a)(r);
+          function r() {
             var e;
-            Object(s.a)(this, n);
-            for (var r = arguments.length, a = new Array(r), o = 0; o < r; o++)
+            Object(s.a)(this, r);
+            for (var n = arguments.length, a = new Array(n), o = 0; o < n; o++)
               a[o] = arguments[o];
             return (
               ((e = t.call.apply(t, [this].concat(a))).history = []),
               (e.handleNewUserMessage = (function () {
                 var t = Object(c.a)(
-                  g().mark(function t(n) {
+                  g().mark(function t(r) {
                     return g().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              Object(m.renderCustomComponent)(N, {}, !0),
+                              Object(d.renderCustomComponent)(N, {}, !0),
                               (document.querySelector(
                                 ".rcw-sender"
                               ).style.visibility = "hidden"),
-                              e.addQuestionToChatHistory(n),
-                              (t.next = 5),
-                              e.fetchAnswer(n, function () {
-                                (document.querySelector(
-                                  ".rcw-sender"
-                                ).style.display = "none"),
-                                  Object(m.setQuickButtons)([
-                                    {
-                                      label: "Ask another question",
-                                      value: "",
-                                    },
-                                  ]);
-                              })
+                              (t.next = 4),
+                              e.fetchAnswer(r)
                             );
-                          case 5:
+                          case 4:
                           case "end":
                             return t.stop();
                         }
@@ -672,34 +667,26 @@
                 };
               })()),
               (e.handleQuickButtonClicked = function () {
-                Object(m.setQuickButtons)([]),
+                Object(d.setQuickButtons)([]),
                   (document.querySelector(".rcw-sender").style.visibility =
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
-                  Object(m.renderCustomComponent)(_);
+                  Object(d.renderCustomComponent)(_);
               }),
               e
             );
           }
           return (
-            Object(u.a)(n, [
+            Object(u.a)(r, [
               {
                 key: "componentDidMount",
                 value: function () {
-                  Object(m.renderCustomComponent)(j),
-                    Object(m.renderCustomComponent)(A, {}, !0),
+                  Object(d.renderCustomComponent)(L),
+                    Object(d.renderCustomComponent)(j, {}, !0),
                     document.addEventListener("DOMContentLoaded", function () {
                       E.observe(document.querySelector("footer#footer"));
                     });
-                },
-              },
-              {
-                key: "addQuestionToChatHistory",
-                value: function (e) {
-                  this.history.push({
-                    question: { question: e, timestamp: new Date().getTime() },
-                  });
                 },
               },
               {
@@ -715,15 +702,22 @@
                 key: "fetchAnswer",
                 value: (function () {
                   var e = Object(c.a)(
-                    g().mark(function e(t, n) {
-                      var r,
-                        a = this;
+                    g().mark(function e(t) {
+                      var r, n, a, o, i;
                       return g().wrap(
                         function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
                               case 0:
-                                (r = { answer: "", timestamp: 0 }),
+                                return (
+                                  (r = {
+                                    question: {
+                                      question: t,
+                                      timestamp: new Date().getTime(),
+                                    },
+                                    answer: { answer: "", timestamp: 0 },
+                                  }),
+                                  (e.next = 3),
                                   fetch(
                                     "https://chatapi.databricks.com/doc_qa",
                                     {
@@ -737,35 +731,54 @@
                                       }),
                                     }
                                   )
-                                    .then(function (e) {
-                                      e.text().then(function (e) {
-                                        var t = JSON.parse(e);
-                                        (r.timestamp = t.timestamp),
-                                          t.related_to_azure_gcp
-                                            ? (x(!0), (r.answer = O))
-                                            : t.has_answer
-                                            ? (k(),
-                                              Object(m.renderCustomComponent)(
-                                                q,
-                                                t,
-                                                !0
-                                              ),
-                                              (r.answer = t.answer))
-                                            : (x(!1), (r.answer = L));
-                                      });
-                                    })
-                                    .catch(function () {
-                                      x(!1),
-                                        (r.answer = L),
-                                        (r.timestamp = new Date().getTime());
-                                    })
-                                    .finally(function () {
-                                      (a.history[a.history.length - 1].answer =
-                                        r),
-                                        k(),
-                                        n();
-                                    });
-                              case 2:
+                                );
+                              case 3:
+                                if (
+                                  !(
+                                    (n = e.sent).status >= 200 || n.status < 300
+                                  )
+                                ) {
+                                  e.next = 14;
+                                  break;
+                                }
+                                return (e.next = 7), n.text();
+                              case 7:
+                                (a = e.sent),
+                                  (o = JSON.parse(a)),
+                                  (r.answer.timestamp = o.timestamp),
+                                  (i = o.related_to_azure_gcp) || !o.has_answer
+                                    ? (k(i), (r.answer.answer = i ? x : O))
+                                    : (Object(d.renderCustomComponent)(
+                                        D,
+                                        o,
+                                        !0
+                                      ),
+                                      (r.answer.answer = o.answer)),
+                                  (e.next = 15);
+                                break;
+                              case 14:
+                                429 === n.status
+                                  ? Object(d.renderCustomComponent)(S, {}, !0)
+                                  : (k(!1),
+                                    (r.answer.answer = O),
+                                    (r.answer.timestamp =
+                                      new Date().getTime()));
+                              case 15:
+                                document.querySelector(".rcw-loading") &&
+                                  document
+                                    .querySelector(".rcw-loading")
+                                    .parentElement.remove(),
+                                  429 !== n.status && this.history.push(r),
+                                  (document.querySelector(
+                                    ".rcw-sender"
+                                  ).style.display = "none"),
+                                  Object(d.setQuickButtons)([
+                                    {
+                                      label: "Ask another question",
+                                      value: "",
+                                    },
+                                  ]);
+                              case 19:
                               case "end":
                                 return e.stop();
                             }
@@ -775,7 +788,7 @@
                       );
                     })
                   );
-                  return function (t, n) {
+                  return function (t) {
                     return e.apply(this, arguments);
                   };
                 })(),
@@ -794,7 +807,7 @@
                     : a.a.createElement(
                         "div",
                         { className: "LLMAssistantWidget" },
-                        a.a.createElement(m.Widget, {
+                        a.a.createElement(d.Widget, {
                           handleNewUserMessage: this.handleNewUserMessage,
                           handleQuickButtonClicked:
                             this.handleQuickButtonClicked,
@@ -806,10 +819,10 @@
                             "https://agao00.github.io/static/media/dblogo.56ac0149.jpg",
                           launcher: function (e) {
                             return (function (e) {
-                              var t = Object(r.useState)(!1),
-                                n = Object(d.a)(t, 2),
-                                o = n[0],
-                                i = n[1];
+                              var t = Object(n.useState)(!1),
+                                r = Object(m.a)(t, 2),
+                                o = r[0],
+                                i = r[1];
                               return a.a.createElement(
                                 "button",
                                 {
@@ -840,7 +853,7 @@
                                       a.a.createElement(
                                         "div",
                                         { className: "rcw-tooltip" },
-                                        "Ask a question to Databricks AI assistant"
+                                        "Ask the Databricks AI Assistant a question"
                                       )
                                     )
                               );
@@ -851,13 +864,13 @@
                 },
               },
             ]),
-            n
+            r
           );
-        })(r.Component),
+        })(n.Component),
         P = document.getElementById("rcw-root");
       i.a.render(a.a.createElement(I, null), P);
     },
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.b1347ae7.chunk.js.map
+//# sourceMappingURL=main.646b84aa.chunk.js.map
