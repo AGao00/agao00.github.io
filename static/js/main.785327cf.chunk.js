@@ -537,14 +537,14 @@
             { className: "rcw-message-text" },
             "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
             " ",
-            a.a.createElement(q, {
+            a.a.createElement(D, {
               url: "https://docs.databricks.com",
               name: "Databricks Documentation",
             }),
             " ",
             "or",
             " ",
-            a.a.createElement(q, {
+            a.a.createElement(D, {
               url: "https://kb.databricks.com",
               name: "Databricks Knowledge Base",
             }),
@@ -561,14 +561,14 @@
             { className: "rcw-message-text" },
             "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
             " ",
-            a.a.createElement(q, {
+            a.a.createElement(D, {
               url: "https://learn.microsoft.com/en-us/azure/databricks",
               name: "Databricks on Azure",
             }),
             " ",
             "and",
             " ",
-            a.a.createElement(q, {
+            a.a.createElement(D, {
               url: "https://docs.gcp.databricks.com",
               name: "Databricks on GCP",
             }),
@@ -584,14 +584,14 @@
           a.a.createElement(
             "div",
             { className: "rcw-message-text rcw-rate-limited" },
-            "Too many requests to the bot. Take a moment before asking more questions."
+            "There was a network error. Please try again later."
           )
         );
       }
       function _() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function q(e) {
+      function D(e) {
         var t = e.url,
           r = e.name;
         return a.a.createElement(
@@ -605,7 +605,7 @@
           r || t
         );
       }
-      function D(e) {
+      function q(e) {
         var t = e.answer,
           r = e.sources;
         return a.a.createElement(
@@ -625,7 +625,7 @@
                   "Source".concat(1 === r.length ? "" : "s")
                 ),
                 r.map(function (e) {
-                  return a.a.createElement(q, { url: e });
+                  return a.a.createElement(D, { url: e });
                 })
               )
             : null
@@ -704,14 +704,14 @@
                 value: (function () {
                   var e = Object(c.a)(
                     g().mark(function e(t) {
-                      var r, n, a, o, i, c, s;
+                      var r, n, a, o, i, c;
                       return g().wrap(
                         function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
                               case 0:
                                 return (
-                                  (a = {
+                                  (n = {
                                     question: {
                                       question: t,
                                       timestamp: new Date().getTime(),
@@ -735,42 +735,40 @@
                                   )
                                 );
                               case 4:
-                                (o = e.sent), (e.next = 10);
+                                (a = e.sent), (e.next = 9);
                                 break;
                               case 7:
-                                (e.prev = 7), (e.t0 = e.catch(1)), k(!1);
-                              case 10:
+                                (e.prev = 7), (e.t0 = e.catch(1));
+                              case 9:
                                 if (
-                                  !(null === (r = o) || void 0 === r
+                                  !(null === (r = a) || void 0 === r
                                     ? void 0
                                     : r.ok)
                                 ) {
-                                  e.next = 21;
+                                  e.next = 20;
                                   break;
                                 }
-                                return (e.next = 13), o.text();
-                              case 13:
-                                (i = e.sent),
-                                  (c = JSON.parse(i)),
-                                  (a.answer.timestamp = c.timestamp),
-                                  (s = c.related_to_azure_gcp) || !c.has_answer
-                                    ? (k(s), (a.answer.answer = s ? x : O))
+                                return (e.next = 12), a.text();
+                              case 12:
+                                (o = e.sent),
+                                  (i = JSON.parse(o)),
+                                  (n.answer.timestamp = i.timestamp),
+                                  (c = i.related_to_azure_gcp) || !i.has_answer
+                                    ? (k(c), (n.answer.answer = c ? x : O))
                                     : (Object(m.renderCustomComponent)(
-                                        D,
-                                        c,
+                                        q,
+                                        i,
                                         !0
                                       ),
-                                      (a.answer.answer = c.answer)),
-                                  this.history.push(a),
-                                  (e.next = 22);
+                                      (n.answer.answer = i.answer)),
+                                  this.history.push(n),
+                                  (e.next = 21);
                                 break;
+                              case 20:
+                                a.status >= 400
+                                  ? Object(m.renderCustomComponent)(S, {}, !0)
+                                  : k(!1);
                               case 21:
-                                429 ===
-                                  (null === (n = o) || void 0 === n
-                                    ? void 0
-                                    : n.status) &&
-                                  Object(m.renderCustomComponent)(S, {}, !0);
-                              case 22:
                                 document.querySelector(".rcw-loading") &&
                                   document
                                     .querySelector(".rcw-loading")
@@ -784,7 +782,7 @@
                                       value: "",
                                     },
                                   ]);
-                              case 25:
+                              case 24:
                               case "end":
                                 return e.stop();
                             }
@@ -880,4 +878,4 @@
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.b170379f.chunk.js.map
+//# sourceMappingURL=main.cab5131b.chunk.js.map

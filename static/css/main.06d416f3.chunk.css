@@ -66,14 +66,14 @@
   border-radius: 8px !important
 }
 
-.rcw-response .rcw-message-text ol li,
-.rcw-response .rcw-message-text p {
+.rcw-message-text ol li,
+.rcw-message-text p {
   font-weight: 400 !important;
   font-size: 13px !important;
   color: #1f272d !important
 }
 
-.rcw-response .rcw-message-text pre {
+.rcw-message-text pre {
   white-space: pre-wrap !important;
   padding: 16px !important;
   grid-gap: 8px !important;
@@ -82,7 +82,7 @@
   border-radius: 8px !important
 }
 
-.rcw-message-text .rcw-rate-limited {
+.rcw-rate-limited {
   color: #c82d4c !important
 }
 
@@ -336,4 +336,4 @@
   border-left-color: #1f262d
 }
 
-/*# sourceMappingURL=main.9408e6fd.chunk.css.map */
+/*# sourceMappingURL=main.5d47e440.chunk.css.map */
