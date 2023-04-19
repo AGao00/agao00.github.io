@@ -24,8 +24,8 @@
         v = r(2),
         w = r.n(v);
       r(20);
-      function g() {
-        g = function () {
+      function y() {
+        y = function () {
           return e;
         };
         var e = {},
@@ -53,7 +53,7 @@
         }
         try {
           s({}, "");
-        } catch (C) {
+        } catch (S) {
           s = function (e, t, r) {
             return (e[t] = r);
           };
@@ -67,8 +67,8 @@
         function l(e, t, r) {
           try {
             return { type: "normal", arg: e.call(t, r) };
-          } catch (C) {
-            return { type: "throw", arg: C };
+          } catch (S) {
+            return { type: "throw", arg: S };
           }
         }
         e.wrap = u;
@@ -81,9 +81,9 @@
           return this;
         });
         var v = Object.getPrototypeOf,
-          w = v && v(v(j([])));
+          w = v && v(v(L([])));
         w && w !== t && r.call(w, o) && (p = w);
-        var y = (f.prototype = d.prototype = Object.create(p));
+        var g = (f.prototype = d.prototype = Object.create(p));
         function b(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -210,7 +210,7 @@
             2 in e && ((t.finallyLoc = e[2]), (t.afterLoc = e[3])),
             this.tryEntries.push(t);
         }
-        function L(e) {
+        function j(e) {
           var t = e.completion || {};
           (t.type = "normal"), delete t.arg, (e.completion = t);
         }
@@ -219,7 +219,7 @@
             e.forEach(O, this),
             this.reset(!0);
         }
-        function j(e) {
+        function L(e) {
           if (e) {
             var t = e[o];
             if (t) return t.call(e);
@@ -241,7 +241,7 @@
         }
         return (
           (m.prototype = f),
-          n(y, "constructor", { value: f, configurable: !0 }),
+          n(g, "constructor", { value: f, configurable: !0 }),
           n(f, "constructor", { value: m, configurable: !0 }),
           (m.displayName = s(f, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
@@ -256,7 +256,7 @@
               Object.setPrototypeOf
                 ? Object.setPrototypeOf(e, f)
                 : ((e.__proto__ = f), s(e, c, "GeneratorFunction")),
-              (e.prototype = Object.create(y)),
+              (e.prototype = Object.create(g)),
               e
             );
           }),
@@ -277,12 +277,12 @@
                   return e.done ? e.value : i.next();
                 });
           }),
-          b(y),
-          s(y, c, "Generator"),
-          s(y, o, function () {
+          b(g),
+          s(g, c, "Generator"),
+          s(g, o, function () {
             return this;
           }),
-          s(y, "toString", function () {
+          s(g, "toString", function () {
             return "[object Generator]";
           }),
           (e.keys = function (e) {
@@ -300,7 +300,7 @@
               }
             );
           }),
-          (e.values = j),
+          (e.values = L),
           (N.prototype = {
             constructor: N,
             reset: function (e) {
@@ -312,7 +312,7 @@
                 (this.delegate = null),
                 (this.method = "next"),
                 (this.arg = void 0),
-                this.tryEntries.forEach(L),
+                this.tryEntries.forEach(j),
                 !e)
               )
                 for (var t in this)
@@ -402,7 +402,7 @@
               for (var t = this.tryEntries.length - 1; t >= 0; --t) {
                 var r = this.tryEntries[t];
                 if (r.finallyLoc === e)
-                  return this.complete(r.completion, r.afterLoc), L(r), h;
+                  return this.complete(r.completion, r.afterLoc), j(r), h;
               }
             },
             catch: function (e) {
@@ -412,7 +412,7 @@
                   var n = r.completion;
                   if ("throw" === n.type) {
                     var a = n.arg;
-                    L(r);
+                    j(r);
                   }
                   return a;
                 }
@@ -421,7 +421,7 @@
             },
             delegateYield: function (e, t, r) {
               return (
-                (this.delegate = { iterator: j(e), resultName: t, nextLoc: r }),
+                (this.delegate = { iterator: L(e), resultName: t, nextLoc: r }),
                 "next" === this.method && (this.arg = void 0),
                 h
               );
@@ -430,7 +430,7 @@
           e
         );
       }
-      function y() {
+      function g() {
         w()(window).height() >= 850
           ? (w()(".rcw-conversation-container").height("620px"),
             w()(".rcw-messages-container").height("502px"))
@@ -445,8 +445,8 @@
           document.contains(
             document.querySelector(".rcw-conversation-container .rcw-header")
           ) &&
-            (y(),
-            window.addEventListener("resize", y, !0),
+            (g(),
+            window.addEventListener("resize", g, !0),
             (w()(".rcw-disclaimer-info").parent()[0].style.height = "49px"),
             b.disconnect());
         }),
@@ -497,7 +497,7 @@
           )
         );
       }
-      function L() {
+      function j() {
         return a.a.createElement("div", {
           className: "rcw-response rcw-message-text rcw-loading",
         });
@@ -523,7 +523,7 @@
           )
         );
       }
-      function j() {
+      function L() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -572,7 +572,7 @@
           )
         );
       }
-      function C() {
+      function S() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -583,7 +583,7 @@
           )
         );
       }
-      function S() {
+      function C() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
       function _(e) {
@@ -635,16 +635,19 @@
             for (var n = arguments.length, a = new Array(n), o = 0; o < n; o++)
               a[o] = arguments[o];
             return (
-              ((e = t.call.apply(t, [this].concat(a))).history = []),
+              ((e = t.call.apply(t, [this].concat(a))).state = {
+                isEnabled: !1,
+              }),
+              (e.history = []),
               (e.handleNewUserMessage = (function () {
                 var t = Object(c.a)(
-                  g().mark(function t(r) {
-                    return g().wrap(function (t) {
+                  y().mark(function t(r) {
+                    return y().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              Object(m.renderCustomComponent)(L, {}, !0),
+                              Object(m.renderCustomComponent)(j, {}, !0),
                               (document.querySelector(
                                 ".rcw-sender"
                               ).style.visibility = "hidden"),
@@ -668,7 +671,7 @@
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
-                  Object(m.renderCustomComponent)(S);
+                  Object(m.renderCustomComponent)(C);
               }),
               e
             );
@@ -677,12 +680,66 @@
             Object(u.a)(r, [
               {
                 key: "componentDidMount",
-                value: function () {
-                  Object(m.renderCustomComponent)(O),
+                value: (function () {
+                  var e = Object(c.a)(
+                    y().mark(function e() {
+                      var t, r;
+                      return y().wrap(
+                        function (e) {
+                          for (;;)
+                            switch ((e.prev = e.next)) {
+                              case 0:
+                                return (
+                                  (e.prev = 0),
+                                  (e.next = 3),
+                                  fetch(
+                                    "https://chatapi.databricks.com/flags",
+                                    {
+                                      method: "POST",
+                                      headers: {
+                                        "Content-Type": "application/json",
+                                      },
+                                      body: JSON.stringify({}),
+                                    }
+                                  )
+                                );
+                              case 3:
+                                return (t = e.sent), (e.next = 6), t.json();
+                              case 6:
+                                (r = e.sent),
+                                  this.setState({
+                                    isEnabled: r.assistant_enabled,
+                                  }),
+                                  (e.next = 13);
+                                break;
+                              case 10:
+                                (e.prev = 10),
+                                  (e.t0 = e.catch(0)),
+                                  this.setState({ isEnabled: !1 });
+                              case 13:
+                              case "end":
+                                return e.stop();
+                            }
+                        },
+                        e,
+                        this,
+                        [[0, 10]]
+                      );
+                    })
+                  );
+                  return function () {
+                    return e.apply(this, arguments);
+                  };
+                })(),
+              },
+              {
+                key: "componentDidUpdate",
+                value: function (e, t) {
+                  !t.isEnabled &&
+                    this.state.isEnabled &&
+                    (Object(m.renderCustomComponent)(O),
                     Object(m.renderCustomComponent)(N, {}, !0),
-                    document.addEventListener("DOMContentLoaded", function () {
-                      E.observe(document.querySelector("footer#footer"));
-                    });
+                    E.observe(document.querySelector("footer#footer")));
                 },
               },
               {
@@ -698,9 +755,9 @@
                 key: "fetchAnswer",
                 value: (function () {
                   var e = Object(c.a)(
-                    g().mark(function e(t) {
+                    y().mark(function e(t) {
                       var r, n, a, o, i, c;
-                      return g().wrap(
+                      return y().wrap(
                         function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
@@ -756,7 +813,7 @@
                                             !0
                                           )
                                         : Object(m.renderCustomComponent)(
-                                            j,
+                                            L,
                                             {},
                                             !0
                                           ),
@@ -771,7 +828,7 @@
                                   (e.next = 21);
                                 break;
                               case 20:
-                                Object(m.renderCustomComponent)(C, {}, !0);
+                                Object(m.renderCustomComponent)(S, {}, !0);
                               case 21:
                                 document.querySelector(".rcw-loading") &&
                                   document
@@ -811,7 +868,8 @@
                     navigator.userAgent.match(/iPad/i) ||
                     navigator.userAgent.match(/iPod/i) ||
                     navigator.userAgent.match(/BlackBerry/i) ||
-                    navigator.userAgent.match(/Windows Phone/i)
+                    navigator.userAgent.match(/Windows Phone/i) ||
+                    !this.state.isEnabled
                     ? null
                     : a.a.createElement(
                         "div",
@@ -882,4 +940,4 @@
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.05eef18f.chunk.js.map
+//# sourceMappingURL=main.060c77b8.chunk.js.map
