@@ -459,16 +459,11 @@
           },
           { threshold: [0] }
         );
-      function k(e) {
-        e
-          ? Object(m.renderCustomComponent)(C, {}, !0)
-          : Object(m.renderCustomComponent)(A, {}, !0);
-      }
-      var x =
+      var k =
           "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime.",
-        O =
+        x =
           "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in Databricks Documentation or Databricks Knowledge Base";
-      function L() {
+      function O() {
         return a.a.createElement(
           "div",
           { className: "rcw-disclaimer-info" },
@@ -502,12 +497,12 @@
           )
         );
       }
-      function N() {
+      function L() {
         return a.a.createElement("div", {
           className: "rcw-response rcw-message-text rcw-loading",
         });
       }
-      function j() {
+      function N() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -528,7 +523,7 @@
           )
         );
       }
-      function A() {
+      function j() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -537,14 +532,14 @@
             { className: "rcw-message-text" },
             "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
             " ",
-            a.a.createElement(D, {
+            a.a.createElement(_, {
               url: "https://docs.databricks.com",
               name: "Databricks Documentation",
             }),
             " ",
             "or",
             " ",
-            a.a.createElement(D, {
+            a.a.createElement(_, {
               url: "https://kb.databricks.com",
               name: "Databricks Knowledge Base",
             }),
@@ -552,7 +547,7 @@
           )
         );
       }
-      function C() {
+      function A() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -561,14 +556,14 @@
             { className: "rcw-message-text" },
             "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
             " ",
-            a.a.createElement(D, {
+            a.a.createElement(_, {
               url: "https://learn.microsoft.com/en-us/azure/databricks",
               name: "Databricks on Azure",
             }),
             " ",
             "and",
             " ",
-            a.a.createElement(D, {
+            a.a.createElement(_, {
               url: "https://docs.gcp.databricks.com",
               name: "Databricks on GCP",
             }),
@@ -577,7 +572,7 @@
           )
         );
       }
-      function S() {
+      function C() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -588,10 +583,10 @@
           )
         );
       }
-      function _() {
+      function S() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function D(e) {
+      function _(e) {
         var t = e.url,
           r = e.name;
         return a.a.createElement(
@@ -605,7 +600,7 @@
           r || t
         );
       }
-      function q(e) {
+      function D(e) {
         var t = e.answer,
           r = e.sources;
         return a.a.createElement(
@@ -625,13 +620,13 @@
                   "Source".concat(1 === r.length ? "" : "s")
                 ),
                 r.map(function (e) {
-                  return a.a.createElement(D, { url: e });
+                  return a.a.createElement(_, { url: e });
                 })
               )
             : null
         );
       }
-      var I = (function (e) {
+      var q = (function (e) {
           Object(l.a)(r, e);
           var t = Object(h.a)(r);
           function r() {
@@ -649,7 +644,7 @@
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              Object(m.renderCustomComponent)(N, {}, !0),
+                              Object(m.renderCustomComponent)(L, {}, !0),
                               (document.querySelector(
                                 ".rcw-sender"
                               ).style.visibility = "hidden"),
@@ -673,7 +668,7 @@
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
-                  Object(m.renderCustomComponent)(_);
+                  Object(m.renderCustomComponent)(S);
               }),
               e
             );
@@ -683,8 +678,8 @@
               {
                 key: "componentDidMount",
                 value: function () {
-                  Object(m.renderCustomComponent)(L),
-                    Object(m.renderCustomComponent)(j, {}, !0),
+                  Object(m.renderCustomComponent)(O),
+                    Object(m.renderCustomComponent)(N, {}, !0),
                     document.addEventListener("DOMContentLoaded", function () {
                       E.observe(document.querySelector("footer#footer"));
                     });
@@ -754,9 +749,20 @@
                                   (i = JSON.parse(o)),
                                   (n.answer.timestamp = i.timestamp),
                                   (c = i.related_to_azure_gcp) || !i.has_answer
-                                    ? (k(c), (n.answer.answer = c ? x : O))
+                                    ? (c
+                                        ? Object(m.renderCustomComponent)(
+                                            A,
+                                            {},
+                                            !0
+                                          )
+                                        : Object(m.renderCustomComponent)(
+                                            j,
+                                            {},
+                                            !0
+                                          ),
+                                      (n.answer.answer = c ? k : x))
                                     : (Object(m.renderCustomComponent)(
-                                        q,
+                                        D,
                                         i,
                                         !0
                                       ),
@@ -765,9 +771,7 @@
                                   (e.next = 21);
                                 break;
                               case 20:
-                                a.status >= 400
-                                  ? Object(m.renderCustomComponent)(S, {}, !0)
-                                  : k(!1);
+                                Object(m.renderCustomComponent)(C, {}, !0);
                               case 21:
                                 document.querySelector(".rcw-loading") &&
                                   document
@@ -872,10 +876,10 @@
             r
           );
         })(n.Component),
-        P = document.getElementById("rcw-root");
-      i.a.render(a.a.createElement(I, null), P);
+        I = document.getElementById("rcw-root");
+      i.a.render(a.a.createElement(q, null), I);
     },
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.cab5131b.chunk.js.map
+//# sourceMappingURL=main.05eef18f.chunk.js.map
