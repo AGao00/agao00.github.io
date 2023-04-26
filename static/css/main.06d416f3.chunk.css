@@ -28,7 +28,15 @@
   background-color: #cddae5 !important;
   width: 332px !important;
   height: 1px !important;
-  border: none !important
+  border: none !important;
+  -webkit-margin-before: .5em !important;
+  margin-block-start: .5em !important;
+  -webkit-margin-after: .5em !important;
+  margin-block-end: .5em !important;
+  -webkit-margin-start: auto !important;
+  margin-inline-start: auto !important;
+  -webkit-margin-end: auto !important;
+  margin-inline-end: auto !important
 }
 
 .rcw-disclaimer {
@@ -208,7 +216,9 @@
   padding: 0 !important;
   height: 20px !important;
   background-color: #fff !important;
-  font-size: 13px !important
+  font-size: 13px !important;
+  border: none !important;
+  box-shadow: none !important
 }
 
 .rcw-messages-container {
