@@ -31,19 +31,9 @@
   border: none !important
 }
 
-.rcw-disclaimer-info {
-  width: 408px;
-  border-bottom: 1px solid #cddae5 !important;
-  padding: 16px !important;
-  text-align: left !important;
-  float: right !important;
-  font-size: 12px !important;
-  line-height: 16px !important;
-  background: #f2f5f7;
-  color: #5d7283 !important;
-  margin: -16px -16px 0 !important;
-  position: fixed !important;
-  box-sizing: unset !important
+.rcw-disclaimer {
+  color: #5d7283;
+  font-style: italic
 }
 
 .rcw-info {
@@ -336,4 +326,4 @@
   border-left-color: #1f262d
 }
 
-/*# sourceMappingURL=main.5d47e440.chunk.css.map */
+/*# sourceMappingURL=main.06d416f3.chunk.css.map */

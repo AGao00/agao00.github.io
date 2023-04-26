@@ -22,10 +22,10 @@
         f = r(9),
         p = r(10),
         v = r(2),
-        w = r.n(v);
+        y = r.n(v);
       r(20);
-      function y() {
-        y = function () {
+      function g() {
+        g = function () {
           return e;
         };
         var e = {},
@@ -53,7 +53,7 @@
         }
         try {
           s({}, "");
-        } catch (S) {
+        } catch (A) {
           s = function (e, t, r) {
             return (e[t] = r);
           };
@@ -67,8 +67,8 @@
         function l(e, t, r) {
           try {
             return { type: "normal", arg: e.call(t, r) };
-          } catch (S) {
-            return { type: "throw", arg: S };
+          } catch (A) {
+            return { type: "throw", arg: A };
           }
         }
         e.wrap = u;
@@ -81,9 +81,9 @@
           return this;
         });
         var v = Object.getPrototypeOf,
-          w = v && v(v(L([])));
-        w && w !== t && r.call(w, o) && (p = w);
-        var g = (f.prototype = d.prototype = Object.create(p));
+          y = v && v(v(L([])));
+        y && y !== t && r.call(y, o) && (p = y);
+        var w = (f.prototype = d.prototype = Object.create(p));
         function b(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -135,7 +135,7 @@
               throw new Error("Generator is already running");
             if ("completed" === n) {
               if ("throw" === a) throw o;
-              return A();
+              return S();
             }
             for (r.method = a, r.arg = o; ; ) {
               var i = r.delegate;
@@ -234,14 +234,14 @@
               return (a.next = a);
             }
           }
-          return { next: A };
+          return { next: S };
         }
-        function A() {
+        function S() {
           return { value: void 0, done: !0 };
         }
         return (
           (m.prototype = f),
-          n(g, "constructor", { value: f, configurable: !0 }),
+          n(w, "constructor", { value: f, configurable: !0 }),
           n(f, "constructor", { value: m, configurable: !0 }),
           (m.displayName = s(f, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
@@ -256,7 +256,7 @@
               Object.setPrototypeOf
                 ? Object.setPrototypeOf(e, f)
                 : ((e.__proto__ = f), s(e, c, "GeneratorFunction")),
-              (e.prototype = Object.create(g)),
+              (e.prototype = Object.create(w)),
               e
             );
           }),
@@ -277,12 +277,12 @@
                   return e.done ? e.value : i.next();
                 });
           }),
-          b(g),
-          s(g, c, "Generator"),
-          s(g, o, function () {
+          b(w),
+          s(w, c, "Generator"),
+          s(w, o, function () {
             return this;
           }),
-          s(g, "toString", function () {
+          s(w, "toString", function () {
             return "[object Generator]";
           }),
           (e.keys = function (e) {
@@ -430,32 +430,28 @@
           e
         );
       }
-      function g() {
-        w()(window).height() >= 850
-          ? (w()(".rcw-conversation-container").height("620px"),
-            w()(".rcw-messages-container").height("502px"))
-          : (w()(".rcw-conversation-container").height(
-              "".concat(w()(window).height() - 210, "px")
+      function w() {
+        y()(window).height() >= 850
+          ? (y()(".rcw-conversation-container").height("620px"),
+            y()(".rcw-messages-container").height("502px"))
+          : (y()(".rcw-conversation-container").height(
+              "".concat(y()(window).height() - 210, "px")
             ),
-            w()(".rcw-messages-container").height(
-              "".concat(w()(window).height() - 328, "px")
+            y()(".rcw-messages-container").height(
+              "".concat(y()(window).height() - 328, "px")
             ));
       }
       var b = new MutationObserver(function () {
           document.contains(
             document.querySelector(".rcw-conversation-container .rcw-header")
-          ) &&
-            (g(),
-            window.addEventListener("resize", g, !0),
-            (w()(".rcw-disclaimer-info").parent()[0].style.height = "49px"),
-            b.disconnect());
+          ) && (w(), window.addEventListener("resize", w, !0), b.disconnect());
         }),
         E = new IntersectionObserver(
           function (e) {
             e[0].isIntersecting
-              ? w()(".rcw-widget-container").css("bottom", "122px")
+              ? y()(".rcw-widget-container").css("bottom", "122px")
               : e[0].isIntersecting ||
-                w()(".rcw-widget-container").css("bottom", "32px");
+                y()(".rcw-widget-container").css("bottom", "32px");
           },
           { threshold: [0] }
         );
@@ -464,45 +460,11 @@
         x =
           "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in Databricks Documentation or Databricks Knowledge Base";
       function O() {
-        return a.a.createElement(
-          "div",
-          { className: "rcw-disclaimer-info" },
-          a.a.createElement(
-            "svg",
-            {
-              width: "1em",
-              height: "1em",
-              viewBox: "0 0 16 16",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              "aria-hidden": "true",
-              focusable: "false",
-              className: "rcw-info",
-            },
-            a.a.createElement("path", {
-              d: "M7.25 11V7h1.5v4h-1.5zM8 4.5A.75.75 0 118 6a.75.75 0 010-1.5z",
-              fill: "currentColor",
-            }),
-            a.a.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M0 8a8 8 0 1116 0A8 8 0 010 8zm8-6.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z",
-              fill: "currentColor",
-            })
-          ),
-          a.a.createElement(
-            "div",
-            null,
-            "This trained assistant model may display inaccurate or offensive information that doesn\u2019t represent Databricks views."
-          )
-        );
-      }
-      function j() {
         return a.a.createElement("div", {
           className: "rcw-response rcw-message-text rcw-loading",
         });
       }
-      function N() {
+      function j() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -519,7 +481,38 @@
             " ",
             "2. How do you deploy my model for serving? ",
             a.a.createElement("br", null),
-            " 3. How can I convert my files to parquet files?"
+            " 3. How can I convert my files to parquet files? ",
+            a.a.createElement("br", null),
+            a.a.createElement("br", null),
+            a.a.createElement(
+              "div",
+              { className: "rcw-disclaimer" },
+              "Disclaimer: I may display inaccurate information that doesn\u2019t represent Databricks views."
+            )
+          )
+        );
+      }
+      function N() {
+        return a.a.createElement(
+          "div",
+          { className: "rcw-response" },
+          a.a.createElement(
+            "div",
+            { className: "rcw-message-text" },
+            "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
+            " ",
+            a.a.createElement(C, {
+              url: "https://docs.databricks.com",
+              name: "Databricks Documentation",
+            }),
+            " ",
+            "or",
+            " ",
+            a.a.createElement(C, {
+              url: "https://kb.databricks.com",
+              name: "Databricks Knowledge Base",
+            }),
+            "."
           )
         );
       }
@@ -530,40 +523,16 @@
           a.a.createElement(
             "div",
             { className: "rcw-message-text" },
-            "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
-            " ",
-            a.a.createElement(_, {
-              url: "https://docs.databricks.com",
-              name: "Databricks Documentation",
-            }),
-            " ",
-            "or",
-            " ",
-            a.a.createElement(_, {
-              url: "https://kb.databricks.com",
-              name: "Databricks Knowledge Base",
-            }),
-            "."
-          )
-        );
-      }
-      function A() {
-        return a.a.createElement(
-          "div",
-          { className: "rcw-response" },
-          a.a.createElement(
-            "div",
-            { className: "rcw-message-text" },
             "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
             " ",
-            a.a.createElement(_, {
+            a.a.createElement(C, {
               url: "https://learn.microsoft.com/en-us/azure/databricks",
               name: "Databricks on Azure",
             }),
             " ",
             "and",
             " ",
-            a.a.createElement(_, {
+            a.a.createElement(C, {
               url: "https://docs.gcp.databricks.com",
               name: "Databricks on GCP",
             }),
@@ -583,10 +552,10 @@
           )
         );
       }
-      function C() {
+      function A() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function _(e) {
+      function C(e) {
         var t = e.url,
           r = e.name;
         return a.a.createElement(
@@ -600,7 +569,7 @@
           r || t
         );
       }
-      function D(e) {
+      function _(e) {
         var t = e.answer,
           r = e.sources;
         return a.a.createElement(
@@ -620,13 +589,13 @@
                   "Source".concat(1 === r.length ? "" : "s")
                 ),
                 r.map(function (e) {
-                  return a.a.createElement(_, { url: e });
+                  return a.a.createElement(C, { url: e });
                 })
               )
             : null
         );
       }
-      var q = (function (e) {
+      var D = (function (e) {
           Object(l.a)(r, e);
           var t = Object(h.a)(r);
           function r() {
@@ -641,13 +610,13 @@
               (e.history = []),
               (e.handleNewUserMessage = (function () {
                 var t = Object(c.a)(
-                  y().mark(function t(r) {
-                    return y().wrap(function (t) {
+                  g().mark(function t(r) {
+                    return g().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              Object(m.renderCustomComponent)(j, {}, !0),
+                              Object(m.renderCustomComponent)(O, {}, !0),
                               (document.querySelector(
                                 ".rcw-sender"
                               ).style.visibility = "hidden"),
@@ -671,7 +640,7 @@
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
-                  Object(m.renderCustomComponent)(C);
+                  Object(m.renderCustomComponent)(A);
               }),
               e
             );
@@ -682,9 +651,9 @@
                 key: "componentDidMount",
                 value: (function () {
                   var e = Object(c.a)(
-                    y().mark(function e() {
+                    g().mark(function e() {
                       var t, r;
-                      return y().wrap(
+                      return g().wrap(
                         function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
@@ -715,7 +684,7 @@
                               case 10:
                                 (e.prev = 10),
                                   (e.t0 = e.catch(0)),
-                                  this.setState({ isEnabled: !1 });
+                                  this.setState({ isEnabled: !0 });
                               case 13:
                               case "end":
                                 return e.stop();
@@ -737,8 +706,7 @@
                 value: function (e, t) {
                   !t.isEnabled &&
                     this.state.isEnabled &&
-                    (Object(m.renderCustomComponent)(O),
-                    Object(m.renderCustomComponent)(N, {}, !0),
+                    (Object(m.renderCustomComponent)(j, {}, !0),
                     E.observe(document.querySelector("footer#footer")));
                 },
               },
@@ -755,9 +723,9 @@
                 key: "fetchAnswer",
                 value: (function () {
                   var e = Object(c.a)(
-                    y().mark(function e(t) {
+                    g().mark(function e(t) {
                       var r, n, a, o, i, c;
-                      return y().wrap(
+                      return g().wrap(
                         function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
@@ -808,18 +776,18 @@
                                   (c = i.related_to_azure_gcp) || !i.has_answer
                                     ? (c
                                         ? Object(m.renderCustomComponent)(
-                                            A,
+                                            L,
                                             {},
                                             !0
                                           )
                                         : Object(m.renderCustomComponent)(
-                                            L,
+                                            N,
                                             {},
                                             !0
                                           ),
                                       (n.answer.answer = c ? k : x))
                                     : (Object(m.renderCustomComponent)(
-                                        D,
+                                        _,
                                         i,
                                         !0
                                       ),
@@ -920,7 +888,7 @@
                                       a.a.createElement(
                                         "div",
                                         { className: "rcw-tooltip" },
-                                        "Ask the Databricks AI Assistant a question"
+                                        "Ask the Databricks AI assistant a question."
                                       )
                                     )
                               );
@@ -935,9 +903,9 @@
           );
         })(n.Component),
         I = document.getElementById("rcw-root");
-      i.a.render(a.a.createElement(q, null), I);
+      i.a.render(a.a.createElement(D, null), I);
     },
   },
   [[13, 1, 2]],
 ]);
-//# sourceMappingURL=main.060c77b8.chunk.js.map
+//# sourceMappingURL=main.785327cf.chunk.js.map
