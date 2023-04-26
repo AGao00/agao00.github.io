@@ -72,12 +72,15 @@
 }
 
 .rcw-message-text pre {
-  white-space: pre-wrap !important;
   padding: 16px !important;
   grid-gap: 8px !important;
   gap: 8px !important;
   background: #e4ecf1 !important;
   border-radius: 8px !important
+}
+
+.rcw-message-text pre code {
+  white-space: pre-wrap !important
 }
 
 .rcw-rate-limited {
