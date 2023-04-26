@@ -704,10 +704,11 @@
               {
                 key: "componentDidUpdate",
                 value: function (e, t) {
-                  !t.isEnabled &&
-                    this.state.isEnabled &&
-                    (Object(m.renderCustomComponent)(j, {}, !0),
-                    E.observe(document.querySelector("footer#footer")));
+                  if (!t.isEnabled && this.state.isEnabled) {
+                    Object(m.renderCustomComponent)(j, {}, !0);
+                    var r = document.querySelector("footer#footer");
+                    r && E.observe(r);
+                  }
                 },
               },
               {
