@@ -17,15 +17,15 @@
         u = r(8),
         l = r(12),
         h = r(11),
-        d = r(4),
-        m = r(1),
+        m = r(4),
+        d = r(1),
         f = r(9),
         p = r(10),
         v = r(2),
-        y = r.n(v);
+        w = r.n(v);
       r(20);
-      function w() {
-        w = function () {
+      function y() {
+        y = function () {
           return e;
         };
         var e = {},
@@ -53,37 +53,37 @@
         }
         try {
           s({}, "");
-        } catch (A) {
+        } catch (C) {
           s = function (e, t, r) {
             return (e[t] = r);
           };
         }
         function u(e, t, r, a) {
-          var o = t && t.prototype instanceof d ? t : d,
+          var o = t && t.prototype instanceof m ? t : m,
             i = Object.create(o.prototype),
             c = new N(a || []);
-          return n(i, "_invoke", { value: k(e, r, c) }), i;
+          return n(i, "_invoke", { value: E(e, r, c) }), i;
         }
         function l(e, t, r) {
           try {
             return { type: "normal", arg: e.call(t, r) };
-          } catch (A) {
-            return { type: "throw", arg: A };
+          } catch (C) {
+            return { type: "throw", arg: C };
           }
         }
         e.wrap = u;
         var h = {};
-        function d() {}
         function m() {}
+        function d() {}
         function f() {}
         var p = {};
         s(p, o, function () {
           return this;
         });
         var v = Object.getPrototypeOf,
-          y = v && v(v(L([])));
-        y && y !== t && r.call(y, o) && (p = y);
-        var g = (f.prototype = d.prototype = Object.create(p));
+          w = v && v(v(S([])));
+        w && w !== t && r.call(w, o) && (p = w);
+        var g = (f.prototype = m.prototype = Object.create(p));
         function b(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -91,7 +91,7 @@
             });
           });
         }
-        function E(e, t) {
+        function k(e, t) {
           var a;
           n(this, "_invoke", {
             value: function (n, o) {
@@ -128,14 +128,14 @@
             },
           });
         }
-        function k(e, t, r) {
+        function E(e, t, r) {
           var n = "suspendedStart";
           return function (a, o) {
             if ("executing" === n)
               throw new Error("Generator is already running");
             if ("completed" === n) {
               if ("throw" === a) throw o;
-              return S();
+              return L();
             }
             for (r.method = a, r.arg = o; ; ) {
               var i = r.delegate;
@@ -219,7 +219,7 @@
             e.forEach(O, this),
             this.reset(!0);
         }
-        function L(e) {
+        function S(e) {
           if (e) {
             var t = e[o];
             if (t) return t.call(e);
@@ -234,21 +234,21 @@
               return (a.next = a);
             }
           }
-          return { next: S };
+          return { next: L };
         }
-        function S() {
+        function L() {
           return { value: void 0, done: !0 };
         }
         return (
-          (m.prototype = f),
+          (d.prototype = f),
           n(g, "constructor", { value: f, configurable: !0 }),
-          n(f, "constructor", { value: m, configurable: !0 }),
-          (m.displayName = s(f, c, "GeneratorFunction")),
+          n(f, "constructor", { value: d, configurable: !0 }),
+          (d.displayName = s(f, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
             var t = "function" == typeof e && e.constructor;
             return (
               !!t &&
-              (t === m || "GeneratorFunction" === (t.displayName || t.name))
+              (t === d || "GeneratorFunction" === (t.displayName || t.name))
             );
           }),
           (e.mark = function (e) {
@@ -263,14 +263,14 @@
           (e.awrap = function (e) {
             return { __await: e };
           }),
-          b(E.prototype),
-          s(E.prototype, i, function () {
+          b(k.prototype),
+          s(k.prototype, i, function () {
             return this;
           }),
-          (e.AsyncIterator = E),
+          (e.AsyncIterator = k),
           (e.async = function (t, r, n, a, o) {
             void 0 === o && (o = Promise);
-            var i = new E(u(t, r, n, a), o);
+            var i = new k(u(t, r, n, a), o);
             return e.isGeneratorFunction(r)
               ? i
               : i.next().then(function (e) {
@@ -300,7 +300,7 @@
               }
             );
           }),
-          (e.values = L),
+          (e.values = S),
           (N.prototype = {
             constructor: N,
             reset: function (e) {
@@ -421,7 +421,7 @@
             },
             delegateYield: function (e, t, r) {
               return (
-                (this.delegate = { iterator: L(e), resultName: t, nextLoc: r }),
+                (this.delegate = { iterator: S(e), resultName: t, nextLoc: r }),
                 "next" === this.method && (this.arg = void 0),
                 h
               );
@@ -431,14 +431,14 @@
         );
       }
       function g() {
-        y()(window).height() >= 850
-          ? (y()(".rcw-conversation-container").height("620px"),
-            y()(".rcw-messages-container").height("502px"))
-          : (y()(".rcw-conversation-container").height(
-              "".concat(y()(window).height() - 210, "px")
+        w()(window).height() >= 850
+          ? (w()(".rcw-conversation-container").height("620px"),
+            w()(".rcw-messages-container").height("502px"))
+          : (w()(".rcw-conversation-container").height(
+              "".concat(w()(window).height() - 210, "px")
             ),
-            y()(".rcw-messages-container").height(
-              "".concat(y()(window).height() - 328, "px")
+            w()(".rcw-messages-container").height(
+              "".concat(w()(window).height() - 328, "px")
             ));
       }
       var b = new MutationObserver(function () {
@@ -446,25 +446,43 @@
             document.querySelector(".rcw-conversation-container .rcw-header")
           ) && (g(), window.addEventListener("resize", g, !0), b.disconnect());
         }),
-        E = new IntersectionObserver(
+        k = new IntersectionObserver(
           function (e) {
             e[0].isIntersecting
-              ? y()(".rcw-widget-container").css("bottom", "122px")
+              ? w()(".rcw-widget-container").css("bottom", "122px")
               : e[0].isIntersecting ||
-                y()(".rcw-widget-container").css("bottom", "32px");
+                w()(".rcw-widget-container").css("bottom", "32px");
           },
           { threshold: [0] }
         );
-      var k =
+      function E(e, t, r) {
+        var n = t.question,
+          a = t.answer,
+          o = t.timestamp;
+        r ||
+          (Object(d.addUserMessage)(e ? "\ud83d\udc4d" : "\ud83d\udc4e"),
+          fetch("https://chatapi.databricks.com/feedback", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              question: n,
+              answer: a,
+              timestamp: o,
+              reaction: e ? "thumb_up" : "thumb_down",
+            }),
+          }),
+          Object(d.addResponseMessage)("Thank you for your feedback."));
+      }
+      var x =
           "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime.",
-        x =
+        O =
           "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in Databricks Documentation or Databricks Knowledge Base";
-      function O() {
+      function j() {
         return a.a.createElement("div", {
           className: "rcw-response rcw-message-text rcw-loading",
         });
       }
-      function j() {
+      function N() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -492,7 +510,7 @@
           )
         );
       }
-      function N() {
+      function S() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -501,14 +519,14 @@
             { className: "rcw-message-text" },
             "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
             " ",
-            a.a.createElement(C, {
+            a.a.createElement(q, {
               url: "https://docs.databricks.com",
               name: "Databricks Documentation",
             }),
             " ",
             "or",
             " ",
-            a.a.createElement(C, {
+            a.a.createElement(q, {
               url: "https://kb.databricks.com",
               name: "Databricks Knowledge Base",
             }),
@@ -525,14 +543,14 @@
             { className: "rcw-message-text" },
             "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
             " ",
-            a.a.createElement(C, {
+            a.a.createElement(q, {
               url: "https://learn.microsoft.com/en-us/azure/databricks",
               name: "Databricks on Azure",
             }),
             " ",
             "and",
             " ",
-            a.a.createElement(C, {
+            a.a.createElement(q, {
               url: "https://docs.gcp.databricks.com",
               name: "Databricks on GCP",
             }),
@@ -541,7 +559,7 @@
           )
         );
       }
-      function S() {
+      function C() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -555,7 +573,7 @@
       function A() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function C(e) {
+      function q(e) {
         var t = e.url,
           r = e.name;
         return a.a.createElement(
@@ -589,13 +607,54 @@
                   "Source".concat(1 === r.length ? "" : "s")
                 ),
                 r.map(function (e) {
-                  return a.a.createElement(C, { url: e });
+                  return a.a.createElement(q, { url: e });
                 })
               )
             : null
         );
       }
-      var D = (function (e) {
+      function D(e) {
+        var t = e.question,
+          r = e.answer,
+          o = e.timestamp,
+          i = Object(n.useState)(!1),
+          c = Object(m.a)(i, 2),
+          s = c[0],
+          u = c[1];
+        return a.a.createElement(
+          a.a.Fragment,
+          null,
+          a.a.createElement(
+            "div",
+            {
+              className: "rcw-response rcw-feedback rcw-thumbs-up",
+              onClick: function () {
+                E(!0, { question: t, answer: r, timestamp: o }, s), u(!0);
+              },
+            },
+            a.a.createElement(
+              "span",
+              { role: "img", "aria-label": "thumbs up" },
+              "\ud83d\udc4d"
+            )
+          ),
+          a.a.createElement(
+            "div",
+            {
+              className: "rcw-response rcw-feedback rcw-thumbs-down",
+              onClick: function () {
+                E(!1, { question: t, answer: r, timestamp: o }, s), u(!0);
+              },
+            },
+            a.a.createElement(
+              "span",
+              { role: "img", "aria-label": "thumbs down" },
+              "\ud83d\udc4e"
+            )
+          )
+        );
+      }
+      var I = (function (e) {
           Object(l.a)(r, e);
           var t = Object(h.a)(r);
           function r() {
@@ -610,13 +669,13 @@
               (e.history = []),
               (e.handleNewUserMessage = (function () {
                 var t = Object(c.a)(
-                  w().mark(function t(r) {
-                    return w().wrap(function (t) {
+                  y().mark(function t(r) {
+                    return y().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              Object(m.renderCustomComponent)(O, {}, !0),
+                              Object(d.renderCustomComponent)(j, {}, !0),
                               (document.querySelector(
                                 ".rcw-sender"
                               ).style.visibility = "hidden"),
@@ -635,13 +694,13 @@
                 };
               })()),
               (e.handleQuickButtonClicked = function () {
-                Object(m.setQuickButtons)([]),
+                Object(d.setQuickButtons)([]),
                   (document.querySelector(".rcw-sender").style.visibility =
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
                   document.querySelector("input.rcw-new-message").focus(),
-                  Object(m.renderCustomComponent)(A);
+                  Object(d.renderCustomComponent)(A);
               }),
               e
             );
@@ -652,9 +711,9 @@
                 key: "componentDidMount",
                 value: (function () {
                   var e = Object(c.a)(
-                    w().mark(function e() {
+                    y().mark(function e() {
                       var t, r;
-                      return w().wrap(
+                      return y().wrap(
                         function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
@@ -706,9 +765,9 @@
                 key: "componentDidUpdate",
                 value: function (e, t) {
                   if (!t.isEnabled && this.state.isEnabled) {
-                    Object(m.renderCustomComponent)(j, {}, !0);
+                    Object(d.renderCustomComponent)(N, {}, !0);
                     var r = document.querySelector("footer#footer");
-                    r && E.observe(r);
+                    r && k.observe(r);
                   }
                 },
               },
@@ -725,9 +784,9 @@
                 key: "fetchAnswer",
                 value: (function () {
                   var e = Object(c.a)(
-                    w().mark(function e(t) {
+                    y().mark(function e(t) {
                       var r, n, a, o, i, c;
-                      return w().wrap(
+                      return y().wrap(
                         function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
@@ -777,20 +836,29 @@
                                   (n.answer.timestamp = i.timestamp),
                                   (c = i.related_to_azure_gcp) || !i.has_answer
                                     ? (c
-                                        ? Object(m.renderCustomComponent)(
+                                        ? Object(d.renderCustomComponent)(
                                             L,
                                             {},
                                             !0
                                           )
-                                        : Object(m.renderCustomComponent)(
-                                            N,
+                                        : Object(d.renderCustomComponent)(
+                                            S,
                                             {},
                                             !0
                                           ),
-                                      (n.answer.answer = c ? k : x))
-                                    : (Object(m.renderCustomComponent)(
+                                      (n.answer.answer = c ? x : O))
+                                    : (Object(d.renderCustomComponent)(
                                         _,
                                         i,
+                                        !0
+                                      ),
+                                      Object(d.renderCustomComponent)(
+                                        D,
+                                        {
+                                          question: t,
+                                          answer: i.answer,
+                                          timestamp: i.timestamp,
+                                        },
                                         !0
                                       ),
                                       (n.answer.answer = i.answer)),
@@ -798,7 +866,7 @@
                                   (e.next = 21);
                                 break;
                               case 20:
-                                Object(m.renderCustomComponent)(S, {}, !0);
+                                Object(d.renderCustomComponent)(C, {}, !0);
                               case 21:
                                 document.querySelector(".rcw-loading") &&
                                   document
@@ -807,7 +875,7 @@
                                   (document.querySelector(
                                     ".rcw-sender"
                                   ).style.display = "none"),
-                                  Object(m.setQuickButtons)([
+                                  Object(d.setQuickButtons)([
                                     {
                                       label: "Ask another question",
                                       value: "",
@@ -844,7 +912,7 @@
                     : a.a.createElement(
                         "div",
                         { className: "LLMAssistantWidget" },
-                        a.a.createElement(m.Widget, {
+                        a.a.createElement(d.Widget, {
                           handleNewUserMessage: this.handleNewUserMessage,
                           handleQuickButtonClicked:
                             this.handleQuickButtonClicked,
@@ -857,7 +925,7 @@
                           launcher: function (e) {
                             return (function (e) {
                               var t = Object(n.useState)(!1),
-                                r = Object(d.a)(t, 2),
+                                r = Object(m.a)(t, 2),
                                 o = r[0],
                                 i = r[1];
                               return a.a.createElement(
@@ -904,8 +972,8 @@
             r
           );
         })(n.Component),
-        q = document.getElementById("rcw-root");
-      i.a.render(a.a.createElement(D, null), q);
+        P = document.getElementById("rcw-root");
+      i.a.render(a.a.createElement(I, null), P);
     },
   },
   [[13, 1, 2]],
