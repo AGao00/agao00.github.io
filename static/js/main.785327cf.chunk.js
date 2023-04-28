@@ -459,19 +459,22 @@
         var n = t.question,
           a = t.answer,
           o = t.timestamp;
-        r ||
-          (Object(d.addUserMessage)(e ? "\ud83d\udc4d" : "\ud83d\udc4e"),
-          fetch("https://chatapi.databricks.com/feedback", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              question: n,
-              answer: a,
-              timestamp: o,
-              reaction: e ? "thumb_up" : "thumb_down",
-            }),
-          }),
-          Object(d.addResponseMessage)("Thank you for your feedback."));
+        if (!r) {
+          Object(d.addUserMessage)(e ? "\ud83d\udc4d" : "\ud83d\udc4e");
+          try {
+            fetch("https://chatapi.databricks.com/feedback", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                question: n,
+                answer: a,
+                timestamp: o,
+                reaction: e ? "thumb_up" : "thumb_down",
+              }),
+            });
+          } catch (i) {}
+          Object(d.addResponseMessage)("Thank you for your feedback.");
+        }
       }
       var x =
           "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime.",
