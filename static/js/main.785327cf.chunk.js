@@ -852,15 +852,16 @@
                                         i,
                                         !0
                                       ),
-                                      Object(d.renderCustomComponent)(
-                                        D,
-                                        {
-                                          question: t,
-                                          answer: i.answer,
-                                          timestamp: i.timestamp,
-                                        },
-                                        !0
-                                      ),
+                                      i.sources.length > 0 &&
+                                        Object(d.renderCustomComponent)(
+                                          D,
+                                          {
+                                            question: t,
+                                            answer: i.answer,
+                                            timestamp: i.timestamp,
+                                          },
+                                          !0
+                                        ),
                                       (n.answer.answer = i.answer)),
                                   this.history.push(n),
                                   (e.next = 21);
