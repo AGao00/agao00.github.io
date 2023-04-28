@@ -468,7 +468,7 @@
               body: JSON.stringify({
                 question: n,
                 answer: a,
-                timestamp: o,
+                answer_timestamp: o,
                 reaction: e ? "thumb_up" : "thumb_down",
               }),
             });
