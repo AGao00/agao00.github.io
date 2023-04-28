@@ -24,8 +24,8 @@
         v = r(2),
         y = r.n(v);
       r(20);
-      function g() {
-        g = function () {
+      function w() {
+        w = function () {
           return e;
         };
         var e = {},
@@ -83,7 +83,7 @@
         var v = Object.getPrototypeOf,
           y = v && v(v(L([])));
         y && y !== t && r.call(y, o) && (p = y);
-        var w = (f.prototype = d.prototype = Object.create(p));
+        var g = (f.prototype = d.prototype = Object.create(p));
         function b(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -241,7 +241,7 @@
         }
         return (
           (m.prototype = f),
-          n(w, "constructor", { value: f, configurable: !0 }),
+          n(g, "constructor", { value: f, configurable: !0 }),
           n(f, "constructor", { value: m, configurable: !0 }),
           (m.displayName = s(f, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
@@ -256,7 +256,7 @@
               Object.setPrototypeOf
                 ? Object.setPrototypeOf(e, f)
                 : ((e.__proto__ = f), s(e, c, "GeneratorFunction")),
-              (e.prototype = Object.create(w)),
+              (e.prototype = Object.create(g)),
               e
             );
           }),
@@ -277,12 +277,12 @@
                   return e.done ? e.value : i.next();
                 });
           }),
-          b(w),
-          s(w, c, "Generator"),
-          s(w, o, function () {
+          b(g),
+          s(g, c, "Generator"),
+          s(g, o, function () {
             return this;
           }),
-          s(w, "toString", function () {
+          s(g, "toString", function () {
             return "[object Generator]";
           }),
           (e.keys = function (e) {
@@ -430,7 +430,7 @@
           e
         );
       }
-      function w() {
+      function g() {
         y()(window).height() >= 850
           ? (y()(".rcw-conversation-container").height("620px"),
             y()(".rcw-messages-container").height("502px"))
@@ -444,7 +444,7 @@
       var b = new MutationObserver(function () {
           document.contains(
             document.querySelector(".rcw-conversation-container .rcw-header")
-          ) && (w(), window.addEventListener("resize", w, !0), b.disconnect());
+          ) && (g(), window.addEventListener("resize", g, !0), b.disconnect());
         }),
         E = new IntersectionObserver(
           function (e) {
@@ -610,8 +610,8 @@
               (e.history = []),
               (e.handleNewUserMessage = (function () {
                 var t = Object(c.a)(
-                  g().mark(function t(r) {
-                    return g().wrap(function (t) {
+                  w().mark(function t(r) {
+                    return w().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
@@ -640,6 +640,7 @@
                     "visible"),
                   (document.querySelector(".rcw-sender").style.display =
                     "flex"),
+                  document.querySelector("input.rcw-new-message").focus(),
                   Object(m.renderCustomComponent)(A);
               }),
               e
@@ -651,9 +652,9 @@
                 key: "componentDidMount",
                 value: (function () {
                   var e = Object(c.a)(
-                    g().mark(function e() {
+                    w().mark(function e() {
                       var t, r;
-                      return g().wrap(
+                      return w().wrap(
                         function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
@@ -724,9 +725,9 @@
                 key: "fetchAnswer",
                 value: (function () {
                   var e = Object(c.a)(
-                    g().mark(function e(t) {
+                    w().mark(function e(t) {
                       var r, n, a, o, i, c;
-                      return g().wrap(
+                      return w().wrap(
                         function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
@@ -903,8 +904,8 @@
             r
           );
         })(n.Component),
-        I = document.getElementById("rcw-root");
-      i.a.render(a.a.createElement(D, null), I);
+        q = document.getElementById("rcw-root");
+      i.a.render(a.a.createElement(D, null), q);
     },
   },
   [[13, 1, 2]],

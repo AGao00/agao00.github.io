@@ -71,6 +71,15 @@
   color: #1f272d !important
 }
 
+.rcw-message-text ol,
+.rcw-message-text ol li {
+  list-style: decimal !important
+}
+
+.rcw-message-text ol {
+  margin-left: 20px !important
+}
+
 .rcw-message-text pre {
   padding: 16px !important;
   grid-gap: 8px !important;
