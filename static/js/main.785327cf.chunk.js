@@ -777,10 +777,7 @@
               {
                 key: "getChatHistory",
                 value: function () {
-                  return (
-                    (this.history = this.history.slice(-4)),
-                    this.history.slice(0, -1)
-                  );
+                  return (this.history = this.history.slice(-3)), this.history;
                 },
               },
               {
