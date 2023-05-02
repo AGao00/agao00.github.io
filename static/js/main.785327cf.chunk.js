@@ -729,10 +729,9 @@
                       case 21:
                         Object(u.renderCustomComponent)(O, {}, !0);
                       case 22:
-                        document.querySelector(".rcw-loading") &&
-                          document
-                            .querySelector(".rcw-loading")
-                            .parentElement.remove(),
+                        d()(".rcw-loading").each(function (e, t) {
+                          t.parentElement.remove();
+                        }),
                           (document.querySelector(".rcw-sender").style.display =
                             "none"),
                           Object(u.setQuickButtons)([
