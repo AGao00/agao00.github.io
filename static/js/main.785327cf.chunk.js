@@ -747,7 +747,7 @@
                               case 10:
                                 (e.prev = 10),
                                   (e.t0 = e.catch(0)),
-                                  this.setState({ isEnabled: !0 });
+                                  this.setState({ isEnabled: !1 });
                               case 13:
                               case "end":
                                 return e.stop();
