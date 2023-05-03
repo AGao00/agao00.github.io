@@ -788,10 +788,11 @@
                               (e.next = 3),
                               fetch("https://chatapi.databricks.com/flags", {
                                 method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify({
-                                  url: window.location.href,
-                                }),
+                                headers: {
+                                  "Content-Type": "application/json",
+                                  "X-Webpage-Url": window.location.href,
+                                },
+                                body: JSON.stringify({}),
                               })
                             );
                           case 3:
