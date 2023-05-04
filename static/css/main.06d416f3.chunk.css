@@ -6,8 +6,21 @@
   box-sizing: unset !important
 }
 
-.rcw-close-button {
-  display: none !important
+.rcw-custom-launcher {
+  width: 50px !important;
+  height: 50px !important;
+  left: 126px !important;
+  top: 0 !important;
+  align-self: flex-end !important;
+  border: 0 !important;
+  border-color: transparent !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  box-shadow: 0 4px 16px rgba(31, 39, 45, .12) !important
+}
+
+.rcw-close-launcher {
+  padding-top: 6px !important
 }
 
 .rcw-widget-container {
@@ -18,90 +31,58 @@
   position: fixed !important
 }
 
+.rcw-conversation-container .rcw-header {
+  background-color: #fff !important;
+  color: #000 !important;
+  padding: 16px 0 !important;
+  text-align: left !important;
+  border-bottom: 1px solid #cddae5 !important;
+  border-top-right-radius: 8px !important;
+  border-top-left-radius: 8px !important
+}
+
+.rcw-conversation-container .rcw-header .rcw-title {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important
+}
+
+.rcw-conversation-container {
+  max-width: 440px !important;
+  height: 620px;
+  margin-bottom: 16px !important;
+  background: #fff !important;
+  box-shadow: 0 4px 16px rgba(31, 39, 45, .12) !important;
+  border-radius: 8px !important
+}
+
 @media screen and (max-width:800px) {
   .rcw-widget-container.rcw-opened {
-    height: auto !important
+    height: 686px !important
   }
 }
 
-.rcw-question-separator {
-  background-color: #cddae5 !important;
-  width: 332px !important;
-  height: 1px !important;
-  border: none !important;
-  -webkit-margin-before: .5em !important;
-  margin-block-start: .5em !important;
-  -webkit-margin-after: .5em !important;
-  margin-block-end: .5em !important;
-  -webkit-margin-start: auto !important;
-  margin-inline-start: auto !important;
-  -webkit-margin-end: auto !important;
-  margin-inline-end: auto !important
+@media screen and (max-height:850px),
+screen and (max-height:850px) and (max-width:800px) {
+  .rcw-widget-container.rcw-opened {
+    height: auto !important
+  }
+
+  .rcw-conversation-container {
+    width: 100% !important;
+    height: calc(100vh - 210px) !important
+  }
+
+  .rcw-messages-container {
+    width: 100% !important;
+    height: calc(100vh - 328px) !important
+  }
 }
 
 .rcw-disclaimer {
   color: #5d7283;
   font-style: italic
-}
-
-.rcw-info {
-  width: 20px !important;
-  height: 20px !important;
-  float: left !important;
-  padding: 6px 16px 0 0 !important;
-  box-sizing: unset !important
-}
-
-.rcw-loading-img {
-  height: 32px !important
-}
-
-.rcw-response {
-  padding: 12px 16px !important;
-  color: #1f272d !important;
-  background-color: #f2f5f7 !important;
-  max-width: 300px !important;
-  border-radius: 8px !important
-}
-
-.rcw-message-text ol li,
-.rcw-message-text p {
-  font-weight: 400 !important;
-  font-size: 13px !important;
-  color: #1f272d !important
-}
-
-.rcw-message-text ol,
-.rcw-message-text ol li {
-  list-style: decimal !important
-}
-
-.rcw-message-text ol {
-  margin-left: 20px !important
-}
-
-.rcw-message-text pre {
-  padding: 16px !important;
-  grid-gap: 8px !important;
-  gap: 8px !important;
-  background: #e4ecf1 !important;
-  border-radius: 8px !important
-}
-
-.rcw-message-text pre code {
-  white-space: pre-wrap !important
-}
-
-.rcw-rate-limited {
-  color: #c82d4c !important
-}
-
-.rcw-feedback:hover {
-  cursor: pointer
-}
-
-.rcw-thumbs-up {
-  margin-right: 8px !important
 }
 
 .rcw-loading {
@@ -148,6 +129,12 @@
   }
 }
 
+.rcw-message {
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  margin: 16px !important
+}
+
 .rcw-client {
   background: #0e538b !important;
   border-radius: 8px !important;
@@ -157,43 +144,106 @@
 }
 
 .rcw-client .rcw-message-text p {
-  color: #fff !important
-}
-
-.rcw-client .rcw-message-text p,
-.rcw-message {
+  color: #fff !important;
   font-weight: 400 !important;
   font-size: 13px !important
 }
 
-.rcw-message {
-  margin: 16px !important
-}
-
-.rcw-conversation-container .rcw-header {
-  background-color: #fff !important;
-  color: #000 !important;
-  padding: 16px 0 !important;
-  text-align: left !important;
-  border-bottom: 1px solid #cddae5 !important;
-  border-top-right-radius: 8px !important;
-  border-top-left-radius: 8px !important
-}
-
-.rcw-conversation-container .rcw-header .rcw-title {
-  margin: 0 !important;
-  padding: 0 !important;
-  font-weight: 600 !important;
-  font-size: 14px !important
-}
-
-.rcw-conversation-container {
-  max-width: 440px !important;
-  height: 620px;
-  margin-bottom: 16px !important;
-  background: #fff !important;
-  box-shadow: 0 4px 16px rgba(31, 39, 45, .12) !important;
+.rcw-response {
+  padding: 12px 16px !important;
+  color: #1f272d !important;
+  background-color: #f2f5f7 !important;
+  max-width: 300px !important;
   border-radius: 8px !important
+}
+
+.rcw-message-text ol li,
+.rcw-message-text p {
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  color: #1f272d !important
+}
+
+.rcw-message-text ol,
+.rcw-message-text ol li {
+  list-style: decimal !important
+}
+
+.rcw-message-text ol {
+  margin-left: 20px !important
+}
+
+.rcw-message-text pre {
+  padding: 16px !important;
+  grid-gap: 8px !important;
+  gap: 8px !important;
+  background: #e4ecf1 !important;
+  border-radius: 8px !important
+}
+
+.rcw-message-text pre code {
+  white-space: pre-wrap !important
+}
+
+.rcw-rate-limited {
+  color: #c82d4c !important
+}
+
+.rcw-sources-title {
+  color: #5d7283 !important;
+  -webkit-margin-after: 0 !important;
+  margin-block-end: 0 !important;
+  font-size: 13px !important
+}
+
+.rcw-sources {
+  margin-top: 5px !important
+}
+
+.rcw-link {
+  color: #2272b4 !important;
+  -webkit-text-decoration-line: none !important;
+  text-decoration-line: none !important;
+  font-size: 13px !important
+}
+
+.rcw-feedback:hover {
+  cursor: pointer
+}
+
+.rcw-thumbs-up {
+  margin-right: 8px !important
+}
+
+.quick-button {
+  background: #0e538b !important;
+  border-radius: 4px !important;
+  border: 0 !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  line-height: 20px !important;
+  color: #fff !important;
+  margin-bottom: 8px !important
+}
+
+.quick-buttons-container {
+  padding: 16px !important;
+  border-radius: 8px !important
+}
+
+.rcw-question-separator {
+  background-color: #cddae5 !important;
+  width: 332px !important;
+  height: 1px !important;
+  border: none !important;
+  -webkit-margin-before: .5em !important;
+  margin-block-start: .5em !important;
+  -webkit-margin-after: .5em !important;
+  margin-block-end: .5em !important;
+  -webkit-margin-start: auto !important;
+  margin-inline-start: auto !important;
+  -webkit-margin-end: auto !important;
+  margin-inline-end: auto !important
 }
 
 .rcw-send-icon {
@@ -258,6 +308,10 @@
   position: inherit !important
 }
 
+.rcw-close-button {
+  display: none !important
+}
+
 .rcw-custom-launcher:hover {
   cursor: pointer;
   background: #e4ecf1 !important;
@@ -266,57 +320,6 @@
 
 .rcw-custom-launcher:hover .rcw-tooltip {
   visibility: visible
-}
-
-.rcw-custom-launcher {
-  width: 50px !important;
-  height: 50px !important;
-  left: 126px !important;
-  top: 0 !important;
-  align-self: flex-end !important;
-  border: 0 !important;
-  border-color: transparent !important;
-  border-radius: 50% !important;
-  background: #fff !important;
-  box-shadow: 0 4px 16px rgba(31, 39, 45, .12) !important
-}
-
-.rcw-close-launcher {
-  padding-top: 6px !important
-}
-
-.quick-button {
-  background: #0e538b !important;
-  border-radius: 4px !important;
-  border: 0 !important;
-  font-weight: 400 !important;
-  font-size: 13px !important;
-  line-height: 20px !important;
-  color: #fff !important;
-  margin-bottom: 8px !important
-}
-
-.quick-buttons-container {
-  padding: 16px !important;
-  border-radius: 8px !important
-}
-
-.rcw-sources-title {
-  color: #5d7283 !important;
-  -webkit-margin-after: 0 !important;
-  margin-block-end: 0 !important;
-  font-size: 13px !important
-}
-
-.rcw-sources {
-  margin-top: 5px !important
-}
-
-.rcw-link {
-  color: #2272b4 !important;
-  -webkit-text-decoration-line: none !important;
-  text-decoration-line: none !important;
-  font-size: 13px !important
 }
 
 .rcw-tooltip {

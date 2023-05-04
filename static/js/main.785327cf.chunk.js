@@ -9,12 +9,12 @@
         a = r.n(n),
         o = r(6),
         i = r.n(o),
-        c = (r(15), r(3)),
+        c = (r(15), r(2)),
         s = r(4),
         u = r(1),
         l = r(7),
         m = r(8),
-        h = r(2),
+        h = r(3),
         d = r.n(h);
       r(16);
       function f() {
@@ -46,7 +46,7 @@
         }
         try {
           s({}, "");
-        } catch (_) {
+        } catch (A) {
           s = function (e, t, r) {
             return (e[t] = r);
           };
@@ -60,8 +60,8 @@
         function l(e, t, r) {
           try {
             return { type: "normal", arg: e.call(t, r) };
-          } catch (_) {
-            return { type: "throw", arg: _ };
+          } catch (A) {
+            return { type: "throw", arg: A };
           }
         }
         e.wrap = u;
@@ -69,14 +69,14 @@
         function h() {}
         function d() {}
         function p() {}
-        var w = {};
-        s(w, o, function () {
+        var v = {};
+        s(v, o, function () {
           return this;
         });
-        var v = Object.getPrototypeOf,
-          g = v && v(v(S([])));
-        g && g !== t && r.call(g, o) && (w = g);
-        var y = (p.prototype = h.prototype = Object.create(w));
+        var w = Object.getPrototypeOf,
+          y = w && w(w(S([])));
+        y && y !== t && r.call(y, o) && (v = y);
+        var g = (p.prototype = h.prototype = Object.create(v));
         function b(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -128,7 +128,7 @@
               throw new Error("Generator is already running");
             if ("completed" === n) {
               if ("throw" === a) throw o;
-              return L();
+              return _();
             }
             for (r.method = a, r.arg = o; ; ) {
               var i = r.delegate;
@@ -227,14 +227,14 @@
               return (a.next = a);
             }
           }
-          return { next: L };
+          return { next: _ };
         }
-        function L() {
+        function _() {
           return { value: void 0, done: !0 };
         }
         return (
           (d.prototype = p),
-          n(y, "constructor", { value: p, configurable: !0 }),
+          n(g, "constructor", { value: p, configurable: !0 }),
           n(p, "constructor", { value: d, configurable: !0 }),
           (d.displayName = s(p, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
@@ -249,7 +249,7 @@
               Object.setPrototypeOf
                 ? Object.setPrototypeOf(e, p)
                 : ((e.__proto__ = p), s(e, c, "GeneratorFunction")),
-              (e.prototype = Object.create(y)),
+              (e.prototype = Object.create(g)),
               e
             );
           }),
@@ -270,12 +270,12 @@
                   return e.done ? e.value : i.next();
                 });
           }),
-          b(y),
-          s(y, c, "Generator"),
-          s(y, o, function () {
+          b(g),
+          s(g, c, "Generator"),
+          s(g, o, function () {
             return this;
           }),
-          s(y, "toString", function () {
+          s(g, "toString", function () {
             return "[object Generator]";
           }),
           (e.keys = function (e) {
@@ -423,32 +423,16 @@
           e
         );
       }
-      function p() {
-        d()(window).height() >= 850
-          ? (d()(".rcw-conversation-container").height("620px"),
-            d()(".rcw-messages-container").height("502px"))
-          : (d()(".rcw-conversation-container").height(
-              "".concat(d()(window).height() - 210, "px")
-            ),
-            d()(".rcw-messages-container").height(
-              "".concat(d()(window).height() - 328, "px")
-            ));
-      }
-      var w = new MutationObserver(function () {
-          document.contains(
-            document.querySelector(".rcw-conversation-container .rcw-header")
-          ) && (p(), window.addEventListener("resize", p, !0), w.disconnect());
-        }),
-        v = new IntersectionObserver(
-          function (e) {
-            e[0].isIntersecting
-              ? d()(".rcw-widget-container").css("bottom", "122px")
-              : e[0].isIntersecting ||
-                d()(".rcw-widget-container").css("bottom", "32px");
-          },
-          { threshold: [0] }
-        );
-      function g(e, t, r) {
+      var p = new IntersectionObserver(
+        function (e) {
+          e[0].isIntersecting
+            ? d()(".rcw-widget-container").css("bottom", "122px")
+            : e[0].isIntersecting ||
+              d()(".rcw-widget-container").css("bottom", "32px");
+        },
+        { threshold: [0] }
+      );
+      function v(e, t, r) {
         var n = t.question,
           a = t.answer,
           o = t.timestamp;
@@ -469,18 +453,18 @@
           Object(u.addResponseMessage)("Thank you for your feedback.");
         }
       }
-      var y = {
+      var w = {
         AZURE_GCP_ANSWER:
           "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime.",
         NO_ANSWER:
           "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in Databricks Documentation or Databricks Knowledge Base",
       };
-      function b() {
+      function y() {
         return a.a.createElement("div", {
           className: "rcw-response rcw-message-text rcw-loading",
         });
       }
-      function E() {
+      function g() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -508,7 +492,7 @@
           )
         );
       }
-      function k() {
+      function b() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -517,14 +501,14 @@
             { className: "rcw-message-text" },
             "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(O, {
               url: "https://docs.databricks.com",
               name: "Databricks Documentation",
             }),
             " ",
             "or",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(O, {
               url: "https://kb.databricks.com",
               name: "Databricks Knowledge Base",
             }),
@@ -532,7 +516,7 @@
           )
         );
       }
-      function x() {
+      function E() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -541,14 +525,14 @@
             { className: "rcw-message-text" },
             "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(O, {
               url: "https://learn.microsoft.com/en-us/azure/databricks",
               name: "Databricks on Azure",
             }),
             " ",
             "and",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(O, {
               url: "https://docs.gcp.databricks.com",
               name: "Databricks on GCP",
             }),
@@ -557,7 +541,7 @@
           )
         );
       }
-      function O() {
+      function k() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -568,10 +552,10 @@
           )
         );
       }
-      function j() {
+      function x() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function N(e) {
+      function O(e) {
         var t = e.url,
           r = e.name;
         return a.a.createElement(
@@ -585,7 +569,7 @@
           r || t
         );
       }
-      function S(e) {
+      function j(e) {
         var t = e.answer,
           r = e.sources;
         return a.a.createElement(
@@ -605,13 +589,13 @@
                   "Source".concat(1 === r.length ? "" : "s")
                 ),
                 r.map(function (e) {
-                  return a.a.createElement(N, { url: e });
+                  return a.a.createElement(O, { url: e });
                 })
               )
             : null
         );
       }
-      function L(e) {
+      function N(e) {
         var t = e.question,
           r = e.answer,
           o = e.timestamp,
@@ -627,7 +611,7 @@
             {
               className: "rcw-response rcw-feedback rcw-thumbs-up",
               onClick: function () {
-                g(!0, { question: t, answer: r, timestamp: o }, u), l(!0);
+                v(!0, { question: t, answer: r, timestamp: o }, u), l(!0);
               },
             },
             a.a.createElement(
@@ -641,7 +625,7 @@
             {
               className: "rcw-response rcw-feedback rcw-thumbs-down",
               onClick: function () {
-                g(!1, { question: t, answer: r, timestamp: o }, u), l(!0);
+                v(!1, { question: t, answer: r, timestamp: o }, u), l(!0);
               },
             },
             a.a.createElement(
@@ -652,7 +636,7 @@
           )
         );
       }
-      function _() {
+      function S() {
         var e = Object(n.useState)(!1),
           t = Object(s.a)(e, 2),
           r = t[0],
@@ -705,15 +689,15 @@
                           (n.answer.timestamp = c.timestamp),
                           (s = c.related_to_azure_gcp) || !c.has_answer
                             ? (s
-                                ? Object(u.renderCustomComponent)(x, {}, !0)
-                                : Object(u.renderCustomComponent)(k, {}, !0),
+                                ? Object(u.renderCustomComponent)(E, {}, !0)
+                                : Object(u.renderCustomComponent)(b, {}, !0),
                               (n.answer.answer = s
-                                ? y.AZURE_GCP_ANSWER
-                                : y.NO_ANSWER))
-                            : (Object(u.renderCustomComponent)(S, c, !0),
+                                ? w.AZURE_GCP_ANSWER
+                                : w.NO_ANSWER))
+                            : (Object(u.renderCustomComponent)(j, c, !0),
                               c.sources.length > 0 &&
                                 Object(u.renderCustomComponent)(
-                                  L,
+                                  N,
                                   {
                                     question: t,
                                     answer: c.answer,
@@ -727,7 +711,7 @@
                           (e.next = 22);
                         break;
                       case 21:
-                        Object(u.renderCustomComponent)(O, {}, !0);
+                        Object(u.renderCustomComponent)(k, {}, !0);
                       case 22:
                         d()(".rcw-loading").each(function (e, t) {
                           t.parentElement.remove();
@@ -757,7 +741,7 @@
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        Object(u.renderCustomComponent)(b, {}, !0),
+                        Object(u.renderCustomComponent)(y, {}, !0),
                         (document.querySelector(
                           ".rcw-sender"
                         ).style.visibility = "hidden"),
@@ -821,9 +805,9 @@
           Object(n.useEffect)(
             function () {
               if (r) {
-                Object(u.renderCustomComponent)(E, {}, !0);
+                Object(u.renderCustomComponent)(g, {}, !0);
                 var e = document.querySelector("footer#footer");
-                e && v.observe(e);
+                e && p.observe(e);
               }
             },
             [r]
@@ -851,7 +835,7 @@
                       (document.querySelector(".rcw-sender").style.display =
                         "flex"),
                       document.querySelector("input.rcw-new-message").focus(),
-                      Object(u.renderCustomComponent)(j);
+                      Object(u.renderCustomComponent)(x);
                   },
                   title: "Databricks AI assistant",
                   subtitle: "",
@@ -870,12 +854,7 @@
                         {
                           className: "rcw-custom-launcher",
                           onClick: function () {
-                            i(!o),
-                              e(),
-                              w.observe(document.querySelector("#rcw-root"), {
-                                subtree: !0,
-                                childList: !0,
-                              });
+                            i(!o), e();
                           },
                         },
                         o
@@ -905,8 +884,8 @@
               )
         );
       }
-      var A = document.getElementById("rcw-root");
-      i.a.render(a.a.createElement(_, null), A);
+      var _ = document.getElementById("rcw-root");
+      i.a.render(a.a.createElement(S, null), _);
     },
     9: function (e, t, r) {
       e.exports = r(17);
