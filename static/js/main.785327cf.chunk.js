@@ -802,12 +802,10 @@
                           case 3:
                             return (t = e.sent), (e.next = 6), t.json();
                           case 6:
-                            (r = e.sent),
-                              o(r.assistant_enabled || !0),
-                              (e.next = 13);
+                            (r = e.sent), o(r.assistant_enabled), (e.next = 13);
                             break;
                           case 10:
-                            (e.prev = 10), (e.t0 = e.catch(0)), o(!0);
+                            (e.prev = 10), (e.t0 = e.catch(0)), o(!1);
                           case 13:
                           case "end":
                             return e.stop();
