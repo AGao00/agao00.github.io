@@ -445,7 +445,9 @@
           ? Object(u.a)(
               Object(u.a)({}, e),
               {},
-              { Cookie: "".concat(y, "=").concat(t) }
+              {
+                Cookie: "".concat(y, "=").concat(t, "; domain=.databricks.com"),
+              }
             )
           : e;
       }
