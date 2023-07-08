@@ -883,7 +883,6 @@
                             o &&
                               fetch("https://chatapi.databricks.com/metrics", {
                                 method: "POST",
-                                credentials: "include",
                                 headers: g({
                                   "Content-Type": "application/json",
                                 }),
