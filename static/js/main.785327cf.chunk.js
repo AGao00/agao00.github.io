@@ -1,25 +1,29 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [0],
   {
-    15: function (e, t, r) {},
-    17: function (e, t, r) {
+    10: function (e, t, r) {
+      e.exports = r(18);
+    },
+    16: function (e, t, r) {},
+    18: function (e, t, r) {
       "use strict";
       r.r(t);
       var n = r(0),
         a = r.n(n),
-        o = r(6),
+        o = r(7),
         i = r.n(o),
-        c = (r(15), r(2)),
-        s = r(3),
-        u = r(1),
-        l = r(7),
+        c = (r(16), r(2)),
+        s = r(4),
+        u = r(5),
+        l = r(1),
         m = r(8),
-        h = r(19),
-        d = r(4),
-        f = r.n(d);
-      r(16);
-      function p() {
-        p = function () {
+        h = r(9),
+        d = r(20),
+        f = r(3),
+        p = r.n(f);
+      r(17);
+      function v() {
+        v = function () {
           return e;
         };
         var e = {},
@@ -70,15 +74,15 @@
         function h() {}
         function d() {}
         function f() {}
-        var v = {};
-        s(v, o, function () {
+        var p = {};
+        s(p, o, function () {
           return this;
         });
         var y = Object.getPrototypeOf,
           b = y && y(y(S([])));
-        b && b !== t && r.call(b, o) && (v = b);
-        var w = (f.prototype = h.prototype = Object.create(v));
-        function g(e) {
+        b && b !== t && r.call(b, o) && (p = b);
+        var g = (f.prototype = h.prototype = Object.create(p));
+        function w(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
               return this._invoke(t, e);
@@ -235,7 +239,7 @@
         }
         return (
           (d.prototype = f),
-          n(w, "constructor", { value: f, configurable: !0 }),
+          n(g, "constructor", { value: f, configurable: !0 }),
           n(f, "constructor", { value: d, configurable: !0 }),
           (d.displayName = s(f, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
@@ -250,14 +254,14 @@
               Object.setPrototypeOf
                 ? Object.setPrototypeOf(e, f)
                 : ((e.__proto__ = f), s(e, c, "GeneratorFunction")),
-              (e.prototype = Object.create(w)),
+              (e.prototype = Object.create(g)),
               e
             );
           }),
           (e.awrap = function (e) {
             return { __await: e };
           }),
-          g(E.prototype),
+          w(E.prototype),
           s(E.prototype, i, function () {
             return this;
           }),
@@ -271,12 +275,12 @@
                   return e.done ? e.value : i.next();
                 });
           }),
-          g(w),
-          s(w, c, "Generator"),
-          s(w, o, function () {
+          w(g),
+          s(g, c, "Generator"),
+          s(g, o, function () {
             return this;
           }),
-          s(w, "toString", function () {
+          s(g, "toString", function () {
             return "[object Generator]";
           }),
           (e.keys = function (e) {
@@ -424,8 +428,8 @@
           e
         );
       }
-      var v = "llm_user_id",
-        y = new IntersectionObserver(
+      var y = "llm_user_id",
+        b = new IntersectionObserver(
           function (e) {
             var t = document.querySelector(".rcw-widget-container");
             t &&
@@ -435,16 +439,22 @@
           },
           { threshold: [0] }
         );
-      function b(e, t, r) {
+      function g(e) {
+        var t = p.a.get(y);
+        return t
+          ? Object(u.a)(Object(u.a)({}, e), {}, { "X-Assistant-Cookie": t })
+          : e;
+      }
+      function w(e, t, r) {
         var n = t.question,
           a = t.answer,
           o = t.timestamp;
         if (!r) {
-          Object(u.addUserMessage)(e ? "\ud83d\udc4d" : "\ud83d\udc4e");
+          Object(l.addUserMessage)(e ? "\ud83d\udc4d" : "\ud83d\udc4e");
           try {
             fetch("https://chatapi.databricks.com/feedback", {
               method: "POST",
-              headers: { "Content-Type": "application/json" },
+              headers: g({ "Content-Type": "application/json" }),
               body: JSON.stringify({
                 question: n,
                 answer: a,
@@ -453,21 +463,21 @@
               }),
             });
           } catch (i) {}
-          Object(u.addResponseMessage)("Thank you for your feedback.");
+          Object(l.addResponseMessage)("Thank you for your feedback.");
         }
       }
-      var w = {
+      var E = {
         AZURE_GCP_ANSWER:
           "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime.",
         NO_ANSWER:
           "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in Databricks Documentation or Databricks Knowledge Base",
       };
-      function g() {
+      function k() {
         return a.a.createElement("div", {
           className: "rcw-response rcw-message-text rcw-loading",
         });
       }
-      function E() {
+      function O() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -495,7 +505,7 @@
           )
         );
       }
-      function k() {
+      function x() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -504,14 +514,14 @@
             { className: "rcw-message-text" },
             "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(_, {
               url: "https://docs.databricks.com",
               name: "Databricks Documentation",
             }),
             " ",
             "or",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(_, {
               url: "https://kb.databricks.com",
               name: "Databricks Knowledge Base",
             }),
@@ -519,7 +529,7 @@
           )
         );
       }
-      function O() {
+      function j() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -528,14 +538,14 @@
             { className: "rcw-message-text" },
             "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(_, {
               url: "https://learn.microsoft.com/en-us/azure/databricks",
               name: "Databricks on Azure",
             }),
             " ",
             "and",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(_, {
               url: "https://docs.gcp.databricks.com",
               name: "Databricks on GCP",
             }),
@@ -544,7 +554,7 @@
           )
         );
       }
-      function x() {
+      function N() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -555,10 +565,10 @@
           )
         );
       }
-      function j() {
+      function S() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function N(e) {
+      function _(e) {
         var t = e.url,
           r = e.name;
         return a.a.createElement(
@@ -572,7 +582,7 @@
           r || t
         );
       }
-      function S(e) {
+      function A(e) {
         var t = e.answer,
           r = e.sources;
         return a.a.createElement(
@@ -580,7 +590,7 @@
           { className: "rcw-response" },
           a.a.createElement("div", {
             className: "rcw-message-text",
-            dangerouslySetInnerHTML: { __html: m.sanitize(l.marked.parse(t)) },
+            dangerouslySetInnerHTML: { __html: h.sanitize(m.marked.parse(t)) },
           }),
           r.length > 0
             ? a.a.createElement(
@@ -592,13 +602,13 @@
                   "Source".concat(1 === r.length ? "" : "s")
                 ),
                 r.map(function (e) {
-                  return a.a.createElement(N, { url: e });
+                  return a.a.createElement(_, { url: e });
                 })
               )
             : null
         );
       }
-      function _(e) {
+      function L(e) {
         var t = e.question,
           r = e.answer,
           o = e.timestamp,
@@ -614,7 +624,7 @@
             {
               className: "rcw-response rcw-feedback rcw-thumbs-up",
               onClick: function () {
-                b(!0, { question: t, answer: r, timestamp: o }, u), l(!0);
+                w(!0, { question: t, answer: r, timestamp: o }, u), l(!0);
               },
             },
             a.a.createElement(
@@ -628,7 +638,7 @@
             {
               className: "rcw-response rcw-feedback rcw-thumbs-down",
               onClick: function () {
-                b(!1, { question: t, answer: r, timestamp: o }, u), l(!0);
+                w(!1, { question: t, answer: r, timestamp: o }, u), l(!0);
               },
             },
             a.a.createElement(
@@ -639,20 +649,20 @@
           )
         );
       }
-      function A() {
+      function C() {
         var e = Object(n.useState)(!1),
           t = Object(s.a)(e, 2),
           r = t[0],
           o = t[1],
           i = Object(n.useRef)([]);
-        function l(e) {
+        function u(e) {
           return m.apply(this, arguments);
         }
         function m() {
           return (m = Object(c.a)(
-            p().mark(function e(t) {
+            v().mark(function e(t) {
               var r, n, a, o, c, s;
-              return p().wrap(
+              return v().wrap(
                 function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
@@ -669,7 +679,7 @@
                           (e.next = 4),
                           fetch("https://chatapi.databricks.com/doc_qa", {
                             method: "POST",
-                            headers: { "Content-Type": "application/json" },
+                            headers: g({ "Content-Type": "application/json" }),
                             body: JSON.stringify({
                               question: t,
                               history: i.current,
@@ -695,15 +705,15 @@
                           (n.answer.timestamp = c.timestamp),
                           (s = c.related_to_azure_gcp) || !c.has_answer
                             ? (s
-                                ? Object(u.renderCustomComponent)(O, {}, !0)
-                                : Object(u.renderCustomComponent)(k, {}, !0),
+                                ? Object(l.renderCustomComponent)(j, {}, !0)
+                                : Object(l.renderCustomComponent)(x, {}, !0),
                               (n.answer.answer = s
-                                ? w.AZURE_GCP_ANSWER
-                                : w.NO_ANSWER))
-                            : (Object(u.renderCustomComponent)(S, c, !0),
+                                ? E.AZURE_GCP_ANSWER
+                                : E.NO_ANSWER))
+                            : (Object(l.renderCustomComponent)(A, c, !0),
                               c.sources.length > 0 &&
-                                Object(u.renderCustomComponent)(
-                                  _,
+                                Object(l.renderCustomComponent)(
+                                  L,
                                   {
                                     question: t,
                                     answer: c.answer,
@@ -718,7 +728,7 @@
                           (e.next = 22);
                         break;
                       case 21:
-                        Object(u.renderCustomComponent)(x, {}, !0);
+                        Object(l.renderCustomComponent)(N, {}, !0);
                       case 22:
                         document
                           .querySelectorAll(".rcw-loading")
@@ -727,7 +737,7 @@
                           }),
                           (document.querySelector(".rcw-sender").style.display =
                             "none"),
-                          Object(u.setQuickButtons)([
+                          Object(l.setQuickButtons)([
                             { label: "Ask another question", value: "" },
                           ]);
                       case 25:
@@ -742,20 +752,20 @@
             })
           )).apply(this, arguments);
         }
-        function d() {
-          return (d = Object(c.a)(
-            p().mark(function e(t) {
-              return p().wrap(function (e) {
+        function h() {
+          return (h = Object(c.a)(
+            v().mark(function e(t) {
+              return v().wrap(function (e) {
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        Object(u.renderCustomComponent)(g, {}, !0),
+                        Object(l.renderCustomComponent)(k, {}, !0),
                         (document.querySelector(
                           ".rcw-sender"
                         ).style.visibility = "hidden"),
                         (e.next = 4),
-                        l(t)
+                        u(t)
                       );
                     case 4:
                     case "end":
@@ -769,9 +779,9 @@
           Object(n.useEffect)(function () {
             function e() {
               return (e = Object(c.a)(
-                p().mark(function e() {
+                v().mark(function e() {
                   var t, r;
-                  return p().wrap(
+                  return v().wrap(
                     function (e) {
                       for (;;)
                         switch ((e.prev = e.next)) {
@@ -781,10 +791,10 @@
                               (e.next = 3),
                               fetch("https://chatapi.databricks.com/flags", {
                                 method: "POST",
-                                headers: {
+                                headers: g({
                                   "Content-Type": "application/json",
                                   "X-Webpage-Url": window.location.href,
-                                },
+                                }),
                                 body: JSON.stringify({}),
                               })
                             );
@@ -811,10 +821,10 @@
               ((function () {
                 e.apply(this, arguments);
               })(),
-              !f.a.get(v))
+              !p.a.get(y))
             ) {
               var t = new Date();
-              f.a.set(v, Object(h.a)(), {
+              p.a.set(y, Object(d.a)(), {
                 domain: ".databricks.com",
                 expires: t.setDate(t.getDate() + 183),
               });
@@ -823,9 +833,9 @@
           Object(n.useEffect)(
             function () {
               if (r) {
-                Object(u.renderCustomComponent)(E, {}, !0);
+                Object(l.renderCustomComponent)(O, {}, !0);
                 var e = document.querySelector("footer#footer");
-                e && y.observe(e);
+                e && b.observe(e);
               }
             },
             [r]
@@ -842,18 +852,18 @@
             : a.a.createElement(
                 "div",
                 { className: "LLMAssistantWidget" },
-                a.a.createElement(u.Widget, {
+                a.a.createElement(l.Widget, {
                   handleNewUserMessage: function (e) {
-                    return d.apply(this, arguments);
+                    return h.apply(this, arguments);
                   },
                   handleQuickButtonClicked: function () {
-                    Object(u.setQuickButtons)([]),
+                    Object(l.setQuickButtons)([]),
                       (document.querySelector(".rcw-sender").style.visibility =
                         "visible"),
                       (document.querySelector(".rcw-sender").style.display =
                         "flex"),
                       document.querySelector("input.rcw-new-message").focus(),
-                      Object(u.renderCustomComponent)(j);
+                      Object(l.renderCustomComponent)(S);
                   },
                   title: "Databricks AI assistant",
                   subtitle: "",
@@ -874,7 +884,9 @@
                               fetch("https://chatapi.databricks.com/metrics", {
                                 method: "POST",
                                 credentials: "include",
-                                headers: { "Content-Type": "application/json" },
+                                headers: g({
+                                  "Content-Type": "application/json",
+                                }),
                                 body: JSON.stringify({
                                   event: "opened_assistant",
                                 }),
@@ -918,13 +930,10 @@
               )
         );
       }
-      var L = document.getElementById("rcw-root");
-      i.a.render(a.a.createElement(A, null), L);
-    },
-    9: function (e, t, r) {
-      e.exports = r(17);
+      var q = document.getElementById("rcw-root");
+      i.a.render(a.a.createElement(C, null), q);
     },
   },
-  [[9, 1, 2]],
+  [[10, 1, 2]],
 ]);
 //# sourceMappingURL=main.785327cf.chunk.js.map
