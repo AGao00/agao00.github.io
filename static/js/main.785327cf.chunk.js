@@ -435,7 +435,10 @@
           },
           { threshold: [0] }
         );
-      function b(e, t, r) {
+      function b(e) {
+        return e;
+      }
+      function w(e, t, r) {
         var n = t.question,
           a = t.answer,
           o = t.timestamp;
@@ -444,7 +447,7 @@
           try {
             fetch("https://chatapi.databricks.com/feedback", {
               method: "POST",
-              headers: { "Content-Type": "application/json" },
+              headers: b({ "Content-Type": "application/json" }),
               body: JSON.stringify({
                 question: n,
                 answer: a,
@@ -456,18 +459,18 @@
           Object(u.addResponseMessage)("Thank you for your feedback.");
         }
       }
-      var w = {
+      var g = {
         AZURE_GCP_ANSWER:
           "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime.",
         NO_ANSWER:
           "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in Databricks Documentation or Databricks Knowledge Base",
       };
-      function g() {
+      function E() {
         return a.a.createElement("div", {
           className: "rcw-response rcw-message-text rcw-loading",
         });
       }
-      function E() {
+      function k() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -495,7 +498,7 @@
           )
         );
       }
-      function k() {
+      function O() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -504,14 +507,14 @@
             { className: "rcw-message-text" },
             "Sorry, I can't find an answer to the question you asked. But you may be able to find the answer in",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(S, {
               url: "https://docs.databricks.com",
               name: "Databricks Documentation",
             }),
             " ",
             "or",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(S, {
               url: "https://kb.databricks.com",
               name: "Databricks Knowledge Base",
             }),
@@ -519,7 +522,7 @@
           )
         );
       }
-      function O() {
+      function x() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -528,14 +531,14 @@
             { className: "rcw-message-text" },
             "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(S, {
               url: "https://learn.microsoft.com/en-us/azure/databricks",
               name: "Databricks on Azure",
             }),
             " ",
             "and",
             " ",
-            a.a.createElement(N, {
+            a.a.createElement(S, {
               url: "https://docs.gcp.databricks.com",
               name: "Databricks on GCP",
             }),
@@ -544,7 +547,7 @@
           )
         );
       }
-      function x() {
+      function j() {
         return a.a.createElement(
           "div",
           { className: "rcw-response" },
@@ -555,10 +558,10 @@
           )
         );
       }
-      function j() {
+      function N() {
         return a.a.createElement("hr", { className: "rcw-question-separator" });
       }
-      function N(e) {
+      function S(e) {
         var t = e.url,
           r = e.name;
         return a.a.createElement(
@@ -572,7 +575,7 @@
           r || t
         );
       }
-      function S(e) {
+      function _(e) {
         var t = e.answer,
           r = e.sources;
         return a.a.createElement(
@@ -592,13 +595,13 @@
                   "Source".concat(1 === r.length ? "" : "s")
                 ),
                 r.map(function (e) {
-                  return a.a.createElement(N, { url: e });
+                  return a.a.createElement(S, { url: e });
                 })
               )
             : null
         );
       }
-      function _(e) {
+      function A(e) {
         var t = e.question,
           r = e.answer,
           o = e.timestamp,
@@ -614,7 +617,7 @@
             {
               className: "rcw-response rcw-feedback rcw-thumbs-up",
               onClick: function () {
-                b(!0, { question: t, answer: r, timestamp: o }, u), l(!0);
+                w(!0, { question: t, answer: r, timestamp: o }, u), l(!0);
               },
             },
             a.a.createElement(
@@ -628,7 +631,7 @@
             {
               className: "rcw-response rcw-feedback rcw-thumbs-down",
               onClick: function () {
-                b(!1, { question: t, answer: r, timestamp: o }, u), l(!0);
+                w(!1, { question: t, answer: r, timestamp: o }, u), l(!0);
               },
             },
             a.a.createElement(
@@ -639,7 +642,7 @@
           )
         );
       }
-      function A() {
+      function L() {
         var e = Object(n.useState)(!1),
           t = Object(s.a)(e, 2),
           r = t[0],
@@ -669,7 +672,7 @@
                           (e.next = 4),
                           fetch("https://chatapi.databricks.com/doc_qa", {
                             method: "POST",
-                            headers: { "Content-Type": "application/json" },
+                            headers: b({ "Content-Type": "application/json" }),
                             body: JSON.stringify({
                               question: t,
                               history: i.current,
@@ -695,15 +698,15 @@
                           (n.answer.timestamp = c.timestamp),
                           (s = c.related_to_azure_gcp) || !c.has_answer
                             ? (s
-                                ? Object(u.renderCustomComponent)(O, {}, !0)
-                                : Object(u.renderCustomComponent)(k, {}, !0),
+                                ? Object(u.renderCustomComponent)(x, {}, !0)
+                                : Object(u.renderCustomComponent)(O, {}, !0),
                               (n.answer.answer = s
-                                ? w.AZURE_GCP_ANSWER
-                                : w.NO_ANSWER))
-                            : (Object(u.renderCustomComponent)(S, c, !0),
+                                ? g.AZURE_GCP_ANSWER
+                                : g.NO_ANSWER))
+                            : (Object(u.renderCustomComponent)(_, c, !0),
                               c.sources.length > 0 &&
                                 Object(u.renderCustomComponent)(
-                                  _,
+                                  A,
                                   {
                                     question: t,
                                     answer: c.answer,
@@ -718,7 +721,7 @@
                           (e.next = 22);
                         break;
                       case 21:
-                        Object(u.renderCustomComponent)(x, {}, !0);
+                        Object(u.renderCustomComponent)(j, {}, !0);
                       case 22:
                         document
                           .querySelectorAll(".rcw-loading")
@@ -750,7 +753,7 @@
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        Object(u.renderCustomComponent)(g, {}, !0),
+                        Object(u.renderCustomComponent)(E, {}, !0),
                         (document.querySelector(
                           ".rcw-sender"
                         ).style.visibility = "hidden"),
@@ -781,10 +784,10 @@
                               (e.next = 3),
                               fetch("https://chatapi.databricks.com/flags", {
                                 method: "POST",
-                                headers: {
+                                headers: b({
                                   "Content-Type": "application/json",
                                   "X-Webpage-Url": window.location.href,
-                                },
+                                }),
                                 body: JSON.stringify({}),
                               })
                             );
@@ -823,7 +826,7 @@
           Object(n.useEffect)(
             function () {
               if (r) {
-                Object(u.renderCustomComponent)(E, {}, !0);
+                Object(u.renderCustomComponent)(k, {}, !0);
                 var e = document.querySelector("footer#footer");
                 e && y.observe(e);
               }
@@ -853,7 +856,7 @@
                       (document.querySelector(".rcw-sender").style.display =
                         "flex"),
                       document.querySelector("input.rcw-new-message").focus(),
-                      Object(u.renderCustomComponent)(j);
+                      Object(u.renderCustomComponent)(N);
                   },
                   title: "Databricks AI assistant",
                   subtitle: "",
@@ -873,7 +876,9 @@
                             o &&
                               fetch("https://chatapi.databricks.com/metrics", {
                                 method: "POST",
-                                headers: { "Content-Type": "application/json" },
+                                headers: b({
+                                  "Content-Type": "application/json",
+                                }),
                                 body: JSON.stringify({
                                   event: "opened_assistant",
                                 }),
@@ -917,8 +922,8 @@
               )
         );
       }
-      var L = document.getElementById("rcw-root");
-      i.a.render(a.a.createElement(A, null), L);
+      var C = document.getElementById("rcw-root");
+      i.a.render(a.a.createElement(L, null), C);
     },
     9: function (e, t, r) {
       e.exports = r(17);
