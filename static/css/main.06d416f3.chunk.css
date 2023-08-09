@@ -157,20 +157,26 @@ screen and (max-height:850px) and (max-width:800px) {
   border-radius: 8px !important
 }
 
-.rcw-message-text ol li,
 .rcw-message-text p {
   font-weight: 400 !important;
   font-size: 13px !important;
   color: #1f272d !important
 }
 
-.rcw-message-text ol,
+.rcw-message-text code {
+  white-space: normal !important
+}
+
 .rcw-message-text ol li {
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  color: #1f272d !important;
   list-style: decimal !important
 }
 
 .rcw-message-text ol {
-  margin-left: 20px !important
+  margin-left: 20px !important;
+  list-style: decimal !important
 }
 
 .rcw-message-text pre {
