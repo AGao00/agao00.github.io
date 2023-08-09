@@ -75,9 +75,9 @@
           return this;
         });
         var y = Object.getPrototypeOf,
-          b = y && y(y(S([])));
-        b && b !== t && r.call(b, o) && (v = b);
-        var w = (f.prototype = h.prototype = Object.create(v));
+          w = y && y(y(S([])));
+        w && w !== t && r.call(w, o) && (v = w);
+        var b = (f.prototype = h.prototype = Object.create(v));
         function g(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
@@ -235,7 +235,7 @@
         }
         return (
           (d.prototype = f),
-          n(w, "constructor", { value: f, configurable: !0 }),
+          n(b, "constructor", { value: f, configurable: !0 }),
           n(f, "constructor", { value: d, configurable: !0 }),
           (d.displayName = s(f, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
@@ -250,7 +250,7 @@
               Object.setPrototypeOf
                 ? Object.setPrototypeOf(e, f)
                 : ((e.__proto__ = f), s(e, c, "GeneratorFunction")),
-              (e.prototype = Object.create(w)),
+              (e.prototype = Object.create(b)),
               e
             );
           }),
@@ -271,12 +271,12 @@
                   return e.done ? e.value : i.next();
                 });
           }),
-          g(w),
-          s(w, c, "Generator"),
-          s(w, o, function () {
+          g(b),
+          s(b, c, "Generator"),
+          s(b, o, function () {
             return this;
           }),
-          s(w, "toString", function () {
+          s(b, "toString", function () {
             return "[object Generator]";
           }),
           (e.keys = function (e) {
@@ -435,10 +435,10 @@
           },
           { threshold: [0] }
         );
-      function b(e) {
+      function w(e) {
         return e;
       }
-      function w(e, t, r) {
+      function b(e, t, r) {
         var n = t.question,
           a = t.answer,
           o = t.timestamp;
@@ -447,7 +447,7 @@
           try {
             fetch("https://chatapi.databricks.com/feedback", {
               method: "POST",
-              headers: b({ "Content-Type": "application/json" }),
+              headers: w({ "Content-Type": "application/json" }),
               body: JSON.stringify({
                 question: n,
                 answer: a,
@@ -617,7 +617,7 @@
             {
               className: "rcw-response rcw-feedback rcw-thumbs-up",
               onClick: function () {
-                w(!0, { question: t, answer: r, timestamp: o }, u), l(!0);
+                b(!0, { question: t, answer: r, timestamp: o }, u), l(!0);
               },
             },
             a.a.createElement(
@@ -631,7 +631,7 @@
             {
               className: "rcw-response rcw-feedback rcw-thumbs-down",
               onClick: function () {
-                w(!1, { question: t, answer: r, timestamp: o }, u), l(!0);
+                b(!1, { question: t, answer: r, timestamp: o }, u), l(!0);
               },
             },
             a.a.createElement(
@@ -672,7 +672,7 @@
                           (e.next = 4),
                           fetch("https://chatapi.databricks.com/doc_qa", {
                             method: "POST",
-                            headers: b({ "Content-Type": "application/json" }),
+                            headers: w({ "Content-Type": "application/json" }),
                             body: JSON.stringify({
                               question: t,
                               history: i.current,
@@ -783,7 +783,7 @@
                               (e.next = 3),
                               fetch("https://chatapi.databricks.com/flags", {
                                 method: "POST",
-                                headers: b({
+                                headers: w({
                                   "Content-Type": "application/json",
                                   "X-Webpage-Url": window.location.href,
                                 }),
@@ -876,7 +876,7 @@
                               fetch("https://chatapi.databricks.com/metrics", {
                                 credentials: "include",
                                 method: "POST",
-                                headers: b({
+                                headers: w({
                                   "Content-Type": "application/json",
                                 }),
                                 body: JSON.stringify({
@@ -905,7 +905,7 @@
                                 null,
                                 a.a.createElement("img", {
                                   className: "rcw-open-launcher",
-                                  src: "https://agao00.github.io/static/media/speech-bubble-plus.6df5d2c6.svg",
+                                  src: "https://agao00.github.io/static/media/white-speech-bubble.svg",
                                   alt: "open",
                                 }),
                                 a.a.createElement(
