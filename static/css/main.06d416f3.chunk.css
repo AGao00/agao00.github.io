@@ -323,37 +323,11 @@ screen and (max-height:850px) and (max-width:800px) {
   box-shadow: 0 4px 16px rgba(31, 39, 45, .12) !important
 }
 
-.rcw-custom-launcher:hover .rcw-tooltip {
-  visibility: visible
-}
-
-.rcw-tooltip {
-  visibility: hidden;
-  width: 248px;
-  background: #1f262d;
-  text-align: center;
-  padding: 4px 8px;
-  border-radius: 4px;
-  top: 0;
-  right: 120%;
+.rcw-open-text {
+  top: 10px;
+  right: 80%;
   position: absolute;
-  z-index: 1;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  color: hsla(0, 0%, 100%, .84)
-}
-
-.rcw-tooltip:after {
-  content: " ";
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  margin-top: -5px;
-  border: 5px solid transparent;
-  border-left-color: #1f262d
+  z-index: -1
 }
 
 /*# sourceMappingURL=main.06d416f3.chunk.css.map */

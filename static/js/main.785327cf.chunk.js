@@ -75,10 +75,10 @@
           return this;
         });
         var y = Object.getPrototypeOf,
-          w = y && y(y(S([])));
-        w && w !== t && r.call(w, o) && (v = w);
-        var b = (f.prototype = h.prototype = Object.create(v));
-        function g(e) {
+          g = y && y(y(S([])));
+        g && g !== t && r.call(g, o) && (v = g);
+        var w = (f.prototype = h.prototype = Object.create(v));
+        function b(e) {
           ["next", "throw", "return"].forEach(function (t) {
             s(e, t, function (e) {
               return this._invoke(t, e);
@@ -235,7 +235,7 @@
         }
         return (
           (d.prototype = f),
-          n(b, "constructor", { value: f, configurable: !0 }),
+          n(w, "constructor", { value: f, configurable: !0 }),
           n(f, "constructor", { value: d, configurable: !0 }),
           (d.displayName = s(f, c, "GeneratorFunction")),
           (e.isGeneratorFunction = function (e) {
@@ -250,14 +250,14 @@
               Object.setPrototypeOf
                 ? Object.setPrototypeOf(e, f)
                 : ((e.__proto__ = f), s(e, c, "GeneratorFunction")),
-              (e.prototype = Object.create(b)),
+              (e.prototype = Object.create(w)),
               e
             );
           }),
           (e.awrap = function (e) {
             return { __await: e };
           }),
-          g(E.prototype),
+          b(E.prototype),
           s(E.prototype, i, function () {
             return this;
           }),
@@ -271,12 +271,12 @@
                   return e.done ? e.value : i.next();
                 });
           }),
-          g(b),
-          s(b, c, "Generator"),
-          s(b, o, function () {
+          b(w),
+          s(w, c, "Generator"),
+          s(w, o, function () {
             return this;
           }),
-          s(b, "toString", function () {
+          s(w, "toString", function () {
             return "[object Generator]";
           }),
           (e.keys = function (e) {
@@ -435,10 +435,10 @@
           },
           { threshold: [0] }
         );
-      function w(e) {
+      function g(e) {
         return e;
       }
-      function b(e, t, r) {
+      function w(e, t, r) {
         var n = t.question,
           a = t.answer,
           o = t.timestamp;
@@ -447,7 +447,7 @@
           try {
             fetch("https://chatapi.databricks.com/feedback", {
               method: "POST",
-              headers: w({ "Content-Type": "application/json" }),
+              headers: g({ "Content-Type": "application/json" }),
               body: JSON.stringify({
                 question: n,
                 answer: a,
@@ -459,7 +459,7 @@
           Object(u.addResponseMessage)("Thank you for your feedback.");
         }
       }
-      var g = {
+      var b = {
         AZURE_GCP_ANSWER:
           "As an AI assistant, I'm currently trained on documentation and knowledge base about Databricks on AWS. Please refer to the documentation for Databricks on Azure and Databricks on GCP in the meantime.",
         NO_ANSWER:
@@ -617,7 +617,7 @@
             {
               className: "rcw-response rcw-feedback rcw-thumbs-up",
               onClick: function () {
-                b(!0, { question: t, answer: r, timestamp: o }, u), l(!0);
+                w(!0, { question: t, answer: r, timestamp: o }, u), l(!0);
               },
             },
             a.a.createElement(
@@ -631,7 +631,7 @@
             {
               className: "rcw-response rcw-feedback rcw-thumbs-down",
               onClick: function () {
-                b(!1, { question: t, answer: r, timestamp: o }, u), l(!0);
+                w(!1, { question: t, answer: r, timestamp: o }, u), l(!0);
               },
             },
             a.a.createElement(
@@ -672,7 +672,7 @@
                           (e.next = 4),
                           fetch("https://chatapi.databricks.com/doc_qa", {
                             method: "POST",
-                            headers: w({ "Content-Type": "application/json" }),
+                            headers: g({ "Content-Type": "application/json" }),
                             body: JSON.stringify({
                               question: t,
                               history: i.current,
@@ -701,8 +701,8 @@
                                 ? Object(u.renderCustomComponent)(x, {}, !0)
                                 : Object(u.renderCustomComponent)(O, {}, !0),
                               (n.answer.answer = s
-                                ? g.AZURE_GCP_ANSWER
-                                : g.NO_ANSWER))
+                                ? b.AZURE_GCP_ANSWER
+                                : b.NO_ANSWER))
                             : (Object(u.renderCustomComponent)(_, c, !0),
                               (n.answer.answer = c.answer)),
                           Object(u.renderCustomComponent)(
@@ -783,7 +783,7 @@
                               (e.next = 3),
                               fetch("https://chatapi.databricks.com/flags", {
                                 method: "POST",
-                                headers: w({
+                                headers: g({
                                   "Content-Type": "application/json",
                                   "X-Webpage-Url": window.location.href,
                                 }),
@@ -876,7 +876,7 @@
                               fetch("https://chatapi.databricks.com/metrics", {
                                 credentials: "include",
                                 method: "POST",
-                                headers: w({
+                                headers: g({
                                   "Content-Type": "application/json",
                                 }),
                                 body: JSON.stringify({
@@ -908,11 +908,11 @@
                                   src: "https://agao00.github.io/static/media/white-speech-bubble.svg",
                                   alt: "open",
                                 }),
-                                a.a.createElement(
-                                  "div",
-                                  { className: "rcw-tooltip" },
-                                  "Ask the Databricks AI assistant a question."
-                                )
+                                a.a.createElement("img", {
+                                  className: "rcw-open-text",
+                                  src: "https://agao00.github.io/static/media/tooltip.svg",
+                                  alt: "Try our AI assistant",
+                                })
                               )
                         )
                       );
