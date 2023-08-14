@@ -327,7 +327,8 @@ screen and (max-height:850px) and (max-width:800px) {
   top: 10px;
   right: 80%;
   position: absolute;
-  z-index: -1
+  z-index: -1;
+  max-width: none
 }
 
 /*# sourceMappingURL=main.06d416f3.chunk.css.map */
